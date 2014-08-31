@@ -1,0 +1,86 @@
+FUEL
+
+Overview
+----------------------------------------
+The game is essentially and adventure/puzzle game. The player controls an avatar exploring different worlds
+collecting treasures and fighting bad guys. The idea is that the player has to learn how to solve each puzzle 
+as efficiently as possible. The main quest of the game is always to save on petrol, as the further through the game
+the player is, the harder it is to find. If the player wastes petrol too much early on, then they cannot finish the game
+and have to start again, each time, learning how to do it better and better. For example, some puzzles should only be
+half completed because the other half requires an ability ta the player finds later in the game, then the player should
+return to the puzzle when they get it. 
+
+Objects
+----------------------------------------
+- Kill x amount of y typed enemies
+- Collect this amount of rubies
+- Kill a boss
+- Reach finish point
+
+Crystal Ball Rendering
+----------------------------------------
+The game is 2d but gets rendered around a sphere making it 2d/3d. 
+
+Returning to Previous Levels
+----------------------------------------
+Some level contain areas and obstacles that the player cannot initially overcome. The player has to continue on
+and return later on when they have got the power required.
+
+Powers / Abilities
+----------------------------------------
+Burst charge
+Teleporter points
+
+Enemies/ Obstacles
+Spike balls
+They are the offspring of the cactus and can ride the flow.
+
+Triangle Bugs
+Giant bugs which wander around eating stuff. Their weak point is in the middle and the player has to use
+his burst attack from their side to kill them.
+
+Awesome Boss battles
+----------------------------------------
+The boss battles are very creative in that the player has to figure out how to hurt the boss first
+
+Graphics
+----------------------------------------
+Super Colorful! The game looks extremely beautiful. Things are drawn using extremely polished vector graphics. 
+Every there are colors and the environment changes depending on the user. For example the flow 
+bubbles color changes depending on which way the user is going.
+
+Amazing Dynamic/Interactive Soundtrack
+----------------------------------------
+The soundtrack is effected by events in the game. For example if the player boosts, a distortion effect is 
+added to the soundtrack combined with a slowing down of the tempo. Each level has a different song.
+
+Environment
+----------------------------------------
+Flow Bubbles: Flow bubbles flow in a certain direction. If the user is travelling in the same direction as a flow
+bubble it will boost the player, if the player its it from the opposite direction they will slow and stop the player.
+The bubble's color changes color depending on the difference between its direction and the players. If the player is
+travellingi the same direction the bubbles are rendered green. Perpendicular they are rendered yellow and opposite
+they are colored red. This way the user can figure out which way the are facing.
+
+Burst Attack
+----------------------------------------
+Directly after a strong burst the ship becomes very hard and can penetrate enemies. This is the ships 
+primary attack. If the ship isn't moving or is only moving very slowly the enemies can attack the player.
+
+Collectables
+----------------------------------------
+Fuel
+Door points
+Teleports
+
+Losing
+----------------------------------------
+The player is killed after only one touch. Player loses if he runs out of petrol.
+
+Tutorials
+----------------------------------------
+When the player collects a new power they are provided with a menu box describing the item with the possibility to
+'watch tutorial' or 'continue'.
+
+
+
