@@ -12,14 +12,10 @@ namespace GameUtil2D
 				}
 		}
 
-		public static class TrigUtil2D
+		public static class PhysicsUtil2D
 		{
-				public static Vector2 GetVelocity (float angle, float speed)
-				{
-						Vector2 velocity = Vector2.zero;
-						velocity.x = speed * Mathf.Cos (angle * Mathf.PI / 180);
-						velocity.y += speed * Mathf.Sin (angle * Mathf.PI / 180);
-						return velocity;
+				public static void ApplyForwardForce(Rigidbody2D rigidBody2D, float amount){
+					rigidBody2D.AddForce (rigidBody2D.transform.rotation * Vector3.up * amount);
 				}
 		}
 }

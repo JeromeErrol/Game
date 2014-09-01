@@ -6,7 +6,7 @@ public class RocketShipController : MonoBehaviour
 {
 		public RocketShip rocketShip;
 	
-		void Update ()
+		void FixedUpdate ()
 		{		
 				if (FireBoostThrusterEvent) {
 						MouseUtil2D.FaceMouse (rocketShip.gameObject);

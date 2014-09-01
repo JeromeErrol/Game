@@ -5,14 +5,18 @@ using GameUtil2D;
 public class RocketShip : MonoBehaviour
 {
 		public float boostSpeed;
-		public float burstCharge;
 		public float burstChargeSpeed = 10f;
-		public float fuelCapacity = 1000f;
-		public float fuelRemaining;
-
+		public FuelTank fuelTank;
+		public float startingCapacity;
+		public float startingFuel;
+		private float burstCharge;
+		public int points;
+	
 		void Start ()
 		{
-				fuelRemaining = fuelCapacity;
+				fuelTank = new FuelTank (startingCapacity, startingFuel);
+		points = 0;
+				
 		}
 
 		void Update ()
@@ -21,10 +25,15 @@ public class RocketShip : MonoBehaviour
 		}
 
 		void OnTriggerEnter2D (Collider2D col)
-		{
-				
+		{		
+				GameObject gameObject = col.gameObject;
+				print ("collision occured with: " + gameObject.name);	
+				ICollideable collideable = gameObject.GetComponent<ICollideable> ();
+				if (collideable) {
+						collideable.CollidedWith (this);
+				}
 		}
-
+	
 		public bool BurstCharged {
 				get {
 						return burstCharge > 0;
@@ -33,26 +42,9 @@ public class RocketShip : MonoBehaviour
 
 		public void ChargeBurstThruster ()
 		{
-				if (FuelIsRemaining) {
+				if (fuelTank.FuelIsRemaining) {
 						burstCharge += burstChargeSpeed;
-						BurnFuel ();
-				}
-		}
-
-		public bool FuelIsRemaining {
-				get {
-						return fuelRemaining > 0;
-				}
-		}
-
-		public void BurnFuel ()
-		{
-				fuelRemaining -= 1;
-				
-				if (FuelIsRemaining) {
-						print ("Fuel Remaining:" + fuelRemaining);
-				} else {
-						print ("Game Over!");
+						fuelTank.BurnFuel ();
 				}
 		}
 
@@ -64,14 +56,14 @@ public class RocketShip : MonoBehaviour
 
 		public void BoostThruster ()
 		{
-				if (FuelIsRemaining) {
+				if (fuelTank.FuelIsRemaining) {
 						Boost (boostSpeed);
-						BurnFuel ();
+						fuelTank.BurnFuel ();
 				}				
 		}
 
 		private void Boost (float amount)
 		{		
-				gameObject.rigidbody2D.AddForce (this.transform.rotation * Vector3.up * amount);
+				PhysicsUtil2D.ApplyForwardForce (gameObject.rigidbody2D, amount);
 		}
 }
