@@ -4,23 +4,62 @@ using GameUtil2D;
 
 public class RocketShipController : MonoBehaviour
 {
-		public RocketShip rocketShip;
+		private RocketShip rocketShip;
+		private Thruster thruster;
+		private ChargeThruster chargeThruster;
+		private Teleport teleport;
+		public KeyCode saveTeleportLocationKey = KeyCode.A;
+		public KeyCode useTeleportAbilityKey = KeyCode.S;
+		public KeyCode activateThrustAbilityKey = KeyCode.Space;
+		public Ability abilitySelected = Ability.Boost;
+
+		void Start ()
+		{
+				rocketShip = gameObject.GetComponent<RocketShip> ();
+				thruster = gameObject.GetComponent<Thruster> ();
+				chargeThruster = gameObject.GetComponent<ChargeThruster> ();
+				teleport = gameObject.GetComponent<Teleport> ();
+		}
 	
 		void FixedUpdate ()
 		{		
-				if (FireBoostThrusterEvent) {
-						MouseUtil2D.FaceMouse (rocketShip.gameObject);
-						rocketShip.BoostThruster ();
+				rocketShip = gameObject.GetComponent<RocketShip> ();
+				thruster = rocketShip.GetComponent<Thruster> ();
+				chargeThruster = rocketShip.GetComponent<ChargeThruster> ();
+		
+				if (abilitySelected == Ability.Boost) {
+						if (FireBoostThrusterEvent) {
+								MouseUtil2D.FaceMouse (rocketShip.gameObject);
+								thruster.Boost ();
+						}
 				}
 
-				if (FireChargeBurstThrusterEvent) {
-						MouseUtil2D.FaceMouse (rocketShip.gameObject);
-						rocketShip.ChargeBurstThruster ();
+				if (abilitySelected == Ability.Thrust) {
+						if (FireChargeBurstThrusterEvent) {
+								MouseUtil2D.FaceMouse (rocketShip.gameObject);						
+								chargeThruster.Charge ();
+						}
+			
+						if (FireReleaseBurstThrustEvent) {
+								chargeThruster.Release ();
+								abilitySelected = Ability.Boost;
+						}	
+				}	
+		
+
+				if (Input.GetKeyDown (saveTeleportLocationKey)) {
+						teleport.SavePosition ();
 				}
 
-				if (FireReleaseBurstThrustEvent) {
-						rocketShip.ReleaseBurstThruster ();
-				}			
+				if (Input.GetKeyDown (useTeleportAbilityKey)) {
+						teleport.Activate ();
+				}
+
+				if (chargeThruster) {
+						if (Input.GetKeyDown (activateThrustAbilityKey)) {
+								abilitySelected = Ability.Thrust;
+						}
+				}
 		}
 
 		bool FireBoostThrusterEvent {
@@ -31,13 +70,13 @@ public class RocketShipController : MonoBehaviour
 
 		bool FireChargeBurstThrusterEvent {
 				get {
-						return Input.GetMouseButton (1);
+						return Input.GetMouseButton (0);
 				}
 		}
 
 		bool FireReleaseBurstThrustEvent {
 				get {
-						return FireChargeBurstThrusterEvent == false && rocketShip.BurstCharged; 
+						return FireChargeBurstThrusterEvent == false && chargeThruster.GetCharge > 0; 
 				}
 		}
 }

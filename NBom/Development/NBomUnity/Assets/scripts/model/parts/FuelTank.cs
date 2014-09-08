@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FuelTank {
+public class FuelTank : MonoBehaviour{
 	
-	float capacity = 1000f;
-	float remaining;
+	public float capacity;
+	public float remaining;
 
 	public FuelTank(float capacity, float amount){
 		this.capacity = capacity;
@@ -43,12 +43,6 @@ public class FuelTank {
 	public void BurnFuel ()
 	{
 		Remaining -= 1;
-		
-		if (FuelIsRemaining) {
-			MonoBehaviour.print ("Fuel Remaining:" + remaining);
-		} else {
-			MonoBehaviour.print ("Game Over!");
-		}
 	}
 	
 	public void Refill(float amount){

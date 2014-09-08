@@ -13,11 +13,8 @@ public class Ring:ICollectable
 		public override void CollectedBy (RocketShip rocketShip)
 		{
 			rocketShip.points += value;
-
+			rocketShip.GetComponent<FuelTank> ().Refill (10);
 		}
-
-		
-	
 }
 
 

@@ -1,0 +1,49 @@
+You have to collect oxygen bubbles.
+
+You have an oxygen tank
+
+Your breath runs out slowly and more quickly as you move
+
+You have to collect "Breath Bubbles" before your oxygen runs out.
+
+However every time you collect a breath bubble, you lose an air tank holder and you only have fifteen.
+
+As you get closer to drowning, the heart beat gets much louder and slower. Everything
+starts going black and washy until you eventually go unconscious. The player also becomes
+harder to control, slower.
+
+The level is finishes when you either run out of oxygen and drown or when you collect all the 10 red bubbles.
+
+Then you proceed to the next level, however the remaining 'red bubbles' that you failed to
+collect get taken from your lives.
+
+Game over when you lose all your lives.
+
+The aim of the game is to manage to collect all 10 'red bubbles' in each level, thus proceeding
+to the next level without losing any lives.
+
+So the level finishes when one of the following conditions is met
+'Run out of oxygen'
+'Run out of oxygen tanks'
+'All red bubbles collected'
+
+The game is beaten when the player successfully collects all 100 'red bubbles'. 
+Beat all ten levels, each containing 10 red bubbles.
+
+--------------------------------
+
+You can choose when to take a breath from the oxygen.
+The longer you go without taking a breath the more crazy the game becomes, that is, it starts becoming
+shaky, and fady, and music starts going fade, and the controls become hard. 
+When the player takes a deep breath, (the longer they hold down the breath in button the bigger the breath).
+A huge breath that fully refills the players makes them high and the game goes into super clear bullet
+time. That is the bigger the breath the strong the bullet time. Here the music is also changed, its extremely clear. 
+Each time the player takes a breath though, oxygen is lost from the tank. So the player
+has to be sure to be careful how they spend their oxygen.
+
+The player can collect 'bubbles' a bubble is collected by the player spare air tank however
+to equip it means losing the current air tank. The player only has three spare air tanks.
+
+The player has to swim around and collect all ten 'red bubbles' to beat the level before running out 
+of oxygen.
+

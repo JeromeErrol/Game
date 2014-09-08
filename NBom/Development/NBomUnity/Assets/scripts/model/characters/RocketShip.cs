@@ -2,68 +2,55 @@
 using System.Collections;
 using GameUtil2D;
 
-public class RocketShip : MonoBehaviour
+public class RocketShip : ITriggerListener
 {
-		public float boostSpeed;
-		public float burstChargeSpeed = 10f;
-		public FuelTank fuelTank;
-		public float startingCapacity;
-		public float startingFuel;
-		private float burstCharge;
 		public int points;
-	
-		void Start ()
+
+		public Teleport teleport {
+				get {
+						return gameObject.GetComponent<Teleport> ();
+				}
+		}
+
+		public void Die ()
 		{
-				fuelTank = new FuelTank (startingCapacity, startingFuel);
-		points = 0;
-				
+				Destroy (gameObject);
+				print ("Game Over");
+				Application.LoadLevel (Level.instance.levelName);
 		}
 
 		void Update ()
-		{				
-				
-		}
-
-		void OnTriggerEnter2D (Collider2D col)
-		{		
-				GameObject gameObject = col.gameObject;
-				print ("collision occured with: " + gameObject.name);	
-				ICollideable collideable = gameObject.GetComponent<ICollideable> ();
-				if (collideable) {
-						collideable.CollidedWith (this);
+		{
+				FuelTank fuelTank = GetComponent<FuelTank> ();
+				if (fuelTank != null) {
+						if (fuelTank.FuelIsRemaining == false) {
+								Die ();
+						}
 				}
 		}
+
+	void OnTriggerEnter2D (Collider2D collider2D)
+	{		
+		ICollideable collideable = collider2D.gameObject.GetComponent<ICollideable> ();
+		if (collideable) {
+			 collideable.CollidedWith (this);
+		}
+	}
 	
-		public bool BurstCharged {
-				get {
-						return burstCharge > 0;
-				}
+	void OnTriggerExit2D (Collider2D col)
+	{			
+		IOverlap overlap = col.gameObject.GetComponent<IOverlap> ();
+		if (overlap) {
+			overlap.ExitTriggered(this);
 		}
-
-		public void ChargeBurstThruster ()
-		{
-				if (fuelTank.FuelIsRemaining) {
-						burstCharge += burstChargeSpeed;
-						fuelTank.BurnFuel ();
-				}
+	}
+	
+	void OnTriggerStay2D (Collider2D col)
+	{
+		IOverlap overlap = col.gameObject.GetComponent<IOverlap> ();
+		if (overlap) {
+			 overlap.OverlapTriggered (this);
 		}
-
-		public void ReleaseBurstThruster ()
-		{
-				Boost (burstCharge);
-				burstCharge = 0;
-		}
-
-		public void BoostThruster ()
-		{
-				if (fuelTank.FuelIsRemaining) {
-						Boost (boostSpeed);
-						fuelTank.BurnFuel ();
-				}				
-		}
-
-		private void Boost (float amount)
-		{		
-				PhysicsUtil2D.ApplyForwardForce (gameObject.rigidbody2D, amount);
-		}
+	}
 }
+

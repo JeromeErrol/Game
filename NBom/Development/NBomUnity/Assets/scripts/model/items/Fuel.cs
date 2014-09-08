@@ -5,15 +5,11 @@ public class Fuel:ICollectable
 {
 		public float percentFilled;
 
-		public Fuel ()
-		{
-
-		}
-
 		public override void CollectedBy (RocketShip rocketShip)
 		{
-				float amount = rocketShip.fuelTank.Capacity * percentFilled;
-				rocketShip.fuelTank.Refill (amount);
+				FuelTank fuelTank = rocketShip.GetComponent<FuelTank> ();				
+				float amount = fuelTank.Capacity * percentFilled;
+				fuelTank.Refill (amount);
 		}		
 }
 
