@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameUtil2D", "..\..\GameUtil2D\GameUtil2D\GameUtil2D.csproj", "{C1588C32-E536-4DB0-A265-098EF8BC1EE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "..\..\LineRide\Assembly-CSharp.csproj", "{FA794BAA-6F06-01E9-CB8F-7B5E5E33BCC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1588C32-E536-4DB0-A265-098EF8BC1EE2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C1588C32-E536-4DB0-A265-098EF8BC1EE2}.Debug|x86.Build.0 = Debug|Any CPU
+		{C1588C32-E536-4DB0-A265-098EF8BC1EE2}.Release|x86.ActiveCfg = Release|Any CPU
+		{C1588C32-E536-4DB0-A265-098EF8BC1EE2}.Release|x86.Build.0 = Release|Any CPU
+		{FA794BAA-6F06-01E9-CB8F-7B5E5E33BCC1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FA794BAA-6F06-01E9-CB8F-7B5E5E33BCC1}.Debug|x86.Build.0 = Debug|Any CPU
+		{FA794BAA-6F06-01E9-CB8F-7B5E5E33BCC1}.Release|x86.ActiveCfg = Release|Any CPU
+		{FA794BAA-6F06-01E9-CB8F-7B5E5E33BCC1}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = ..\..\GameUtil2D\GameUtil2D\GameUtil2D.csproj
+	EndGlobalSection
+EndGlobal
