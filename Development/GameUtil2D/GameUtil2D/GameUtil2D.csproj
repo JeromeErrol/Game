@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1588C32-E536-4DB0-A265-098EF8BC1EE2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GameUtil2D</RootNamespace>
+    <AssemblyName>GameUtil2D</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="UnityEditor">
+      <HintPath>C:\Program Files %28x86%29\Unity\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files %28x86%29\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:\Program Files %28x86%29\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="GameUtil2D\ai\Patrol.cs" />
+    <Compile Include="GameUtil2D\enum\Orientation.cs" />
+    <Compile Include="GameUtil2D\primitives\Cap.cs" />
+    <Compile Include="GameUtil2D\primitives\Line.cs" />
+    <Compile Include="GameUtil2D\util\EffectUtil2D.cs" />
+    <Compile Include="GameUtil2D\util\MouseUtil2D.cs" />
+    <Compile Include="GameUtil2D\util\GOUtil2D.cs" />
+    <Compile Include="GameUtil2D\util\PhysicsUtil2D.cs" />
+    <Compile Include="GameUtil2D\util\CameraUtil2D.cs" />
+    <Compile Include="GameUtil2D\util\StageUtil2D.cs" />
+    <Compile Include="GameUtil2D\util\MathUtil2D.cs" />
+    <Compile Include="GameUtil2D\util\AssetUtil2D.cs" />
+    <Compile Include="GameUtil2D\util\TextureUtil2D.cs" />
+    <Compile Include="GameUtil2D\util\CameraFollow2D.cs" />
+    <Compile Include="GameUtil2D\ui\StatusBar.cs" />
+    <Compile Include="GameUtil2D\ui\TextBox2D.cs" />
+    <Compile Include="GameUtil2D\testing\TestResult.cs" />
+    <Compile Include="GameUtil2D\testing\TestUtil2D.cs" />
+    <Compile Include="GameUtil2D\testing\snapToGrid.cs">
+      <DependentUpon>TestResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameUtil2D\tools\SnapToGrid.cs" />
+    <Compile Include="GameUtil2D\tools\CustomSnap.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="GameUtil2D\" />
+  </ItemGroup>
+</Project>
