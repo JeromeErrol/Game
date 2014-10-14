@@ -8,28 +8,57 @@ public class Player : MonoBehaviour {
 	public const int StartingLives = 10;
 	public static int livesRemaining = StartingLives;
 
-	void Start () {
 	
+	
+
+	void Start () {
+
 	}
 
-	void Update () {
+	void FixedUpdate () {
 		ReadKeyboardInput ();
+		ReadScreenInput ();
+
+		float leftBound = 1.45f;
+		float rightBound = 28f;
+		if (transform.position.x < leftBound) {
+			Vector3 pos = transform.position;
+			pos.x = leftBound;
+			transform.position = pos;
+		}
+
+		if (transform.position.x > rightBound) {
+			Level.instance.NextLevel();
+		}
+	}
+
+	void ReadScreenInput(){
+		for (var i = 0; i < Input.touchCount; ++i) {
+			Touch touch = Input.GetTouch(i);
+			if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Began) {
+				if (touch.position.x > (Screen.width/2)) {
+					Accelerate();
+				}else{
+					Reverse();
+				}
+			}
+		}
 	}
 
 	void ReadKeyboardInput(){
-		if (Input.GetKey (accelerateKey)) {
+		if (Input.GetKey (accelerateKey)|| Input.GetKey(KeyCode.D)) {
 			Accelerate();
 		}		
-		if (Input.GetKey (breakKey)) {
+		if (Input.GetKey (breakKey)|| Input.GetKey(KeyCode.A)){
 			Reverse();
 		}
 	}
 
 	void Accelerate(){
-		rigidbody2D.AddForce (new Vector2 (acceleration, 0));
+		GetComponent<Velocity> ().AddAcceleration(acceleration);
 	}
 
 	void Reverse(){
-		rigidbody2D.AddForce (new Vector2 (-acceleration, 0));
+		GetComponent<Velocity> ().AddAcceleration(-acceleration);
 	}
 }

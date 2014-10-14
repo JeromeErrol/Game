@@ -9,6 +9,7 @@ public class Level : MonoBehaviour
 		void Start ()
 		{
 				instance = this;
+				Screen.orientation = ScreenOrientation.LandscapeLeft;
 		}
 
 		void Update ()

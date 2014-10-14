@@ -12,43 +12,26 @@ Platform assembly: C:\Users\Jerome\Google Drive\Projects\Game\Games\LineRide\Lin
 Loading C:\Users\Jerome\Google Drive\Projects\Game\Games\LineRide\LineRide_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Jerome\Google Drive\Projects\Game\Games\LineRide\LineRide_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Jerome\Google Drive\Projects\Game\Games\LineRide\LineRide_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.090 seconds
-desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+- Completed reload, in  0.098 seconds
+desktop: 1920x1080 60Hz; virtual: 3286x1302 at -1366,0
 <RI> Initializing input.
 <RI> Input initialized.
-UnloadTime: 0.345530 ms
+UnloadTime: 0.382021 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 185.
-Total: 0.645445 ms (FindLiveObjects: 0.018245 ms CreateObjectMapping: 0.008552 ms MarkObjects: 0.092369 ms  DeleteObjects: 0.003991 ms)
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 221.
+Total: 0.647155 ms (FindLiveObjects: 0.017675 ms CreateObjectMapping: 0.009122 ms MarkObjects: 0.106053 ms  DeleteObjects: 0.004561 ms)
 
-UnloadTime: 0.317591 ms
+UnloadTime: 0.354082 ms
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 186.
-Total: 0.624919 ms (FindLiveObjects: 0.007412 ms CreateObjectMapping: 0.008552 ms MarkObjects: 0.092369 ms  DeleteObjects: 0.002850 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 236.
+Total: 0.600400 ms (FindLiveObjects: 0.010263 ms CreateObjectMapping: 0.009693 ms MarkObjects: 0.101492 ms  DeleteObjects: 0.008552 ms)
 
-UnloadTime: 0.335266 ms
+Platform assembly: C:\Users\Jerome\Google Drive\Projects\Game\Games\LineRide\LineRide_Data\Managed\System.dll (this message is harmless)
+UnloadTime: 0.344959 ms
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 186.
-Total: 0.646015 ms (FindLiveObjects: 0.009693 ms CreateObjectMapping: 0.009122 ms MarkObjects: 0.099781 ms  DeleteObjects: 0.002850 ms)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1789)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1789)
-
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1789)
-
-UnloadTime: 0.301626 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 198.
-Total: 0.606103 ms (FindLiveObjects: 0.009122 ms CreateObjectMapping: 0.008552 ms MarkObjects: 0.095790 ms  DeleteObjects: 0.002850 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 234.
+Total: 0.575882 ms (FindLiveObjects: 0.009122 ms CreateObjectMapping: 0.009122 ms MarkObjects: 0.089518 ms  DeleteObjects: 0.007982 ms)
 

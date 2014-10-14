@@ -47,11 +47,22 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\lib\GameUtil2D\ai\Patrol.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\enum\Orientation.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\ai\PatrolTeleport.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\Instruction.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\Instructions.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\TargetedInstruction.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\events\EventAction.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\events\EventListener.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\events\events\PatrolPointReached.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\instructions\GoToDestination.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\instructions\GoToPosition.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\instructions\Pause.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\instructions\Rotate.cs" />
      <Compile Include="Assets\lib\GameUtil2D\primitives\Cap.cs" />
      <Compile Include="Assets\lib\GameUtil2D\primitives\Line.cs" />
      <Compile Include="Assets\lib\GameUtil2D\testing\TestResult.cs" />
      <Compile Include="Assets\lib\GameUtil2D\testing\TestUtil2D.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\tools\CustomSnap.cs" />
      <Compile Include="Assets\lib\GameUtil2D\ui\StatusBar.cs" />
      <Compile Include="Assets\lib\GameUtil2D\ui\TextBox2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\AssetUtil2D.cs" />
@@ -62,23 +73,27 @@
      <Compile Include="Assets\lib\GameUtil2D\util\MathUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\MouseUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\PhysicsUtil2D.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\util\ScreenUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\StageUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\TextureUtil2D.cs" />
-     <Compile Include="Assets\scripts\Block.cs" />
      <Compile Include="Assets\scripts\Boost.cs" />
-     <Compile Include="Assets\scripts\FinishBlock.cs" />
+     <Compile Include="Assets\scripts\FinishLine.cs" />
      <Compile Include="Assets\scripts\Hud.cs" />
      <Compile Include="Assets\scripts\Level.cs" />
      <Compile Include="Assets\scripts\Obstacle.cs" />
      <Compile Include="Assets\scripts\Player.cs" />
      <Compile Include="Assets\scripts\PlayerInteractive.cs" />
+     <Compile Include="Assets\scripts\Res.cs" />
+     <Compile Include="Assets\scripts\behaviors\ForwardThrust.cs" />
+     <Compile Include="Assets\scripts\behaviors\Spin.cs" />
+     <Compile Include="Assets\scripts\effects\RainDrop.cs" />
+     <Compile Include="Assets\scripts\effects\RainGenerator.cs" />
      <Compile Include="Assets\scripts\items\Collectable.cs" />
      <Compile Include="Assets\scripts\items\SmallPill.cs" />
+     <Compile Include="Assets\scripts\physics\Velocity.cs" />
+     <Compile Include="Assets\scripts\scenes\scene05\OpenCloseDoor.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="GameUtil2D">
- <HintPath>C:/Users/Jerome/Google Drive/Projects/Game/Development/LineRide/Assets/lib/GameUtil2D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
