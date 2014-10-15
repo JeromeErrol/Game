@@ -17,6 +17,20 @@ public class Level : MonoBehaviour
 				instance = this;
 		}
 
+		public static bool Paused {
+				get {
+						return Time.timeScale == 0;
+				}set {
+					if(value){
+							Time.timeScale = 0;
+						}else{
+							Time.timeScale = 1;
+						}
+				}
+						
+			
+		}
+
 		public string LevelName {
 				get {
 						return "level" + level;
@@ -30,8 +44,7 @@ public class Level : MonoBehaviour
 						Level.RestartGame ();
 				} else {
 						Level.instance.Restart ();
-				}
-			
+				}			
 		}
 	
 		public void Restart ()

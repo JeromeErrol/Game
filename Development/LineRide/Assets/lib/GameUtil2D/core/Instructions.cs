@@ -7,14 +7,7 @@ public class Instructions : Instruction
 		public List<Instruction> instructions = new List<Instruction> ();
 		private int _currentIndex = 0;
 		public bool loop;
-		public bool runAutomatically = true;
-
-		void Update ()
-		{
-				if (runAutomatically) {
-						Run ();	
-				}
-		}
+		
 
 		public Instruction CurrentInstruction {
 				get {
@@ -25,6 +18,12 @@ public class Instructions : Instruction
 						}					
 				}
 		}
+
+	public override void Clean ()
+	{
+		instructions.RemoveAll(item => item == null);			
+	}
+	
 
 		public void NextInstruction ()
 		{		
@@ -39,6 +38,7 @@ public class Instructions : Instruction
 
 		public override void Begin ()
 		{
+				
 				_currentIndex = 0;
 				for (int i = 0; i < instructions.Count; i++) {
 						instructions [i].Begin ();				
@@ -47,12 +47,13 @@ public class Instructions : Instruction
 
 		public override void Run ()
 		{
-				if (CurrentInstruction.IsFinished ()) {
+				if (CurrentInstruction == null || CurrentInstruction.IsFinished ()) {
 						NextInstruction ();
 				} else {
 						CurrentInstruction.Run ();
 				}
 		}
+
 	
 		public override bool IsFinished ()
 		{

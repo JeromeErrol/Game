@@ -10,5 +10,14 @@ public abstract class TargetedInstruction : Instruction
 			target = gameObject;
 		}
 	}
+
+	public GameObject Target{
+		get{
+			if(target == null){
+				target = gameObject;
+			}
+			return target;
+		}
+	}
 }
 

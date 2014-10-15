@@ -22,7 +22,7 @@ public class Rotate : TargetedInstruction
 	public override void Run ()
 	{
 		_currentFrame++;
-		target.transform.Rotate (new Vector3(0, 0, RotationPerFrame));
+		Target.transform.Rotate (new Vector3(0, 0, RotationPerFrame));
 	}
 
 	public override void Begin ()

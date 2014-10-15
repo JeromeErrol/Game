@@ -1,105 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-	<ProductVersion>10.0.20506</ProductVersion>
-	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{FA794BAA-6F06-01E9-CB8F-7B5E5E33BCC1}</ProjectGuid>
-	<OutputType>Library</OutputType>
-	<AppDesignerFolder>Properties</AppDesignerFolder>
-	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
-	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-	<FileAlignment>512</FileAlignment>
-	<BaseDirectory>Assets</BaseDirectory>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA794BAA-6F06-01E9-CB8F-7B5E5E33BCC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-	<DebugSymbols>true</DebugSymbols>
-	<DebugType>full</DebugType>
-	<Optimize>false</Optimize>
-	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
-	<ErrorReport>prompt</ErrorReport>
-	<WarningLevel>4</WarningLevel>
-	<NoWarn>0169</NoWarn>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-	<DebugType>pdbonly</DebugType>
-	<Optimize>true</Optimize>
-	<OutputPath>Temp\bin\Release\</OutputPath>
-	<DefineConstants>TRACE</DefineConstants>
-	<ErrorReport>prompt</ErrorReport>
-	<WarningLevel>4</WarningLevel>
-	<NoWarn>0169</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-	<Reference Include="System" />
-    <Reference Include="System.XML" />
-	<Reference Include="System.Core" />
-	<Reference Include="System.Xml.Linq" />
-	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-	</Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files %28x86%29\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:\Program Files %28x86%29\Unity\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\lib\GameUtil2D\ai\Patrol.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\Condition.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\IfThen.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\Instruction.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\Instructions.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\SimpleCondition.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\TargetedCondition.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\TargetedInstruction.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\conditions\IsAbove.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\conditions\IsBelow.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToDestination.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToPosition.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\instructions\Pause.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\instructions\Rotate.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\instructions\SetPosition.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\instructions\Translate.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\primitives\Cap.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\primitives\Line.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\tools\CustomSnap.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\ui\StatusBar.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\ui\TextBox2D.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\util\AssetUtil2D.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\util\CameraFollow2D.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\util\CameraUtil2D.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\util\EffectUtil2D.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\util\GOUtil2D.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\util\MathUtil2D.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\util\MouseUtil2D.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\util\PhysicsUtil2D.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\util\ScreenUtil2D.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\util\StageUtil2D.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\util\TextureUtil2D.cs" />
-     <Compile Include="Assets\scripts\Boost.cs" />
-     <Compile Include="Assets\scripts\FinishLine.cs" />
-     <Compile Include="Assets\scripts\GameScreen.cs" />
-     <Compile Include="Assets\scripts\Hud.cs" />
-     <Compile Include="Assets\scripts\Level.cs" />
-     <Compile Include="Assets\scripts\Obstacle.cs" />
-     <Compile Include="Assets\scripts\Player.cs" />
-     <Compile Include="Assets\scripts\PlayerInteractive.cs" />
-     <Compile Include="Assets\scripts\Res.cs" />
-     <Compile Include="Assets\scripts\behaviors\ForwardThrust.cs" />
-     <Compile Include="Assets\scripts\behaviors\ScreenBound.cs" />
-     <Compile Include="Assets\scripts\behaviors\Spin.cs" />
-     <Compile Include="Assets\scripts\effects\RainDrop.cs" />
-     <Compile Include="Assets\scripts\effects\RainGenerator.cs" />
-     <Compile Include="Assets\scripts\items\Collectable.cs" />
-     <Compile Include="Assets\scripts\items\HoverButton.cs" />
-     <Compile Include="Assets\scripts\items\SmallPill.cs" />
-     <Compile Include="Assets\scripts\menu\MainMenu.cs" />
-     <Compile Include="Assets\scripts\physics\Velocity.cs" />
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\lib\GameUtil2D\ai\Patrol.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\Condition.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\IfThen.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\Instruction.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\Instructions.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\TargetedCondition.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\TargetedInstruction.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\conditions\IsAbove.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\conditions\IsBelow.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\conditions\IsLeftOf.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\conditions\IsRightOf.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToDestination.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToPosition.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\instructions\Pause.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\instructions\Rotate.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\instructions\Translate.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetPosition.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetRotation.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\primitives\Cap.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\primitives\Line.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\tools\CustomSnap.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\ui\StatusBar.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\ui\TextBox2D.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\util\AssetUtil2D.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\util\CameraFollow2D.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\util\CameraUtil2D.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\util\EffectUtil2D.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\util\GOUtil2D.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\util\MathUtil2D.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\util\MouseUtil2D.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\util\PhysicsUtil2D.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\util\ScreenUtil2D.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\util\StageUtil2D.cs" />
+    <Compile Include="Assets\lib\GameUtil2D\util\TextureUtil2D.cs" />
+    <Compile Include="Assets\scripts\Boost.cs" />
+    <Compile Include="Assets\scripts\FinishLine.cs" />
+    <Compile Include="Assets\scripts\GameScreen.cs" />
+    <Compile Include="Assets\scripts\Hud.cs" />
+    <Compile Include="Assets\scripts\Level.cs" />
+    <Compile Include="Assets\scripts\Obstacle.cs" />
+    <Compile Include="Assets\scripts\Player.cs" />
+    <Compile Include="Assets\scripts\PlayerInteractive.cs" />
+    <Compile Include="Assets\scripts\Res.cs" />
+    <Compile Include="Assets\scripts\behaviors\ForwardThrust.cs" />
+    <Compile Include="Assets\scripts\behaviors\ScreenBound.cs" />
+    <Compile Include="Assets\scripts\behaviors\Spin.cs" />
+    <Compile Include="Assets\scripts\effects\RainDrop.cs" />
+    <Compile Include="Assets\scripts\effects\RainGenerator.cs" />
+    <Compile Include="Assets\scripts\items\Collectable.cs" />
+    <Compile Include="Assets\scripts\items\HoverButton.cs" />
+    <Compile Include="Assets\scripts\items\SmallPill.cs" />
+    <Compile Include="Assets\scripts\menu\MainMenu.cs" />
+    <Compile Include="Assets\scripts\physics\Velocity.cs" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:\Program Files %28x86%29\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\UnityEngine.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -109,5 +110,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>
