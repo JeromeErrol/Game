@@ -4,7 +4,7 @@ using System.Collections;
 public class Collectable : PlayerInteractive
 {
 
-		public override void CollisionWithPlayer (Player player)
+		public override void PlayerEnter (Player player)
 		{
 			CollectedBy (player);
 			GameObject.Destroy (gameObject);

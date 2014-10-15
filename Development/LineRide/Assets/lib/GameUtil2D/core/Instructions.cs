@@ -19,38 +19,38 @@ public class Instructions : Instruction
 		public Instruction CurrentInstruction {
 				get {
 						if (_currentIndex < instructions.Count) {
-							return instructions [_currentIndex];
+								return instructions [_currentIndex];
 						} else {
-							return null;
+								return null;
 						}					
 				}
 		}
 
 		public void NextInstruction ()
 		{		
-			_currentIndex++;
-			if (loop) {
-				_currentIndex = _currentIndex % instructions.Count;	
-			}
-			if (CurrentInstruction != null) {
-				CurrentInstruction.Begin();
-			}
+				_currentIndex++;
+				if (loop) {
+						_currentIndex = _currentIndex % instructions.Count;	
+				}
+				if (CurrentInstruction != null) {
+						CurrentInstruction.Begin ();
+				}
 		}
 
 		public override void Begin ()
 		{
 				_currentIndex = 0;
 				for (int i = 0; i < instructions.Count; i++) {
-					instructions[i].Begin();				
+						instructions [i].Begin ();				
 				}
 		}
 
 		public override void Run ()
 		{
 				if (CurrentInstruction.IsFinished ()) {
-					NextInstruction ();
+						NextInstruction ();
 				} else {
-					CurrentInstruction.Run ();
+						CurrentInstruction.Run ();
 				}
 		}
 	

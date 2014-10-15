@@ -16,6 +16,12 @@ public class Velocity : MonoBehaviour
 			acceleration += amount;
 		}
 
+		public float Vel{
+			get{
+				return velocity;
+			}
+		}
+
 		void FixedUpdate ()
 		{
 				velocity += acceleration;

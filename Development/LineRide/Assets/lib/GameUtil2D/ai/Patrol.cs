@@ -27,23 +27,10 @@ public class Patrol : MonoBehaviour
 		void Update ()
 		{
 				RemoveNullObjectsFromList ();
-
-				if (target.GetComponent<PatrolTeleport> () != null) {
-						transform.position = target.transform.position;
-						currentIndex++;
-				} 
+				
 				float distance = Vector3.Distance (rigidbody2D.position, targetPosition);
 		
-				if (distance <= targetRadius) {
-						PatrolPointReached[] patrolPointListeners = GetComponents<PatrolPointReached> ();
-						for (int i = 0; i < patrolPointListeners.Length; i++) {						
-
-							PatrolPointReached patrolReached = patrolPointListeners[i];
-				
-							if(target == patrolReached.patrolPoint){
-								patrolReached.Fire();
-							}
-						}
+				if (distance <= targetRadius) {						
 						currentIndex++;
 						pauseTimeRemaining = pauseTime;
 				}

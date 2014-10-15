@@ -1,39 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\lib\GameUtil2D\instructions\Pause.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\menu\MainMenu.cs">
     <Files>
-      <File FileName="Assets\scripts\Boost.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\util\StageUtil2D.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\LineRide\Assets\scripts\effects\RainGenerator.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Res.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\effects\RainDrop.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\ai\Patrol.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\util\ScreenUtil2D.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Obstacle.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\FinishLine.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\behaviors\Spin.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\behaviors\ForwardThrust.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\tools\CustomSnap.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameUtil2D\core\instructions\SetPosition.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameUtil2D\core\conditions\IsBelow.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameUtil2D\core\conditions\IsAbove.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameUtil2D\core\IfThen.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Level.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\items\HoverButton.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\physics\Velocity.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\ai\PatrolTeleport.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\events\events\PatrolPointReached.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\scenes\scene05\OpenCloseDoor.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\util\GOUtil2D.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\events\EventListener.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\events\EventAction.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\instructions\GoToDestination.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\instructions\GoToPosition.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\Instruction.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\Instructions.cs" Line="31" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\instructions\Rotate.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\instructions\Pause.cs" Line="9" Column="8" />
-      <File FileName="Assets\lib\GameUtil2D\core\TargetedInstruction.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameUtil2D\core\Instructions.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Level.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Hud.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\menu\MainMenu.cs" Line="23" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Jerome\Google Drive\Projects\Game\Development\LineRide\Assets\scripts\menu\MainMenu.cs" line="5" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="Assets\lib\GameUtil2D\core\Instructions.cs" line="21" offsetX="405" offsetY="340" expression="instructions" liveUpdate="False" />

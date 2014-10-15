@@ -27,7 +27,7 @@ public class Level : MonoBehaviour
 		{
 				Player.livesRemaining--;
 				if (Player.livesRemaining < 0) {
-						Level.instance.RestartGame ();
+						Level.RestartGame ();
 				} else {
 						Level.instance.Restart ();
 				}
@@ -44,7 +44,7 @@ public class Level : MonoBehaviour
 				Application.LoadLevel ("level" + (level + 1));
 		}
 
-		public void RestartGame ()
+		public static void RestartGame ()
 		{
 				Application.LoadLevel ("level1");
 				Player.livesRemaining = Player.StartingLives;

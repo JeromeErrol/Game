@@ -10,6 +10,11 @@ public class Hud : MonoBehaviour
 	void OnGUI(){
 		GUI.Box (new Rect (x, y, 100f, 25f), "Level:" + Level.instance.level);
 		GUI.Box (new Rect (x, y + 25, 100f, 25f), "Lives:" + Player.livesRemaining);
+
+
+		if (GUI.Button (new Rect (550, y, 100, 50), "Menu")) {
+
+		}
 	}
 }
 

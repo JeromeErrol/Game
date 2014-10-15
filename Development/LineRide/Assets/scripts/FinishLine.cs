@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FinishLine : PlayerInteractive
 {
-	public override void CollisionWithPlayer (Player player)
+	public override void PlayerEnter (Player player)
 	{
 		Level.instance.NextLevel ();
 	}
