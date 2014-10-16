@@ -53,7 +53,6 @@ public class Instructions : Instruction
 						CurrentInstruction.Run ();
 				}
 		}
-
 	
 		public override bool IsFinished ()
 		{

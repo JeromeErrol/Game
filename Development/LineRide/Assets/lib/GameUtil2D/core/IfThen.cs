@@ -7,7 +7,6 @@ public class IfThen : MonoBehaviour
 		public List<Condition> conditions = new List<Condition> ();
 		public List<Instruction> instructions = new List<Instruction> ();
 
-
 		void Start(){
 			conditions.RemoveAll(item => item == null);
 			instructions.RemoveAll(item => item == null);			
@@ -18,9 +17,7 @@ public class IfThen : MonoBehaviour
 				if (AllConditionsMet) {
 					RunInstructions();
 				}
-		}
-
-		
+		}		
 
 		private bool AllConditionsMet {
 				get {

@@ -47,25 +47,35 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\lib\GameUtil2D\ai\Patrol.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\Condition.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\constraints\ConstrainAngle.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\IfThen.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\Instruction.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\Instructions.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\TargetedCondition.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\TargetedInstruction.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\Thread.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\conditions\IsAbove.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\conditions\IsBelow.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\conditions\IsLeftOf.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\conditions\IsRightOf.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\instructions\Destroy.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToDestination.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToPosition.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\instructions\LoadScene.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Pause.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Rotate.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Translate.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetPosition.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetRotation.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\Setter.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\primitives\Code.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\primitives\Condition.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\primitives\Function.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\primitives\If.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\primitives\Process.cs" />
      <Compile Include="Assets\lib\GameUtil2D\primitives\Cap.cs" />
      <Compile Include="Assets\lib\GameUtil2D\primitives\Line.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\primitives\SoundEffect.cs" />
      <Compile Include="Assets\lib\GameUtil2D\tools\CustomSnap.cs" />
      <Compile Include="Assets\lib\GameUtil2D\ui\StatusBar.cs" />
      <Compile Include="Assets\lib\GameUtil2D\ui\TextBox2D.cs" />
@@ -80,8 +90,6 @@
      <Compile Include="Assets\lib\GameUtil2D\util\ScreenUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\StageUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\TextureUtil2D.cs" />
-     <Compile Include="Assets\scripts\Boost.cs" />
-     <Compile Include="Assets\scripts\FinishLine.cs" />
      <Compile Include="Assets\scripts\GameScreen.cs" />
      <Compile Include="Assets\scripts\Hud.cs" />
      <Compile Include="Assets\scripts\Level.cs" />
@@ -96,9 +104,15 @@
      <Compile Include="Assets\scripts\effects\RainGenerator.cs" />
      <Compile Include="Assets\scripts\items\Collectable.cs" />
      <Compile Include="Assets\scripts\items\HoverButton.cs" />
+     <Compile Include="Assets\scripts\items\PressButton.cs" />
      <Compile Include="Assets\scripts\items\SmallPill.cs" />
+     <Compile Include="Assets\scripts\menu\AlphaFade.cs" />
+     <Compile Include="Assets\scripts\menu\DisplayLevel.cs" />
+     <Compile Include="Assets\scripts\menu\FadeAGUI.cs" />
      <Compile Include="Assets\scripts\menu\MainMenu.cs" />
+     <Compile Include="Assets\scripts\menu\WhiteSheet.cs" />
      <Compile Include="Assets\scripts\physics\Velocity.cs" />
+     <None Include="Assets\Todo.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

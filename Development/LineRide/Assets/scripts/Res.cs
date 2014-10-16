@@ -9,7 +9,7 @@ public class Res
 	private const String environment_dir = Res.texture_dir + "environment/";
 
 	public static Sprite raindrop = LoadEnvironment("raindrop.png");
-
+	//public static Sprite 
 
 	//public static void Load(){
 	////	raindrop = Resources.LoadAssetAtPath<Sprite> ("raindrop.png");

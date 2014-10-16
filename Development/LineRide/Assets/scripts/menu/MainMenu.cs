@@ -37,6 +37,7 @@ public class MainMenu : MonoBehaviour
 								Level.RestartGame ();
 								Close ();
 						}
+
 						if (AddButton ("Exit")) {
 								Application.Quit ();
 						}

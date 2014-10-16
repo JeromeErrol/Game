@@ -5,11 +5,8 @@ public class Player : MonoBehaviour {
 	public KeyCode accelerateKey = KeyCode.RightArrow;
 	public KeyCode breakKey = KeyCode.LeftArrow;
 	public float acceleration;
-	public const int StartingLives = 10;
-	public static int livesRemaining = StartingLives;
-
-	
-	
+	public static int currentLevel = 0;
+		
 
 	void Start () {
 
