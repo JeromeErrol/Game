@@ -46,8 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\lib\GameUtil2D\editor\CustomSnap.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\editor\SnapToGrid.cs" />
+     <Compile Include="Assets\Editor\EditorUtil2D.cs" />
+     <None Include="Assets\Todo.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

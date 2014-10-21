@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -48,31 +48,37 @@
   <ItemGroup>
      <Compile Include="Assets\lib\GameUtil2D\ai\Patrol.cs" />
      <Compile Include="Assets\lib\GameUtil2D\constraints\ConstrainAngle.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\Condition.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\For.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\IfThen.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\Instruction.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\InstructionRunOnce.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\InstructionSingleInstance.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\Instructions.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\TargetedCondition.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\TargetedInstruction.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\Thread.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\conditions\InProgress.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\conditions\InstructionFinished.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\conditions\IsAbove.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\conditions\IsBelow.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\conditions\IsLeftOf.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\conditions\IsRightOf.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\debug\Validtor.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\extensions\GameObjectEntensions.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\extensions\MonoBehaviorExtensions.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Destroy.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToDestination.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToPosition.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\LoadScene.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Pause.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\instructions\PlaySound.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Rotate.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\instructions\Rotation.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Translate.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetPosition.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetRotation.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\Setter.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\primitives\Code.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\primitives\Condition.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\primitives\Function.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\primitives\If.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\primitives\Process.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\input\SmoothKeyboard.cs" />
      <Compile Include="Assets\lib\GameUtil2D\primitives\Cap.cs" />
      <Compile Include="Assets\lib\GameUtil2D\primitives\Line.cs" />
      <Compile Include="Assets\lib\GameUtil2D\primitives\SoundEffect.cs" />
@@ -97,11 +103,17 @@
      <Compile Include="Assets\scripts\Player.cs" />
      <Compile Include="Assets\scripts\PlayerInteractive.cs" />
      <Compile Include="Assets\scripts\Res.cs" />
+     <Compile Include="Assets\scripts\behaviors\ActivateOnCollision.cs" />
+     <Compile Include="Assets\scripts\behaviors\DeactivateOnCollision.cs" />
+     <Compile Include="Assets\scripts\behaviors\DestroyOnCollision.cs" />
      <Compile Include="Assets\scripts\behaviors\ForwardThrust.cs" />
      <Compile Include="Assets\scripts\behaviors\ScreenBound.cs" />
      <Compile Include="Assets\scripts\behaviors\Spin.cs" />
      <Compile Include="Assets\scripts\effects\RainDrop.cs" />
      <Compile Include="Assets\scripts\effects\RainGenerator.cs" />
+     <Compile Include="Assets\scripts\effects\WhiteScreen.cs" />
+     <Compile Include="Assets\scripts\environment\AutomaticDoor.cs" />
+     <Compile Include="Assets\scripts\instructions\OpenDoor.cs" />
      <Compile Include="Assets\scripts\items\Collectable.cs" />
      <Compile Include="Assets\scripts\items\HoverButton.cs" />
      <Compile Include="Assets\scripts\items\PressButton.cs" />
@@ -111,7 +123,11 @@
      <Compile Include="Assets\scripts\menu\FadeAGUI.cs" />
      <Compile Include="Assets\scripts\menu\MainMenu.cs" />
      <Compile Include="Assets\scripts\menu\WhiteSheet.cs" />
+     <Compile Include="Assets\scripts\particles\Dust.cs" />
+     <Compile Include="Assets\scripts\particles\SpeedLine.cs" />
+     <Compile Include="Assets\scripts\physics\Smoothen.cs" />
      <Compile Include="Assets\scripts\physics\Velocity.cs" />
+     <Compile Include="Assets\scripts\scenehelper\DeactivateSceneObjects.cs" />
      <None Include="Assets\Todo.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>

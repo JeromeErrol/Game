@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using GameUtil2D;
 
 public class Level : MonoBehaviour
 {
@@ -7,26 +8,37 @@ public class Level : MonoBehaviour
 		public int level;
 		public int startingLives;
 		private static int livesRemaining;
-		public AudioClip deathSoundEffect;
-		public AudioClip levelCompletedSound;
+		public Color backgroundColor;
 
 		void Start ()
 		{
 				instance = this;
 				Screen.orientation = ScreenOrientation.LandscapeLeft;
-				
 				if (Player.currentLevel != level) {						
 						NewLevelStarted ();
 				} else {					
 						LevelRepeated ();
-				}
-				
+				}				
+		}
+
+		void NewGameStart(){
+			audio.PlayOneShot (Res.StartNewGameSound);
 		}
 
 		void LevelRepeated ()
 		{			// Hide title 
+				FlashWhiteScreen ();
 				GetComponent<FadeAGUI> ().text = "Lives: " + livesRemaining;
-				audio.PlayOneShot (deathSoundEffect);
+				audio.PlayOneShot (Res.LoseLifeSound);
+		}
+
+		void FlashWhiteScreen(){
+			GameObject gameObject = StageUtil2D.AddGameObject (Res.Pixel, new Vector3 (14.91f, 0, 0));
+			gameObject.transform.localScale = new Vector3 (2900, 1750, 1);
+
+			AlphaFade alphaFade = gameObject.AddComponent<AlphaFade> ();
+			alphaFade.fadeSpeed = -0.1f;
+			alphaFade.alpha = 1;
 		}
 
 		void NewLevelStarted ()
@@ -37,17 +49,15 @@ public class Level : MonoBehaviour
 				
 
 				if (level > 1) {
-						audio.PlayOneShot (levelCompletedSound);
+						audio.PlayOneShot (Res.LevelCompletedSound);
+				} else {
+						NewGameStart();
 				}
-	}
+		}
 	
 		void Update ()
 		{
 				instance = this;
-
-				if (Input.GetKeyDown (KeyCode.T)) {
-						audio.PlayOneShot (deathSoundEffect);
-				}
 		}
 
 		public static bool Paused {
@@ -60,8 +70,6 @@ public class Level : MonoBehaviour
 								Time.timeScale = 1;
 						}
 				}
-						
-			
 		}
 
 		public string LevelName {
@@ -72,7 +80,6 @@ public class Level : MonoBehaviour
 
 		public void LoseLife ()
 		{
-			audio.PlayOneShot (deathSoundEffect);
 			livesRemaining--;
 				if (livesRemaining < 0) {
 						Level.RestartGame ();

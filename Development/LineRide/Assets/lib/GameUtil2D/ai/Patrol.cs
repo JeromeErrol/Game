@@ -8,7 +8,6 @@ public class Patrol : MonoBehaviour
 		public float movementSpeed = 0.1f;
 		private int _currentIndex = 0;
 		public int startingIndex;
-		public float targetRadius = 0.1f;
 		public float pauseTime;
 		private float pauseTimeRemaining;
 		public bool spinOnPause = true;
@@ -30,7 +29,7 @@ public class Patrol : MonoBehaviour
 				
 				float distance = Vector3.Distance (rigidbody2D.position, targetPosition);
 		
-				if (distance <= targetRadius) {						
+			if (distance <= movementSpeed + 0.01f) {						
 						currentIndex++;
 						pauseTimeRemaining = pauseTime;
 				}
@@ -84,8 +83,4 @@ public class Patrol : MonoBehaviour
 						_currentIndex = (int)Mathf.Max ((value) % patrolPoints.Count, 0);
 				}
 		}
-	
-	
-	
-	
 }

@@ -7,7 +7,6 @@ public class GoToPosition : TargetedInstruction
 
 	public override void Run ()
 	{
-
 	}
 
 	public override bool IsFinished ()
