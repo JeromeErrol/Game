@@ -24,7 +24,11 @@ public class GoToDestination : TargetedInstruction
 
 	public override bool IsFinished ()
 	{
-		return Vector3.Distance (Target.transform.position, destination.transform.position) <= (movementSpeed + 0.0001f);		
+		float dist = Vector3.Distance (Target.transform.position, destination.transform.position);
+		if(dist <= (movementSpeed + 0.1f)){
+			print ("hi");
+		}
+		return dist <= (movementSpeed + 0.0001f);		
 	}
 }
 

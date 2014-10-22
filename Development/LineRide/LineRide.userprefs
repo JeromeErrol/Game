@@ -1,42 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\scenehelper\DeactivateSceneObjects.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\lib\GameUtil2D\core\RunAll.cs">
     <Files>
-      <File FileName="Assets\lib\GameUtil2D\core\InstructionSingleInstance.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\items\PressButton.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\LineRide\Assets\lib\GameUtil2D\core\TargetedCondition.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\Condition.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\InstructionRunOnce.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\Instruction.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\GoToDestination.cs" Line="1" Column="1" />
-      <File FileName="Assets\Editor\EditorUtil2D.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\debug\Validtor.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\For.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\Instructions.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\Translate.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\IfThen.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\Rotation.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\Rotate.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\TargetedInstruction.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\conditions\InstructionFinished.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Res.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Player.cs" Line="76" Column="39" />
-      <File FileName="Assets\scripts\particles\Dust.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\util\StageUtil2D.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\particles\SpeedLine.cs" Line="26" Column="3" />
-      <File FileName="Assets\lib\GameUtil2D\core\extensions\GameObjectEntensions.cs" Line="48" Column="2" />
+      <File FileName="Assets\lib\GameUtil2D\core\TargetedInstruction.cs" Line="13" Column="2" />
+      <File FileName="Assets\lib\GameUtil2D\core\instructions\GoToDestination.cs" Line="28" Column="1" />
       <File FileName="Assets\lib\GameUtil2D\core\instructions\GoToPosition.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\extensions\MonoBehaviorExtensions.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\PlayerInteractive.cs" Line="4" Column="1" />
-      <File FileName="Assets\scripts\physics\Velocity.cs" Line="32" Column="27" />
-      <File FileName="Assets\scripts\physics\Smoothen.cs" Line="21" Column="4" />
-      <File FileName="Assets\lib\GameUtil2D\input\SmoothKeyboard.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\ai\Patrol.cs" Line="44" Column="8" />
-      <File FileName="Assets\scripts\Obstacle.cs" Line="9" Column="4" />
-      <File FileName="Assets\scripts\behaviors\DestroyOnCollision.cs" Line="8" Column="1" />
-      <File FileName="Assets\scripts\behaviors\ActivateOnCollision.cs" Line="9" Column="1" />
-      <File FileName="Assets\scripts\behaviors\DeactivateOnCollision.cs" Line="12" Column="1" />
-      <File FileName="Assets\scripts\scenehelper\DeactivateSceneObjects.cs" Line="16" Column="4" />
+      <File FileName="Assets\lib\GameUtil2D\core\RunAll.cs" Line="15" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -40,6 +40,7 @@ public class Instructions : Instruction
 		{
 				
 				_currentIndex = 0;
+				Clean ();
 				for (int i = 0; i < instructions.Count; i++) {
 						instructions [i].Begin ();				
 				}

@@ -55,6 +55,7 @@
      <Compile Include="Assets\lib\GameUtil2D\core\InstructionRunOnce.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\InstructionSingleInstance.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\Instructions.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\RunAll.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\TargetedCondition.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\TargetedInstruction.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\conditions\InProgress.cs" />
