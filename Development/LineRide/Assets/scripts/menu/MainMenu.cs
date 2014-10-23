@@ -33,7 +33,12 @@ public class MainMenu : MonoBehaviour
 								}
 						}
 						
-						if (AddButton ("New Game")) {
+						if (AddButton ("New Adventure")) {
+								Level.RestartGame ();
+								Close ();
+						}
+
+						if (AddButton ("New Block Run")) {
 								Level.RestartGame ();
 								Close ();
 						}
