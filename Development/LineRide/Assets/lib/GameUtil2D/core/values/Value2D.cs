@@ -1,19 +1,19 @@
 using UnityEngine;
 using System.Collections;
 
-public class Value2D : MonoBehaviour
+public abstract class Value2D : MonoBehaviour
 {
+	public GameObject target;
+		
+	public GameObject Target{
+		get{
+			if(target == null){
+				target = gameObject;
+			}
+			return target;
+		}
+	}
 
-		// Use this for initialization
-		void Start ()
-		{
-	
-		}
-	
-		// Update is called once per frame
-		void Update ()
-		{
-	
-		}
+	public abstract float Value{ get; set;}
 }
 

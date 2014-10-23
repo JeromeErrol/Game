@@ -65,5 +65,24 @@ public static class GameObjectEntensions
 		{
 				return gameobject.transform.position.x + gameobject.GetComponent<SpriteRenderer> ().bounds.min.x;
 		}
+
+		public static float Rotation (this GameObject gameobject)
+		{
+				return gameobject.transform.eulerAngles.z;
+		}
+
+		public static void Rotation (this GameObject gameobject, float value)
+		{
+				Vector3 e = gameobject.transform.eulerAngles;
+				e.z = value;
+				gameobject.transform.eulerAngles = e;
+		}
+
+		public static void RotateBy (this GameObject gameobject, float value)
+		{
+				Vector3 e = gameobject.transform.eulerAngles;
+				e.z += value;
+				gameobject.transform.eulerAngles = e;
+		}
 }
 

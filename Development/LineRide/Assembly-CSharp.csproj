@@ -79,6 +79,10 @@
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetPosition.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetRotation.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\Setter.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\values\BlendTweens.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\values\RotationEValue.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\values\Tween.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\values\Value2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\input\SmoothKeyboard.cs" />
      <Compile Include="Assets\lib\GameUtil2D\primitives\Cap.cs" />
      <Compile Include="Assets\lib\GameUtil2D\primitives\Line.cs" />

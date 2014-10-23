@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class RotationQValue : Value2D
+public class RotationEValue : Value2D
 {
 	public override float Value {
 		get {
