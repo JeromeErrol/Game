@@ -1,25 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Level.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\lib\GameUtil2D\core\Instruction.cs">
     <Files>
-      <File FileName="Assets\lib\GameUtil2D\core\TargetedInstruction.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\GoToDestination.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\GoToPosition.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\RunAll.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Level.cs" Line="77" Column="23" />
-      <File FileName="Assets\lib\GameUtil2D\core\values\Value2D.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\values\RotationEValue.cs" Line="1" Column="1" />
       <File FileName="Assets\lib\GameUtil2D\core\values\Tween.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\values\BlendTweens.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Hud.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\menu\MainMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\menu\FadeAGUI.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\menu\AlphaFade.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\InstructionSingleInstance.cs" Line="6" Column="39" />
-      <File FileName="Assets\lib\GameUtil2D\core\InstructionRunOnce.cs" Line="21" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\extensions\GameObjectEntensions.cs" Line="84" Column="18" />
-      <File FileName="Assets\lib\GameUtil2D\core\extensions\MonoBehaviorExtensions.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameUtil2D\core\instructions\animate\Animate.cs" Line="26" Column="4" />
+      <File FileName="Assets\lib\GameUtil2D\util\PhysicsUtil2D.cs" Line="43" Column="5" />
+      <File FileName="Assets\lib\GameUtil2D\core\instructions\animate\AnimateRotation.cs" Line="9" Column="4" />
+      <File FileName="Assets\lib\GameUtil2D\core\Instruction.cs" Line="12" Column="4" />
+      <File FileName="Assets\lib\GameUtil2D\core\Instructions.cs" Line="53" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

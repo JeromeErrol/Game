@@ -7,7 +7,6 @@ public class Instructions : Instruction
 		public List<Instruction> instructions = new List<Instruction> ();
 		private int _currentIndex = 0;
 		public bool loop;
-		
 
 		public Instruction CurrentInstruction {
 				get {
@@ -19,11 +18,10 @@ public class Instructions : Instruction
 				}
 		}
 
-	public override void Clean ()
-	{
-		instructions.RemoveAll(item => item == null);			
-	}
-	
+		public override void Clean ()
+		{
+				instructions.RemoveAll (item => item == null);			
+		}
 
 		public void NextInstruction ()
 		{		
@@ -37,8 +35,7 @@ public class Instructions : Instruction
 		}
 
 		public override void Begin ()
-		{
-				
+		{				
 				_currentIndex = 0;
 				Clean ();
 				for (int i = 0; i < instructions.Count; i++) {

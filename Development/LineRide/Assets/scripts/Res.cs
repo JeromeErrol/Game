@@ -10,8 +10,10 @@ public class Res
 	private const String environment_dir = Res.texture_dir + "environment/";
 	public static Sprite raindrop = LoadEnvironment("raindrop.png");
 
+	private static Sprite circle;
 	private static Sprite square;
 	private static Sprite pixel;
+	private static Sprite particle;
 
 	// Audio
 	private static AudioClip blop;
@@ -67,9 +69,27 @@ public class Res
 	public static Sprite Square{
 		get{
 			if (square == null) {
-				square = LoadTexture("texture_pack/square_512.png");
+				square = LoadTexture("texture_pack/512x512/square_512.png");
 			}
 			return square;
+		}
+	}
+
+	public static Sprite Particle{
+		get{
+			if (particle == null) {
+				particle = LoadTexture("texture_pack/512x512/particle_512.png");
+			}
+			return particle;
+		}
+	}
+
+	public static Sprite Circle{
+		get{
+			if (circle == null) {
+				circle = LoadTexture("texture_pack/512x512/circle_512.png");
+			}
+			return circle;
 		}
 	}
 

@@ -39,5 +39,7 @@ namespace GameUtil2D
 				{
 						return	Mathf.Atan ((velocity.x / velocity.y));
 				}
+
+				
 		}
 }
