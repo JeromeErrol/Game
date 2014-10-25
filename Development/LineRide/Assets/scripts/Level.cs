@@ -6,9 +6,7 @@ public class Level : MonoBehaviour
 {
 		public static Level instance;
 		public int level;
-		//public int startingLives;
 		private static int livesRemaining;
-		public Color backgroundColor;
 
 		void Start ()
 		{
@@ -26,7 +24,7 @@ public class Level : MonoBehaviour
 		{
 				float livesLost = 5 - livesRemaining;
 
-				GameObject sta = GameObject.Find ("StarLives");
+				GameObject sta = GameObject.Find ("MenuStar");
 				float angle = 71f;
 
 				//sta.transform.Rotate (livesLost * angle);
@@ -56,9 +54,8 @@ public class Level : MonoBehaviour
 
 		void RotateStar ()
 		{
-				GameObject menuCog = GameObject.Find ("MenuCog");
-				InstructionSingleInstance instance = menuCog.GetComponent<InstructionSingleInstance> ();
-				instance.Run ();
+				GameObject.Find ("MenuCog").GetComponent<InstructionSingleInstance> ().Run ();
+				GameObject.Find ("MenuStar").GetComponent<InstructionSingleInstance> ().Run ();
 		}
 
 		void FlashWhiteScreen ()
