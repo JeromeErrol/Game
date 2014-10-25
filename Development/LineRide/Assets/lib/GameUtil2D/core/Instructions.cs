@@ -45,7 +45,7 @@ public class Instructions : Instruction
 
 		public override void Run ()
 		{
-				if (CurrentInstruction == null || CurrentInstruction.IsFinished ()) {
+				if (CurrentInstruction == null || CurrentInstruction.IsFinished () || CurrentInstruction.enabled == false) {
 						NextInstruction ();
 				} else {
 						CurrentInstruction.Run ();
