@@ -21,6 +21,20 @@ public class LevelEffects : MonoBehaviour
 						}
 						GameObject star = GameObject.Find ("star" + i);
 						star.SetAlpha (0.2f);
+						if (i == livesLost) {
+								star.SetAlpha (1f);
+
+								GameObject fadeToNothing = new GameObject ();
+								InstructionSingleInstance instance = fadeToNothing.AddComponent<InstructionSingleInstance> ();
+								For forLoop = fadeToNothing.AddComponent<For> ();
+								forLoop.numberOfFrames = 75;
+								Fade fade = fadeToNothing.AddComponent<Fade> ();
+								fade.amount = -0.01f;
+								forLoop.instructions.Add (fade);
+								fade.target = star;
+								instance.instruction = forLoop;
+								instance.Run();
+						}
 				}
 		}
 }
