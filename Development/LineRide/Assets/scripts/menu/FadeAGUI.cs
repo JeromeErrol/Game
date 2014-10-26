@@ -19,7 +19,7 @@ public class FadeAGUI : MonoBehaviour {
 	
 	void OnGUI() {
 		
-		Color colorSave = GUI.color;
+		//Color colorSave = GUI.color;
 		GUI.color = color;
 		GUI.Label (new Rect(x, y, Screen.width,50), text, style);
 	}

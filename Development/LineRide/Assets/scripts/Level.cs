@@ -7,7 +7,7 @@ public class Level : MonoBehaviour
 		public static Level instance;
 		public int level;
 		public static int livesRemaining;
-		public bool lifeLost = false;
+		private bool lifeLost = false;
 
 		void Start ()
 		{

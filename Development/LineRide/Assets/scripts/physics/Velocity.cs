@@ -7,7 +7,6 @@ public class Velocity : MonoBehaviour
 		public float friction = 0.95f;
 		float velocity = 0;
 		float previousVelocity;
-		Vector3 direction = new Vector3(1, 0, 0);
 
 		void Start ()
 		{	
@@ -33,10 +32,8 @@ public class Velocity : MonoBehaviour
 
 			Vector3 nextPosition = transform.position;
 			nextPosition.x += velocity;
-			Vector3 targetPos = new Vector3 (velocity, 0, 0);
 			Vector3 vel = new Vector3 (velocity, 0, 0);
 			transform.position = Vector3.SmoothDamp (transform.position, nextPosition, ref vel, 1f);
-			// transform.position = Vector3.MoveTowards(transform.position, nextPosition, Time.deltaTime * Mathf.Abs(velocity));
 		}
 
 		float averageVelocity {

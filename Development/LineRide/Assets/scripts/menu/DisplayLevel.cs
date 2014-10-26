@@ -24,7 +24,7 @@ public class DisplayLevel : MonoBehaviour
 			Acolor.a = a;
 			style.normal.textColor = Acolor;
 
-			Color colorSave = GUI.color;
+		//	Color colorSave = GUI.color;
 			GUI.color = color;
 			
 		}

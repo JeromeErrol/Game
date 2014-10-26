@@ -26,7 +26,6 @@ public class SpeedLine : MonoBehaviour
 
 			gameObject.SetAlpha (alpha);
 			previousPosition = gameObject.transform.position;
-			MonoBehaviour.print (alpha);
 		
 	}
 }
