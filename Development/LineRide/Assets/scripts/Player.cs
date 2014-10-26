@@ -9,29 +9,23 @@ public class Player : MonoBehaviour
 		public float acceleration;
 		public static int currentLevel = 0;
 		public bool activated = false;
-		public int heldDownFor =	0;
+		public int heldDownFor = 0;
 
-		void Start ()
-		{
 
-		}
+		
 
 		void FixedUpdate ()
 		{
 				ReadKeyboardInput ();
 				ReadScreenInput ();
-				float leftBound = 1.45f;
-				float rightBound = 28f;
-				if (transform.position.x < leftBound) {
-						Vector3 pos = transform.position;
-						pos.x = leftBound;
-						transform.position = pos;
+
+				if (gameObject.Left () < GameScreen.Left) {
+						gameObject.Left (GameScreen.Left);
 				}
 
-				if (transform.position.x > rightBound) {
+				if (transform.position.x > GameScreen.Right) {
 						Level.instance.NextLevel ();
 				}
-				//EjectMist ();
 		}
 
 		void EjectMist ()
@@ -83,10 +77,10 @@ public class Player : MonoBehaviour
 				}
 			
 				if (Input.GetKey (accelerateKey)) {
-					heldDownFor++;
-					if(heldDownFor> 15){
-						activated = true;
-					}
+						heldDownFor++;
+						if (heldDownFor > 15) {
+								activated = true;
+						}
 				}
 
 				if (activated) {

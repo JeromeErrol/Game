@@ -18,7 +18,7 @@ public static class GameObjectEntensions
 		public static void ModifyAlpha (this GameObject gameobject, float changeValue)
 		{
 				Color color = gameobject.renderer.material.color;
-				color.a = Mathf.Max(0, Mathf.Min(1, color.a + changeValue));
+				color.a = Mathf.Max (0, Mathf.Min (1, color.a + changeValue));
 				gameobject.renderer.material.color = color;
 		}
 
@@ -58,7 +58,12 @@ public static class GameObjectEntensions
 
 		public static float Left (this GameObject gameobject)
 		{
-				return gameobject.transform.position.x + gameobject.GetComponent<SpriteRenderer> ().bounds.min.x;
+				return gameobject.X () - (gameobject.Width () / 2f);
+		}
+
+		public static void Left (this GameObject gameobject, float value)
+		{				
+				gameobject.X (value + (gameobject.Width () / 2f));
 		}
 
 		public static float Right (this GameObject gameobject)
@@ -109,17 +114,31 @@ public static class GameObjectEntensions
 				GetOrCreateComponent<SpriteRenderer> (gameObject).sprite = sprite;
 		}
 
-		public static Color GetColor(this GameObject gameObject){
-			return gameObject.GetComponent<SpriteRenderer> ().color;
+		public static Color GetColor (this GameObject gameObject)
+		{
+				return gameObject.GetComponent<SpriteRenderer> ().color;
 		}
 
-		public static Color SetColor(this GameObject gameObject, Color color){
-			return gameObject.GetComponent<SpriteRenderer> ().color = color;
+		public static Color SetColor (this GameObject gameObject, Color color)
+		{
+				return gameObject.GetComponent<SpriteRenderer> ().color = color;
 		}
 
 		public static void Destroy (this GameObject gameObject)
 		{
 				GameObject.Destroy (gameObject);
+		}
+
+		public static float Width (this GameObject gameObject)
+		{
+				SpriteRenderer r = gameObject.GetComponent<SpriteRenderer> ();
+				return r.bounds.max.x - r.bounds.min.x;
+		}
+
+		public static float Height (this GameObject gameObject)
+		{
+				SpriteRenderer r = gameObject.GetComponent<SpriteRenderer> ();
+				return r.bounds.max.y - r.bounds.min.y;
 		}
 }
 

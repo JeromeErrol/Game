@@ -1,20 +1,33 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Level.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Hud.cs">
     <Files>
-      <File FileName="Assets\lib\GameUtil2D\core\values\Tween.cs" Line="9" Column="20" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\animate\Animate.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\util\PhysicsUtil2D.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\animate\AnimateRotation.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\Instruction.cs" Line="20" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\Instructions.cs" Line="47" Column="4" />
-      <File FileName="Assets\lib\GameUtil2D\core\InstructionRunOnce.cs" Line="24" Column="30" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\Rotate.cs" Line="17" Column="15" />
-      <File FileName="Assets\scripts\Level.cs" Line="60" Column="93" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\DeactivateBehavior.cs" Line="11" Column="4" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\ActivateBehavior.cs" Line="14" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\ToggleBehavior.cs" Line="13" Column="1" />
+      <File FileName="Assets\lib\GameUtil2D\effects\ParticleGenerator.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameUtil2D\effects\BaseParticle.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameUtil2D\core\extensions\Vector3Extensions.cs" Line="7" Column="64" />
+      <File FileName="Assets\lib\GameUtil2D\core\extensions\MonoBehaviorExtensions.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameUtil2D\core\extensions\GameObjectEntensions.cs" Line="112" Column="21" />
+      <File FileName="Assets\scripts\Player.cs" Line="13" Column="1" />
+      <File FileName="Assets\scripts\characters\Character01.cs" Line="14" Column="3" />
+      <File FileName="Assets\lib\GameUtil2D\core\extensions\FloatExtensions.cs" Line="8" Column="3" />
+      <File FileName="Assets\scripts\Level.cs" Line="65" Column="6" />
+      <File FileName="Assets\scripts\PlayerInteractive.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\behaviors\Shake.cs" Line="13" Column="54" />
+      <File FileName="Assets\scripts\environment\Wind.cs" Line="16" Column="1" />
+      <File FileName="Assets\lib\GameUtil2D\core\instructions\Fade.cs" Line="11" Column="5" />
+      <File FileName="Assets\lib\GameUtil2D\core\instructions\Rotate.cs" Line="23" Column="3" />
+      <File FileName="Assets\lib\GameUtil2D\core\instructions\setters\SetAlpha.cs" Line="6" Column="2" />
+      <File FileName="Assets\lib\GameUtil2D\core\instructions\setters\SetRotation.cs" Line="16" Column="1" />
+      <File FileName="Assets\scripts\LevelEffects.cs" Line="23" Column="6" />
+      <File FileName="Assets\scripts\Hud.cs" Line="13" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>gameObject.Width()</Value>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -6,35 +6,18 @@ public class Level : MonoBehaviour
 {
 		public static Level instance;
 		public int level;
-		private static int livesRemaining;
+		public static int livesRemaining;
+		public bool lifeLost = false;
 
 		void Start ()
 		{
+				gameObject.GetOrCreateComponent<LevelEffects> ();
 				instance = this;
 				Screen.orientation = ScreenOrientation.LandscapeLeft;
 				if (Player.currentLevel != level) {						
 						NewLevelStarted ();
 				} else {					
 						LevelRepeated ();
-				}	
-				FadeStar ();
-		}
-
-		void FadeStar ()
-		{
-				float livesLost = 5 - livesRemaining;
-
-				GameObject sta = GameObject.Find ("MenuStar");
-				float angle = 71f;
-
-				//sta.transform.Rotate (livesLost * angle);
-
-				for (int i = 1; i <= livesLost; i++) {
-						if (i != 1) {
-								sta.RotateBy (angle);
-						}
-						GameObject star = GameObject.Find ("star" + i);
-						star.SetAlpha (0.2f);
 				}
 		}
 
@@ -48,7 +31,6 @@ public class Level : MonoBehaviour
 				FlashWhiteScreen ();
 				GetComponent<FadeAGUI> ().text = "";
 				audio.PlayOneShot (Res.LoseLifeSound);
-
 				RotateStar ();
 		}
 
@@ -60,7 +42,7 @@ public class Level : MonoBehaviour
 
 		void FlashWhiteScreen ()
 		{
-				GameObject gameObject = StageUtil2D.AddGameObject (Res.Pixel, new Vector3 (14.91f, 0, 0));
+				GameObject gameObject = StageUtil2D.AddGameObject (Res.Pixel, new Vector3 (0, 0, 0));
 				gameObject.transform.localScale = new Vector3 (3100, 1750, 1);
 
 				AlphaFade alphaFade = gameObject.AddComponent<AlphaFade> ();
@@ -71,8 +53,10 @@ public class Level : MonoBehaviour
 		void NewLevelStarted ()
 		{
 				Player.currentLevel = level;
-				livesRemaining = 5;
+				GetComponent<FadeAGUI> ().text = "Level: " + level;
+				Level.livesRemaining = 5;
 				
+				GameObject.Find ("RotateMenuCog360").GetComponent<InstructionSingleInstance> ().Run ();
 
 				if (level > 1) {
 						audio.PlayOneShot (Res.LevelCompletedSound);
@@ -106,11 +90,15 @@ public class Level : MonoBehaviour
 
 		public void LoseLife ()
 		{
-				livesRemaining--;
-				if (livesRemaining < 1) {
-						Level.RestartGame ();
-				} else {
-						Level.instance.Restart ();
+				if (!lifeLost) {
+						lifeLost = true;
+						livesRemaining--;
+						lifeLost = true;
+						if (livesRemaining < 1) {
+								Level.RestartGame ();
+						} else {
+								Level.instance.Restart ();
+						}
 				}	
 		}
 	
