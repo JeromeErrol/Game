@@ -59,6 +59,7 @@
      <Compile Include="Assets\lib\GameUtil2D\core\TargetedCondition.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\TargetedInstruction.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\behaviors\AlphaChange.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\behaviors\BehaviorInteractive.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\behaviors\Lifespan.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\conditions\InProgress.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\conditions\InstructionFinished.cs" />
@@ -72,6 +73,7 @@
      <Compile Include="Assets\lib\GameUtil2D\core\extensions\MonoBehaviorExtensions.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\extensions\Vector3Extensions.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\ActivateBehavior.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\instructions\ActivateRunAutomatically.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\DeactivateBehavior.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Destroy.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Fade.cs" />
@@ -86,6 +88,8 @@
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Translate.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\animate\Animate.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\animate\AnimateRotation.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\instructions\animate\AnimateX.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\instructions\animate\AnimateY.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetAlpha.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetPosition.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetRotation.cs" />
@@ -101,6 +105,7 @@
      <Compile Include="Assets\lib\GameUtil2D\primitives\Line.cs" />
      <Compile Include="Assets\lib\GameUtil2D\primitives\SoundEffect.cs" />
      <Compile Include="Assets\lib\GameUtil2D\tools\CustomSnap.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\ui\MouseInteractive.cs" />
      <Compile Include="Assets\lib\GameUtil2D\ui\StatusBar.cs" />
      <Compile Include="Assets\lib\GameUtil2D\ui\TextBox2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\AssetUtil2D.cs" />
@@ -114,6 +119,7 @@
      <Compile Include="Assets\lib\GameUtil2D\util\ScreenUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\StageUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\TextureUtil2D.cs" />
+     <Compile Include="Assets\scripts\GameProgress.cs" />
      <Compile Include="Assets\scripts\GameScreen.cs" />
      <Compile Include="Assets\scripts\Hud.cs" />
      <Compile Include="Assets\scripts\Level.cs" />
@@ -129,11 +135,15 @@
      <Compile Include="Assets\scripts\behaviors\ScreenBound.cs" />
      <Compile Include="Assets\scripts\behaviors\Shake.cs" />
      <Compile Include="Assets\scripts\behaviors\Spin.cs" />
-     <Compile Include="Assets\scripts\characters\Character01.cs" />
+     <Compile Include="Assets\scripts\characters\CharacterPart.cs" />
+     <Compile Include="Assets\scripts\characters\Eyes.cs" />
+     <Compile Include="Assets\scripts\characters\Mouth.cs" />
+     <Compile Include="Assets\scripts\characters\Wings.cs" />
      <Compile Include="Assets\scripts\effects\RainDrop.cs" />
      <Compile Include="Assets\scripts\effects\RainGenerator.cs" />
      <Compile Include="Assets\scripts\effects\SmokeGenerator.cs" />
      <Compile Include="Assets\scripts\environment\AutomaticDoor.cs" />
+     <Compile Include="Assets\scripts\environment\Lightening.cs" />
      <Compile Include="Assets\scripts\environment\Wind.cs" />
      <Compile Include="Assets\scripts\instructions\OpenDoor.cs" />
      <Compile Include="Assets\scripts\items\Collectable.cs" />

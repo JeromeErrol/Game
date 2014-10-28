@@ -54,7 +54,7 @@ public class Level : MonoBehaviour
 		{
 				Player.currentLevel = level;
 				GetComponent<FadeAGUI> ().text = "Level: " + level;
-				Level.livesRemaining = 5;
+				Level.livesRemaining = GameProgress.totalStarPieces;
 				
 				GameObject.Find ("RotateMenuCog360").GetComponent<InstructionSingleInstance> ().Run ();
 
@@ -109,6 +109,7 @@ public class Level : MonoBehaviour
 
 		public void NextLevel ()
 		{
+				GameProgress.totalStarPieces++;
 				Application.LoadLevel ("level" + (level + 1));
 		}
 

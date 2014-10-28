@@ -10,14 +10,32 @@ public class Player : MonoBehaviour
 		public static int currentLevel = 0;
 		public bool activated = false;
 		public int heldDownFor = 0;
+		public bool moving = false;
+		public static Player instance;
 
+		void Start ()
+		{
+				Player.instance = this;
+		}
 
-		
+		void ActivateGlintGenerator (bool enabled)
+		{
+				GameObject glintGenerator = GameObject.Find ("glintGenerator");
+				glintGenerator.GetComponent<ParticleGenerator> ().enabled = enabled;
+		}
 
 		void FixedUpdate ()
 		{
+				moving = false;
 				ReadKeyboardInput ();
 				ReadScreenInput ();
+				ActivateGlintGenerator (moving);
+				if (moving) {
+						GameObject.Find ("mouth").GetComponent<Mouth> ().OpenMouth ();	
+
+				} else {
+						GameObject.Find ("mouth").gameObject.GetComponent<Mouth> ().Smile ();
+				}
 
 				if (gameObject.Left () < GameScreen.Left) {
 						gameObject.Left (GameScreen.Left);
@@ -26,24 +44,8 @@ public class Player : MonoBehaviour
 				if (transform.position.x > GameScreen.Right) {
 						Level.instance.NextLevel ();
 				}
-		}
 
-		void EjectMist ()
-		{
-				float velocity = GetComponent<Velocity> ().Vel;
-
-				if (velocity > 0) {
-
-						float x = transform.position.x;
-						float y = renderer.bounds.min.y;
-
-
-						GameObject particle = StageUtil2D.AddGameObject (Res.Pixel, new Vector3 (x, y));
-						particle.AddComponent<Dust> ();
-						particle.transform.localScale = new Vector3 (10, 10);
-
-
-				}
+				
 		}
 
 		void ReadScreenInput ()
@@ -97,10 +99,20 @@ public class Player : MonoBehaviour
 		void Accelerate ()
 		{
 				GetComponent<Velocity> ().AddAcceleration (acceleration);
+				
+				Vector3 scale = gameObject.transform.localScale;
+				scale.x = 0.25f;
+				transform.localScale = scale;
+				moving = true;
 		}
 
 		void Reverse ()
 		{
 				GetComponent<Velocity> ().AddAcceleration (-acceleration);
+
+				Vector3 scale = gameObject.transform.localScale;
+				scale.x = -0.25f;
+				transform.localScale = scale;
+				moving = true;
 		}
 }

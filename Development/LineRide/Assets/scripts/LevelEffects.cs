@@ -10,8 +10,8 @@ public class LevelEffects : MonoBehaviour
 
 		void FadeStar ()
 		{
-				float livesLost = 5 - Level.livesRemaining;
-		
+				
+				float livesLost = GameProgress.totalStarPieces - Level.livesRemaining;
 				GameObject sta = GameObject.Find ("MenuStar");
 				float angle = 71f;
 		
@@ -33,9 +33,13 @@ public class LevelEffects : MonoBehaviour
 								forLoop.instructions.Add (fade);
 								fade.target = star;
 								instance.instruction = forLoop;
-								instance.Run();
+								instance.Run ();
 						}
 				}
+		}
+
+		void FadeStars(int visibleStarPieces, int faded){
+
 		}
 }
 

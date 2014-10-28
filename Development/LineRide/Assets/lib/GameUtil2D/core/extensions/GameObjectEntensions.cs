@@ -140,5 +140,11 @@ public static class GameObjectEntensions
 				SpriteRenderer r = gameObject.GetComponent<SpriteRenderer> ();
 				return r.bounds.max.y - r.bounds.min.y;
 		}
+
+		public static Vector3 ScreenPosition(this GameObject gameObject){
+			return Camera.main.WorldToScreenPoint (gameObject.transform.position);
+		}
+
+		
 }
 
