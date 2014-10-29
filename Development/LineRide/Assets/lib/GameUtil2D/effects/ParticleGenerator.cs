@@ -19,7 +19,7 @@ public class ParticleGenerator : MonoBehaviour
 	public Color color = Color.white;
 	public Sprite sprite;
 	public Vector2 spawnRange;
-
+	public int orderInLayer;
 	
 	void Update ()
 	{
@@ -46,6 +46,7 @@ public class ParticleGenerator : MonoBehaviour
 		r.material.color = color;
 		smoke.sprite = sprite;
 		smoke.scale = scale.Randomize(scaleRange);
+		r.sortingOrder = orderInLayer;
 	}
 }
 
