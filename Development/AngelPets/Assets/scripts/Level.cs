@@ -6,6 +6,8 @@ public class Level : MonoBehaviour
 {
 		public static Level instance;
 		public int level;
+		public string sceneName;
+		public string nextScene;
 		public static int livesRemaining;
 		private bool lifeLost = false;
 
@@ -104,13 +106,13 @@ public class Level : MonoBehaviour
 	
 		public void Restart ()
 		{
-				Application.LoadLevel ("level" + level);
+				Application.LoadLevel (sceneName);
 		}
 
 		public void NextLevel ()
 		{
 				GameProgress.totalStarPieces++;
-				Application.LoadLevel ("level" + (level + 1));
+				Application.LoadLevel (nextScene);
 		}
 
 		public static void RestartGame ()

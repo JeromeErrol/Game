@@ -15,13 +15,13 @@ public class ParticleGenerator : MonoBehaviour
 		public Vector2 velocityRange;
 		public Vector3 scale;
 		public float scaleRange;
+		public Vector3 scaleChange;
 		public float friction = 1;
 		public Color color = Color.white;
 		public Sprite sprite;
 		public Vector2 spawnRange;
 		public int orderInLayer;
 		public string particleName;
-		
 	
 		void Update ()
 		{
@@ -44,6 +44,7 @@ public class ParticleGenerator : MonoBehaviour
 				smoke.acceleration = accelerate.Randomize (accelerationRange);
 				smoke.velocity = velocity.Randomize (velocityRange);
 				smoke.friction = friction;
+				smoke.scaleChange = scaleChange;
 				SpriteRenderer r = smoke.gameObject.GetOrCreateComponent<SpriteRenderer> ();
 				r.material.color = color;
 				smoke.sprite = sprite;

@@ -12,6 +12,7 @@ public class BaseParticle : MonoBehaviour
 		public float friction = 1f;
 		public Sprite sprite;
 		public Vector3 scale;
+		public Vector3 scaleChange;
 	
 		void Start ()
 		{
@@ -32,6 +33,7 @@ public class BaseParticle : MonoBehaviour
 				transform.position += velocity;
 				velocity += acceleration;
 				velocity *= friction;
+				gameObject.transform.localScale += scaleChange;
 		}
 }
 
