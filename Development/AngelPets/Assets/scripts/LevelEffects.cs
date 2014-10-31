@@ -11,7 +11,7 @@ public class LevelEffects : MonoBehaviour
 		void FadeStar ()
 		{
 				
-				float livesLost = GameProgress.totalStarPieces - Level.livesRemaining;
+		float livesLost = GameState.Instance.totalStarPieces - GameState.Instance.livesRemaining;
 				GameObject sta = GameObject.Find ("MenuStar");
 				float angle = 71f;
 		

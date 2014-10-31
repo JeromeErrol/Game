@@ -8,7 +8,6 @@ public class Level : MonoBehaviour
 		public int level;
 		public string sceneName;
 		public string nextScene;
-		public static int livesRemaining;
 		private bool lifeLost = false;
 
 		void Start ()
@@ -56,7 +55,7 @@ public class Level : MonoBehaviour
 		{
 				Player.currentLevel = level;
 				GetComponent<FadeAGUI> ().text = "Level: " + level;
-				Level.livesRemaining = GameProgress.totalStarPieces;
+				GameState.Instance.livesRemaining = GameState.Instance.totalStarPieces;
 				
 				GameObject.Find ("RotateMenuCog360").GetComponent<InstructionSingleInstance> ().Run ();
 
@@ -94,9 +93,9 @@ public class Level : MonoBehaviour
 		{
 				if (!lifeLost) {
 						lifeLost = true;
-						livesRemaining--;
+						GameState.Instance.livesRemaining--;
 						lifeLost = true;
-						if (livesRemaining < 1) {
+						if (GameState.Instance.livesRemaining < 1) {
 								Level.RestartGame ();
 						} else {
 								Level.instance.Restart ();
@@ -111,7 +110,7 @@ public class Level : MonoBehaviour
 
 		public void NextLevel ()
 		{
-				GameProgress.totalStarPieces++;
+				GameState.Instance.totalStarPieces++;
 				Application.LoadLevel (nextScene);
 		}
 

@@ -10,7 +10,7 @@ public class AddAppear : MonoBehaviour
 				print ("awakening");
 				if (Advertisement.isSupported) {
 						Advertisement.allowPrecache = true;
-						Advertisement.Initialize (GameData.APP_ID);
+						Advertisement.Initialize (AppInfo.APP_ID);
 				} else {
 						Debug.Log ("Platform not supported");
 				}

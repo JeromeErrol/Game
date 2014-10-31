@@ -8,6 +8,7 @@ public class DeactivateBehavior : InstructionRunOnce
 		public override void RunOnce ()
 		{
 			behavior.enabled = false;
+			print ("Hello");
 		}
 	
 }

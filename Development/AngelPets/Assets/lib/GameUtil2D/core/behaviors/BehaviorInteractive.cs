@@ -6,9 +6,13 @@ public class BehaviorInteractive : MonoBehaviour
 		private bool sameFrame = false;
 		public GameObject interactWith;
 		public Instruction enterInstruction;
-		public Instruction stayInstruction;
+		public Instruction hoverInstruction;
 		public Instruction leaveInstruction;
 		public bool newSingleInstance = false;
+		public Sprite normalSprite;
+		public Sprite enterSprite;
+		public Sprite staySprite;
+		public Sprite leaveSprite;
 	
 		void Update ()
 		{
@@ -21,6 +25,10 @@ public class BehaviorInteractive : MonoBehaviour
 						if (!sameFrame) {
 								sameFrame = true;
 								if (collider2D.gameObject == interactWith) {
+										if (enterSprite != null) {
+												gameObject.SetSprite (enterSprite);
+										}
+									
 										if (newSingleInstance == false) {
 												enterInstruction.Run ();
 										} else {
@@ -37,14 +45,19 @@ public class BehaviorInteractive : MonoBehaviour
 	
 		void OnTriggerStay2D (Collider2D collider2D)
 		{
-				if (stayInstruction != null) {
+				if (hoverInstruction != null) {
 						if (collider2D.gameObject == interactWith) {
+
+								if (staySprite != null) {
+										gameObject.SetSprite (staySprite);
+								}
+
 								if (newSingleInstance == false) {
-										stayInstruction.Run ();
+										hoverInstruction.Run ();
 								} else {
 										GameObject gameObject = new GameObject ("temp"); // Objects named 'temp' get garbage collected at the end of the frame. 
 										InstructionSingleInstance instance = gameObject.AddComponent<InstructionSingleInstance> ();
-										instance.instruction = stayInstruction;
+										instance.instruction = hoverInstruction;
 										instance.RunOnce ();
 										gameObject.Destroy ();
 								}

@@ -1,27 +1,16 @@
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (Collider2D))]
 public class MouseInteractive : MonoBehaviour
 {
+		public Instruction instruction;
 
-		// Use this for initialization
-		void Start ()
+		void OnMouseDown ()
 		{
-	
-		}
-	
-		// Update is called once per frame
-		void Update ()
-		{
-			
-		}
-
-		public virtual void Clicked(){
-
-		}
-
-		public virtual void MouseHover(){
-
+				if (instruction) {
+						instruction.Run ();
+				}
 		}
 }
 

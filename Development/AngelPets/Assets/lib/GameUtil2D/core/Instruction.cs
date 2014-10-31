@@ -14,7 +14,6 @@ public abstract class Instruction : MonoBehaviour
 
 	void Update ()
 	{
-
 		if (runAutomatically && !IsFinished()) {
 			Run ();	
 		}
