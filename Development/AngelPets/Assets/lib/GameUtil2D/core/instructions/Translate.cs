@@ -8,10 +8,12 @@ public class Translate : TargetedInstruction
 
 	public override void Run ()
 	{
-		Vector3 pos = Target.transform.position;
-		pos.x += x;
-		pos.y += y;
-		Target.transform.position = pos;
+		if (enabled) {
+						Vector3 pos = Target.transform.position;
+						pos.x += x;
+						pos.y += y;
+						Target.transform.position = pos;
+		}
 	}
 
 	public override void Begin ()
