@@ -148,7 +148,9 @@
      <Compile Include="Assets\lib\GameUtil2D\primitives\Line.cs" />
      <Compile Include="Assets\lib\GameUtil2D\primitives\SoundEffect.cs" />
      <Compile Include="Assets\lib\GameUtil2D\tools\CustomSnap.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\ui\Button2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\ui\MouseInteractive.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\ui\instructions\CloseUIElement.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\AssetUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\CameraFollow2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\CameraUtil2D.cs" />

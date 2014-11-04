@@ -9,7 +9,6 @@ public class FadeAGUI : MonoBehaviour {
 	public float fadeSpeed;
 	public float x;
 	public float y;
-
 	
 
 	void Update () {
