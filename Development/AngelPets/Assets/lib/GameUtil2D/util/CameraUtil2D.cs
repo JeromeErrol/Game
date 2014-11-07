@@ -11,6 +11,7 @@ namespace GameUtil2D
 						cameraPosition.Set (cameraPosition.x, cameraPosition.y, z);
 						Camera.main.transform.position = cameraPosition;
 				}
+
 		}
 }
 

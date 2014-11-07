@@ -8,7 +8,7 @@ public class GoToDestination : TargetedInstruction
 
 	public override void Run ()
 	{
-		Target.gameObject.transform.position = Vector3.MoveTowards (Target.transform.position, DestPosition, movementSpeed);
+		Target.transform.MoveTowards (destination.transform.position, movementSpeed);
 	}
 
 	public Vector3 DestPosition{
@@ -25,9 +25,6 @@ public class GoToDestination : TargetedInstruction
 	public override bool IsFinished ()
 	{
 		float dist = Vector3.Distance (Target.transform.position, destination.transform.position);
-		if(dist <= (movementSpeed + 0.1f)){
-			print ("hi");
-		}
 		return dist <= (movementSpeed + 0.0001f);		
 	}
 }

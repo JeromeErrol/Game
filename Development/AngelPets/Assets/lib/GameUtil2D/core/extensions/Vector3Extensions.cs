@@ -20,7 +20,6 @@ public static class Vector3Extensions
 		public static Vector3 Randomize (this Vector3 vector, float range)
 		{
 				float amount = Random.Range (-range, range);
-
 				return new Vector3 (vector.x + amount, vector.y + amount);
 		}
 

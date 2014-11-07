@@ -15,5 +15,14 @@ namespace GameUtil2D
 			gameobjet.transform.eulerAngles = angle;
 
 		}
+
+		
+		public static void RemoveAllComponentsOfType<T> () where T : Component
+		{
+			T[] components = GameObject.FindObjectsOfType<T> ();
+			foreach (T audioListener in components) {
+				MonoBehaviour.Destroy(audioListener);
+			}
+		}
 	}
 }

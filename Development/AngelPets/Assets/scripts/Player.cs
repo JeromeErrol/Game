@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
 		public int heldDownFor = 0;
 		public bool moving = false;
 		public static Player instance;
+		public int fastFlapSpeed = 2;
+		public int slowFlapSpeed = 60;
 
 		void Start ()
 		{
@@ -24,14 +26,12 @@ public class Player : MonoBehaviour
 				ReadKeyboardInput ();
 				ReadScreenInput ();
 				GameObject.Find ("glintGenerator").GetComponent<ParticleGenerator> ().enabled = moving;
-				Cat cat = Player.instance.GetComponent<Cat> ();		
+				SpriteSheet cat = Player.instance.GetComponent<SpriteSheet> ();		
 				if (moving) {
-						//	GameObject.Find ("mouth").GetComponent<Mouth> ().OpenMouth ();	
-						cat.timePerFrame = 2;
+						cat.timePerFrame = fastFlapSpeed;
 
 				} else {
-						//	GameObject.Find ("mouth").gameObject.GetComponent<Mouth> ().Smile ();
-						cat.timePerFrame = 6;
+						cat.timePerFrame = slowFlapSpeed;
 				}
 
 				if (gameObject.Left () < GameScreen.Left) {

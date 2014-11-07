@@ -7,14 +7,15 @@ public class Level : MonoBehaviour
 		public static Level instance;
 		public int level;
 		public string sceneName;
+		public string previousScene;
 		public string nextScene;
 		private bool lifeLost = false;
 
 		void Start ()
 		{
 				gameObject.GetOrCreateComponent<LevelEffects> ();
+				gameObject.GetOrCreateComponent<UserInputManager> ();
 				instance = this;
-				Screen.orientation = ScreenOrientation.LandscapeLeft;
 				if (Player.currentLevel != level) {						
 						NewLevelStarted ();
 				} else {					
@@ -24,14 +25,14 @@ public class Level : MonoBehaviour
 
 		void NewGameStart ()
 		{
-				audio.PlayOneShot (Res.StartNewGameSound);
+				OnLoaded.Add (SoundLibrary.PlayNewGame);
 		}
 
 		void LevelRepeated ()
 		{			// Hide title 
 				FlashWhiteScreen ();
 				GetComponent<FadeAGUI> ().text = "";
-				audio.PlayOneShot (Res.LoseLifeSound);
+				OnLoaded.Add (SoundLibrary.PlayDeath);
 				RotateStar ();
 		}
 
@@ -60,7 +61,7 @@ public class Level : MonoBehaviour
 				GameObject.Find ("RotateMenuCog360").GetComponent<InstructionSingleInstance> ().Run ();
 
 				if (level > 1) {
-						audio.PlayOneShot (Res.LevelCompletedSound);
+						SoundLibrary.PlayLevelCompleted ();
 				} else {
 						NewGameStart ();
 				}
@@ -112,6 +113,10 @@ public class Level : MonoBehaviour
 		{
 				GameState.Instance.totalStarPieces++;
 				Application.LoadLevel (nextScene);
+		}
+
+		public void PreviousLevel(){
+			Application.LoadLevel (previousScene);
 		}
 
 		public static void RestartGame ()

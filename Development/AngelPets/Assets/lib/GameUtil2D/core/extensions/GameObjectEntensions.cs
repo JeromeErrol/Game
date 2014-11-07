@@ -141,9 +141,11 @@ public static class GameObjectEntensions
 				return r.bounds.max.y - r.bounds.min.y;
 		}
 
-		public static Vector3 ScreenPosition(this GameObject gameObject){
-			return Camera.main.WorldToScreenPoint (gameObject.transform.position);
+		public static Vector3 ScreenPosition (this GameObject gameObject)
+		{
+				return Camera.main.WorldToScreenPoint (gameObject.transform.position);
 		}
+
 
 		
 }

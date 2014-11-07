@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_IPHONE;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_IPHONE_API;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;UNITY_IOS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -46,48 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\UnityAds\Advertisement.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\Adapter.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\DeviceInfo\DeviceInfo.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\DeviceInfo\DeviceInfoAndroid.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\DeviceInfo\DeviceInfoEditor.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\DeviceInfo\DeviceInfoIos.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\DeviceInfo\DeviceInfoPlatform.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\Events\Event.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\Events\EventJSON.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\Events\EventManager.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\HTTP\HTTPManager.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\HTTP\HTTPRequest.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\HTTP\HTTPResponse.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\HTTP\RetryRequest.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\Mediation\AdapterManager.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\Mediation\ConfigManager.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\Mediation\Engine.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\Mediation\IntervalManager.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\Mediation\Zone.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\Mediation\ZoneManager.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\Misc\AsyncExec.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\Misc\MiniJSON.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\Misc\Settings.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\Misc\Utils.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\PictureAds\PictureAd.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\PictureAds\PictureAdAdapter.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\PictureAds\PictureAdsFrameManager.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\PictureAds\PictureAdsManager.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\PictureAds\PictureAdsParser.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\PictureAds\PictureAdsRequestsManager.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\ShowOptionsExtended.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\VideoAds\UnityAds.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\VideoAds\UnityAdsAndroid.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\VideoAds\UnityAdsEditor.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\VideoAds\UnityAdsEditorPlaceholder.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\VideoAds\UnityAdsExternal.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\VideoAds\UnityAdsIos.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\VideoAds\UnityAdsIosBridge.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\VideoAds\UnityAdsPlatform.cs" />
-     <Compile Include="Assets\UnityAds\Advertisements\VideoAds\VideoAdAdapter.cs" />
-     <Compile Include="Assets\UnityAds\ShowOptions.cs" />
-     <Compile Include="Assets\UnityAds\ShowResult.cs" />
+     <Compile Include="Assets\lib\GameUI\camera\OrthographicsCameraManager.cs" />
+     <Compile Include="Assets\lib\GameUI\camera\PerspectiveCameraManager.cs" />
+     <Compile Include="Assets\lib\GameUI\userinput\UserInputManager.cs" />
+     <Compile Include="Assets\lib\GameUI\userinput\UserInteractive.cs" />
      <Compile Include="Assets\lib\GameUtil2D\ai\Patrol.cs" />
      <Compile Include="Assets\lib\GameUtil2D\constraints\ConstrainAngle.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\Condition.cs" />
@@ -97,11 +59,13 @@
      <Compile Include="Assets\lib\GameUtil2D\core\InstructionRunOnce.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\InstructionSingleInstance.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\Instructions.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\OnLoaded.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\RunAll.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\TargetedCondition.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\TargetedInstruction.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\behaviors\AlphaChange.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\behaviors\BehaviorInteractive.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\behaviors\InstructionOnTouch.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\behaviors\Lifespan.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\conditions\InProgress.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\conditions\InstructionFinished.cs" />
@@ -113,16 +77,19 @@
      <Compile Include="Assets\lib\GameUtil2D\core\extensions\FloatExtensions.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\extensions\GameObjectEntensions.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\extensions\MonoBehaviorExtensions.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\extensions\TransformExtensions.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\extensions\Vector3Extensions.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\ActivateBehavior.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\ActivateRunAutomatically.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\DeactivateBehavior.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Destroy.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\instructions\ExitGame.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Fade.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToDestination.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToPosition.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\LoadScene.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Pause.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\instructions\PauseInstructions.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\PlaySound.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Print.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Rotate.cs" />
@@ -137,20 +104,29 @@
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetPosition.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetRotation.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\Setter.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\programming\Code.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\programming\ForLoop.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\programming\Function.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\programming\IfElse.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\values\BlendTweens.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\values\RotationEValue.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\values\Tween.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\values\Value2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\effects\BaseParticle.cs" />
      <Compile Include="Assets\lib\GameUtil2D\effects\ParticleGenerator.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\effects\SpriteSheet.cs" />
      <Compile Include="Assets\lib\GameUtil2D\input\SmoothKeyboard.cs" />
      <Compile Include="Assets\lib\GameUtil2D\primitives\Cap.cs" />
      <Compile Include="Assets\lib\GameUtil2D\primitives\Line.cs" />
      <Compile Include="Assets\lib\GameUtil2D\primitives\SoundEffect.cs" />
      <Compile Include="Assets\lib\GameUtil2D\tools\CustomSnap.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\tools\Fps.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\tools\HUDFPS.cs" />
      <Compile Include="Assets\lib\GameUtil2D\ui\Button2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\ui\MouseInteractive.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\ui\Text2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\ui\instructions\CloseUIElement.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\ui\instructions\DestroyOnClick.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\AssetUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\CameraFollow2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\CameraUtil2D.cs" />
@@ -162,7 +138,6 @@
      <Compile Include="Assets\lib\GameUtil2D\util\ScreenUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\StageUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\TextureUtil2D.cs" />
-     <Compile Include="Assets\scripts\AddAppear.cs" />
      <Compile Include="Assets\scripts\AppInfo.cs" />
      <Compile Include="Assets\scripts\GameScreen.cs" />
      <Compile Include="Assets\scripts\GameState.cs" />
@@ -182,7 +157,6 @@
      <Compile Include="Assets\scripts\behaviors\Shake.cs" />
      <Compile Include="Assets\scripts\behaviors\Spin.cs" />
      <Compile Include="Assets\scripts\characters\AnimatedFly.cs" />
-     <Compile Include="Assets\scripts\characters\Cat.cs" />
      <Compile Include="Assets\scripts\characters\CharacterPart.cs" />
      <Compile Include="Assets\scripts\characters\Eyes.cs" />
      <Compile Include="Assets\scripts\characters\GravitateToMiddle.cs" />
@@ -193,9 +167,13 @@
      <Compile Include="Assets\scripts\effects\SmokeGenerator.cs" />
      <Compile Include="Assets\scripts\environment\AutomaticDoor.cs" />
      <Compile Include="Assets\scripts\environment\Lightening.cs" />
+     <Compile Include="Assets\scripts\environment\ToggleButton.cs" />
      <Compile Include="Assets\scripts\environment\Wind.cs" />
      <Compile Include="Assets\scripts\gameflow\StartNewGame.cs" />
-     <Compile Include="Assets\scripts\instructions\OpenDoor.cs" />
+     <Compile Include="Assets\scripts\gameflow\Toggle.cs" />
+     <Compile Include="Assets\scripts\instructions\NextLevel.cs" />
+     <Compile Include="Assets\scripts\instructions\PreviousLevel.cs" />
+     <Compile Include="Assets\scripts\instructions\RunInstructionOnUserInput.cs" />
      <Compile Include="Assets\scripts\items\Collectable.cs" />
      <Compile Include="Assets\scripts\items\HoverButton.cs" />
      <Compile Include="Assets\scripts\items\PressButton.cs" />
@@ -209,12 +187,9 @@
      <Compile Include="Assets\scripts\particles\SpeedLine.cs" />
      <Compile Include="Assets\scripts\physics\Smoothen.cs" />
      <Compile Include="Assets\scripts\physics\Velocity.cs" />
-     <None Include="Assets\plugins\Android\unityads\proguard-project.txt" />
-     <None Include="Assets\plugins\Android\unityads\build.xml" />
+     <Compile Include="Assets\scripts\resources\SoundLibrary.cs" />
      <None Include="Assets\link.xml" />
-     <None Include="Assets\plugins\Android\unityads\res\values\strings.xml" />
      <None Include="Assets\Todo.txt" />
-     <None Include="Assets\plugins\Android\unityads\AndroidManifest.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

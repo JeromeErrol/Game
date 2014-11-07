@@ -9,7 +9,8 @@ public class IfThen : MonoBehaviour
 
 		void Start(){
 			conditions.RemoveAll(item => item == null);
-			instructions.RemoveAll(item => item == null);			
+			instructions.RemoveAll(item => item == null);
+		
 		}
 
 		void Update ()

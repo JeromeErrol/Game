@@ -1,59 +1,27 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\lib\GameUtil2D\ui\Button2D.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\lib\GameUI\camera\OrthographicsCameraManager.cs">
     <Files>
-      <File FileName="Assets\lib\GameUtil2D\effects\BaseParticle.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\GameScreen.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\GameState.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Level.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\scripts\LevelEffects.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\constraints\ConstrainAngle.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\behaviors\BehaviorInteractive.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\characters\GravitateToMiddle.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\DeactivateBehavior.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\Instruction.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\Translate.cs" Line="15" Column="39" />
-      <File FileName="Assets\lib\GameUtil2D\core\TargetedInstruction.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\Instructions.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\InstructionRunOnce.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\RunAll.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\UnityAds\Advertisement.cs" Line="36" Column="29" />
-      <File FileName="Assets\lib\GameUtil2D\core\For.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\instructions\Destroy.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\instructions\Fade.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\instructions\GoToDestination.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\instructions\GoToPosition.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\instructions\LoadScene.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\instructions\Pause.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\instructions\PlaySound.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\instructions\Rotate.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\instructions\Rotation.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\instructions\animate\Animate.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\instructions\setters\Setter.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\values\Tween.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\IfThen.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\ui\MouseInteractive.cs" Line="17" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\scripts\items\HoverButton.cs" Line="1" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\scripts\items\PressButton.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\menu\FadeAGUI.cs" Line="24" Column="3" />
-      <File FileName="Assets\scripts\menu\DisplayLevel.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\menu\AlphaFade.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\menu\MainMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\ui\Button2D.cs" Line="25" Column="10" />
-      <File FileName="Assets\lib\GameUtil2D\ui\instructions\CloseUIElement.cs" Line="11" Column="4" />
+      <File FileName="Assets\lib\GameUI\userinput\UserInputManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameUI\userinput\UserInteractive.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameUI\camera\OrthographicsCameraManager.cs" Line="10" Column="3" />
+      <File FileName="Assets\lib\GameUI\camera\PerspectiveCameraManager.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="lib" expanded="True">
-              <Node name="GameUtil2D" expanded="True">
-                <Node name="ui" expanded="True">
-                  <Node name="instructions" expanded="True" />
-                  <Node name="Button2D.cs" selected="True" />
+              <Node name="GameUI" expanded="True">
+                <Node name="camera" expanded="True">
+                  <Node name="OrthographicsCameraManager.cs" selected="True" />
                 </Node>
+                <Node name="userinput" expanded="True" />
               </Node>
             </Node>
+          </Node>
+          <Node name="Assembly-CSharp-Editor" expanded="True">
+            <Node name="Editor" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -66,7 +34,10 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUI\core\InputManager.cs" line="20" />
+      <Breakpoint file="C:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUI\core\D.cs" line="25" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="..\LineRide\Assets\lib\GameUtil2D\core\Instructions.cs" line="21" offsetX="405" offsetY="340" expression="instructions" liveUpdate="False" />
