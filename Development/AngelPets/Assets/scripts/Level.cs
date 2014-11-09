@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using GameUtil2D;
+using System;
 
 public class Level : MonoBehaviour
 {
@@ -9,35 +10,37 @@ public class Level : MonoBehaviour
 		public string sceneName;
 		public string previousScene;
 		public string nextScene;
-		private bool lifeLost = false;
 
 		void Start ()
 		{
-				gameObject.GetOrCreateComponent<LevelEffects> ();
-				gameObject.GetOrCreateComponent<UserInputManager> ();
+				this.gameObject.GetOrCreateComponent<LevelEffects> ();
+				this.gameObject.GetOrCreateComponent<UserInputManager> ();
 				instance = this;
 				if (Player.currentLevel != level) {						
 						NewLevelStarted ();
 				} else {					
 						LevelRepeated ();
 				}
+
+				GameObject gameObject = new GameObject ();
+				gameObject.AddComponent<LevelInstructions> ();
 		}
 
 		void NewGameStart ()
 		{
-				OnLoaded.Add (SoundLibrary.PlayNewGame);
+
 		}
 
 		void LevelRepeated ()
 		{			// Hide title 
 				FlashWhiteScreen ();
 				GetComponent<FadeAGUI> ().text = "";
-				OnLoaded.Add (SoundLibrary.PlayDeath);
 				RotateStar ();
 		}
 
 		void RotateStar ()
 		{
+
 				GameObject.Find ("MenuCog").GetComponent<InstructionSingleInstance> ().Run ();
 				GameObject.Find ("MenuStar").GetComponent<InstructionSingleInstance> ().Run ();
 		}
@@ -45,9 +48,10 @@ public class Level : MonoBehaviour
 		void FlashWhiteScreen ()
 		{
 				GameObject gameObject = StageUtil2D.AddGameObject (Res.Pixel, new Vector3 (0, 0, 0));
-				gameObject.transform.localScale = new Vector3 (3100, 1750, 1);
-
+				gameObject.transform.localScale = new Vector3 (4000, 2000, 1);
+				
 				AlphaFade alphaFade = gameObject.AddComponent<AlphaFade> ();
+				gameObject.renderer.sortingOrder = 99999;
 				alphaFade.fadeSpeed = -0.1f;
 				alphaFade.alpha = 1;
 		}
@@ -61,7 +65,7 @@ public class Level : MonoBehaviour
 				GameObject.Find ("RotateMenuCog360").GetComponent<InstructionSingleInstance> ().Run ();
 
 				if (level > 1) {
-						SoundLibrary.PlayLevelCompleted ();
+
 				} else {
 						NewGameStart ();
 				}
@@ -92,16 +96,7 @@ public class Level : MonoBehaviour
 
 		public void LoseLife ()
 		{
-				if (!lifeLost) {
-						lifeLost = true;
-						GameState.Instance.livesRemaining--;
-						lifeLost = true;
-						if (GameState.Instance.livesRemaining < 1) {
-								Level.RestartGame ();
-						} else {
-								Level.instance.Restart ();
-						}
-				}	
+				GameObject.Find ("DIE()").GetComponent<Instructions> ().runAutomatically = true;
 		}
 	
 		public void Restart ()
@@ -115,8 +110,9 @@ public class Level : MonoBehaviour
 				Application.LoadLevel (nextScene);
 		}
 
-		public void PreviousLevel(){
-			Application.LoadLevel (previousScene);
+		public void PreviousLevel ()
+		{
+				Application.LoadLevel (previousScene);
 		}
 
 		public static void RestartGame ()

@@ -10,17 +10,7 @@ public class SoundLibrary : MonoBehaviour
 		public AudioClip death;
 		public AudioClip gameOver;
 		public AudioClip newGame;
-		private static SoundLibrary Instance;
-
-		private static List<Action> callbacks = new List<Action> ();
-
-		void Update ()
-		{
-		foreach (Action action in SoundLibrary.callbacks) {
-						action ();
-				}
-		SoundLibrary.callbacks.Clear ();
-		}
+		public static SoundLibrary Instance;
 	
 		void Awake ()
 		{

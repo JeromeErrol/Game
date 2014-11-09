@@ -29,11 +29,10 @@ public class Velocity : MonoBehaviour
 			velocity += acceleration;
 			acceleration = 0;
 			velocity *= (friction);
-
 			Vector3 nextPosition = transform.position;
 			nextPosition.x += velocity.RealVal();
 			Vector3 vel = new Vector3 (velocity, 0, 0);
-			transform.position = Vector3.SmoothDamp (transform.position, nextPosition, ref vel, 1f);
+			transform.position = Vector3.SmoothDamp (transform.position, nextPosition, ref vel, 1f, 10f, Time.deltaTime);
 		}
 
 		float averageVelocity {

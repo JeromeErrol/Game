@@ -5,10 +5,12 @@ public class Button2D : MonoBehaviour
 {
 		public Color color = Color.black;
 		public GUIStyle style;
-		public float alpha;
+		public float alpha = 1;
 		public string text;
+		public float x;
+		public float y;
+		public bool visible = true;
 		public Instruction instruction;
-		public bool visible;
 	
 		void Update ()
 		{
@@ -19,7 +21,7 @@ public class Button2D : MonoBehaviour
 		{
 				if (visible) {
 						GUI.color = color;
-						if (GUI.Button (new Rect (transform.position.x, transform.position.y, Screen.width, 50), text, style)) {
+						if (GUI.Button (new Rect (x, y, Screen.width, 50), text, style)) {
 								if (instruction != null) {
 										instruction.Run ();
 								}

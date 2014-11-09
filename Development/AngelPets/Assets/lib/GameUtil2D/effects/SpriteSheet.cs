@@ -9,7 +9,7 @@ public class SpriteSheet : MonoBehaviour
 	public bool reverseOnFinish = true;
 	private int currentIndex;
 	private int currentDirection;
-	private int nextFrame;
+	private float nextFrame;
 	
 	void Start ()
 	{
@@ -21,7 +21,7 @@ public class SpriteSheet : MonoBehaviour
 	void Update ()
 	{		
 		gameObject.SetSprite (CurrentSprite);
-		nextFrame--;
+		nextFrame-= Fps.Correct;
 		if (nextFrame <= 0) {
 			nextFrame = timePerFrame;
 			if (reverseOnFinish && currentIndex >= frames.Count - 1 || currentIndex <= 0) {

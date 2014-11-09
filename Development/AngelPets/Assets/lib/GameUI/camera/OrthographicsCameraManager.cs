@@ -6,12 +6,6 @@ public class OrthographicsCameraManager : MonoBehaviour
 		public float width = 16;
 		public float height = 9;
 
-		// Use this for initialization
-		void Start ()
-		{				
-				
-		}
-
 		void Update ()
 		{
 				Camera camera = GetComponent<Camera> ();

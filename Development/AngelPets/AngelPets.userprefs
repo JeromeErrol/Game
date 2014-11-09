@@ -1,27 +1,39 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\lib\GameUI\camera\OrthographicsCameraManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Player.cs">
     <Files>
-      <File FileName="Assets\lib\GameUI\userinput\UserInputManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUI\userinput\UserInteractive.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUI\camera\OrthographicsCameraManager.cs" Line="10" Column="3" />
-      <File FileName="Assets\lib\GameUI\camera\PerspectiveCameraManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Level.cs" Line="86" Column="7" />
+      <File FileName="Assets\lib\GameUtil2D\core\InstructionSingleInstance.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\gameflow\RestartLevel.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\gameflow\StartNewGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\wingpets\LevelInstructions.cs" Line="10" Column="1" />
+      <File FileName="Assets\lib\wingpets\Die.cs" Line="19" Column="24" />
+      <File FileName="Assets\scripts\Player.cs" Line="21" Column="4" />
+      <File FileName="Assets\scripts\characters\Wings.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\resources\SoundLibrary.cs" Line="32" Column="3" />
+      <File FileName="Assets\lib\GameUtil2D\core\instructions\PlaySound.cs" Line="22" Column="18" />
+      <File FileName="Assets\lib\GameUtil2D\effects\ParticleGenerator.cs" Line="41" Column="19" />
+      <File FileName="Assets\lib\GameUtil2D\core\extensions\GameObjectEntensions.cs" Line="150" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="lib" expanded="True">
-              <Node name="GameUI" expanded="True">
-                <Node name="camera" expanded="True">
-                  <Node name="OrthographicsCameraManager.cs" selected="True" />
+              <Node name="GameUtil2D" expanded="True">
+                <Node name="core" expanded="True">
+                  <Node name="extensions" expanded="True" />
+                  <Node name="instructions" expanded="True" />
                 </Node>
-                <Node name="userinput" expanded="True" />
+                <Node name="effects" expanded="True" />
               </Node>
+              <Node name="wingpets" expanded="True" />
             </Node>
-          </Node>
-          <Node name="Assembly-CSharp-Editor" expanded="True">
-            <Node name="Editor" expanded="True" />
+            <Node name="scripts" expanded="True">
+              <Node name="characters" expanded="True" />
+              <Node name="resources" expanded="True" />
+              <Node name="Player.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -37,6 +49,7 @@
     <BreakpointStore>
       <Breakpoint file="C:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUI\core\InputManager.cs" line="20" />
       <Breakpoint file="C:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUI\core\D.cs" line="25" />
+      <Breakpoint file="C:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\scripts\Player.cs" line="34" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>

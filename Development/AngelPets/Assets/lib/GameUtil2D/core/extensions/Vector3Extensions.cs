@@ -23,6 +23,5 @@ public static class Vector3Extensions
 				return new Vector3 (vector.x + amount, vector.y + amount);
 		}
 
-
 }
 

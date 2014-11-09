@@ -9,6 +9,7 @@ public class Fps : MonoBehaviour
 		private float timeleft; // Left time for current interval
 		private float fps = 0;
 		private static float _Value = 0;
+		private static float _Correction = 1;
 
 		void Start ()
 		{
@@ -17,7 +18,7 @@ public class Fps : MonoBehaviour
 
 		public override string ToString ()
 		{
-				return System.String.Format ("{0:F2} FPS", fps);
+				return System.String.Format ("{0:F2} FPS", fps) + " delta time:" + Time.deltaTime;
 		}
 
 		public float GetValue {
@@ -26,24 +27,30 @@ public class Fps : MonoBehaviour
 				}
 		}
 
+		public static float Correct {
+				get {
+						return _Correction;
+				}
+		}
+
 		public static float Value {
 				get {
 						return _Value;
 				}
 		}
-
 	
 		void Update ()
 		{
 				timeleft -= Time.deltaTime;
 				accum += Time.timeScale / Time.deltaTime;
 				++frames;
-		
+				fps = accum / frames;
+				_Correction = (60 / Mathf.Max (1, Fps.Value));
+				_Value = fps;
+				
 				// Interval ended - update GUI text and start new interval
 				if (timeleft <= 0.0) {
 						// display two fractional digits (f2 format)
-						fps = accum / frames;
-						_Value = fps;
 						//	DebugConsole.Log(format,level);
 						timeleft = updateInterval;
 						accum = 0.0F;

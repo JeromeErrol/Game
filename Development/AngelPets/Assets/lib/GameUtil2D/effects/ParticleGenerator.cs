@@ -36,6 +36,7 @@ public class ParticleGenerator : MonoBehaviour
 		void Fire ()
 		{
 				GameObject go = new GameObject ();
+				gameObject.AddChild (go);
 				go.transform.position = transform.position.Randomize (spawnRange);
 				BaseParticle smoke = go.AddComponent<BaseParticle> ();					
 				smoke.lifeTime = particleLifeTime;

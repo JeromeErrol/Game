@@ -86,7 +86,7 @@ public static class GameObjectEntensions
 		public static void RotateBy (this GameObject gameobject, float value)
 		{
 				Vector3 e = gameobject.transform.eulerAngles;
-				e.z += value;
+				e.z += value.RealVal ();
 				gameobject.transform.eulerAngles = e;
 		}
 
@@ -144,6 +144,11 @@ public static class GameObjectEntensions
 		public static Vector3 ScreenPosition (this GameObject gameObject)
 		{
 				return Camera.main.WorldToScreenPoint (gameObject.transform.position);
+		}
+
+		public static void AddChild (this GameObject thisGameObject, GameObject gameObject)
+		{
+				gameObject.transform.parent = thisGameObject.transform;
 		}
 
 

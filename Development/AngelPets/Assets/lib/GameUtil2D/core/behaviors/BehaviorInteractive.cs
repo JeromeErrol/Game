@@ -9,10 +9,6 @@ public class BehaviorInteractive : MonoBehaviour
 		public Instruction hoverInstruction;
 		public Instruction leaveInstruction;
 		public bool newSingleInstance = false;
-		public Sprite normalSprite;
-		public Sprite enterSprite;
-		public Sprite staySprite;
-		public Sprite leaveSprite;
 	
 		void Update ()
 		{
@@ -25,18 +21,10 @@ public class BehaviorInteractive : MonoBehaviour
 						if (!sameFrame) {
 								sameFrame = true;
 								if (collider2D.gameObject == interactWith) {
-										if (enterSprite != null) {
-												gameObject.SetSprite (enterSprite);
-										}
-									
 										if (newSingleInstance == false) {
 												enterInstruction.Run ();
 										} else {
-												GameObject gameObject = new GameObject ("temp"); // Objects named 'temp' get garbage collected at the end of the frame. 
-												InstructionSingleInstance instance = gameObject.AddComponent<InstructionSingleInstance> ();
-												instance.instruction = enterInstruction;
-												instance.RunOnce ();
-												gameObject.Destroy ();
+												InstructionSingleInstance.RunInInstance (enterInstruction);
 										}
 								}
 						}
@@ -47,19 +35,10 @@ public class BehaviorInteractive : MonoBehaviour
 		{
 				if (hoverInstruction != null) {
 						if (collider2D.gameObject == interactWith) {
-
-								if (staySprite != null) {
-										gameObject.SetSprite (staySprite);
-								}
-
 								if (newSingleInstance == false) {
 										hoverInstruction.Run ();
 								} else {
-										GameObject gameObject = new GameObject ("temp"); // Objects named 'temp' get garbage collected at the end of the frame. 
-										InstructionSingleInstance instance = gameObject.AddComponent<InstructionSingleInstance> ();
-										instance.instruction = hoverInstruction;
-										instance.RunOnce ();
-										gameObject.Destroy ();
+										InstructionSingleInstance.RunInInstance (hoverInstruction);
 								}
 						}
 				}
@@ -71,11 +50,7 @@ public class BehaviorInteractive : MonoBehaviour
 						if (collider2D.gameObject == interactWith) {
 								leaveInstruction.Run ();
 						} else {
-								GameObject gameObject = new GameObject ("temp"); // Objects named 'temp' get garbage collected at the end of the frame. 
-								InstructionSingleInstance instance = gameObject.AddComponent<InstructionSingleInstance> ();
-								instance.instruction = leaveInstruction;
-								instance.RunOnce ();
-								gameObject.Destroy ();
+								InstructionSingleInstance.RunInInstance (leaveInstruction);
 						}
 				}
 		}

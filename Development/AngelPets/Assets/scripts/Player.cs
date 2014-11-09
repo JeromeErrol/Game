@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 		public bool moving = false;
 		public static Player instance;
 		public int fastFlapSpeed = 2;
-		public int slowFlapSpeed = 60;
+		public int slowFlapSpeed = 5;
 
 		void Start ()
 		{
@@ -34,15 +34,13 @@ public class Player : MonoBehaviour
 						cat.timePerFrame = slowFlapSpeed;
 				}
 
-				if (gameObject.Left () < GameScreen.Left) {
-						gameObject.Left (GameScreen.Left);
+				if (gameObject.Left () < -17.906f) {
+						gameObject.Left (-17.906f);
 				}
 
-				if (transform.position.x > GameScreen.Right) {
+				if (transform.position.x > 18.073) {
 						Level.instance.NextLevel ();
 				}
-
-				
 		}
 
 		void ReadScreenInput ()

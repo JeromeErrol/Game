@@ -16,6 +16,7 @@ public class BaseParticle : MonoBehaviour
 	
 		void Start ()
 		{
+				gameObject.name = "Particle";
 				gameObject.SetSprite (sprite);	
 				gameObject.SetAlpha (alpha);
 				gameObject.transform.localScale = scale;
