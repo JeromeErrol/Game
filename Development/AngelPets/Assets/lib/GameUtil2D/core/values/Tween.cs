@@ -22,7 +22,6 @@ public class Tween : Instruction
 		return initialSpeed + (Acceleration * frame);
 	}	
 
-
 	public override void Begin ()
 	{
 		currentFrame = 0;

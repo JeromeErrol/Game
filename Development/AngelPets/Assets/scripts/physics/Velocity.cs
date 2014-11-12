@@ -30,7 +30,7 @@ public class Velocity : MonoBehaviour
 			acceleration = 0;
 			velocity *= (friction);
 			Vector3 nextPosition = transform.position;
-			nextPosition.x += velocity.RealVal();
+			nextPosition.x += velocity;
 			Vector3 vel = new Vector3 (velocity, 0, 0);
 			transform.position = Vector3.SmoothDamp (transform.position, nextPosition, ref vel, 1f, 10f, Time.deltaTime);
 		}

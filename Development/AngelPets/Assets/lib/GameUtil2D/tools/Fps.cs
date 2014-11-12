@@ -10,6 +10,9 @@ public class Fps : MonoBehaviour
 		private float fps = 0;
 		private static float _Value = 0;
 		private static float _Correction = 1;
+		public static float GameSpeed = 1.0f;
+		public float gameSpeed = 1.0f;
+		public static int FRAME = 0;
 
 		void Start ()
 		{
@@ -41,11 +44,13 @@ public class Fps : MonoBehaviour
 	
 		void Update ()
 		{
+				FRAME++;
 				timeleft -= Time.deltaTime;
 				accum += Time.timeScale / Time.deltaTime;
 				++frames;
 				fps = accum / frames;
-				_Correction = (60 / Mathf.Max (1, Fps.Value));
+				Fps.GameSpeed = gameSpeed;
+				_Correction = (60 / Mathf.Max (1, Fps.Value)) * GameSpeed;
 				_Value = fps;
 				
 				// Interval ended - update GUI text and start new interval

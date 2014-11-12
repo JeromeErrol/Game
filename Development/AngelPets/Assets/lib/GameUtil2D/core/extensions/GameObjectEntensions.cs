@@ -86,7 +86,7 @@ public static class GameObjectEntensions
 		public static void RotateBy (this GameObject gameobject, float value)
 		{
 				Vector3 e = gameobject.transform.eulerAngles;
-				e.z += value.RealVal ();
+				e.z += value;
 				gameobject.transform.eulerAngles = e;
 		}
 
@@ -151,7 +151,10 @@ public static class GameObjectEntensions
 				gameObject.transform.parent = thisGameObject.transform;
 		}
 
-
+		public static float GetRelativeSpeed (this GameObject thisGameObject)
+		{
+				return thisGameObject.GetOrCreateComponent<Speed> ().RelativeSpeed;
+		}
 		
 }
 

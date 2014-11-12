@@ -10,12 +10,14 @@ public abstract class Animate : TargetedInstruction
 		public float distanceTravelled;
 		private float time;
 		private float currentTime;
+		private float targetDestination;
+
 
 		public override void Begin ()
 		{
 				currentTime = 0;
 				velocity = initialVelocity;
-				float averageVelocity = 0.5f * (initialVelocity + finalVelocity);
+				float averageVelocity = (initialVelocity + finalVelocity) / 2f;
 				time = Mathf.Abs(distanceTravelled / averageVelocity);
 				acceleration = (finalVelocity - initialVelocity) / time;
 		}
@@ -33,7 +35,5 @@ public abstract class Animate : TargetedInstruction
 		}
 
 		public abstract void UpdateValue (float velocity);
-
-		
 }
 

@@ -62,7 +62,7 @@ public class Level : MonoBehaviour
 				GetComponent<FadeAGUI> ().text = "Level: " + level;
 				GameState.Instance.livesRemaining = GameState.Instance.totalStarPieces;
 				
-				GameObject.Find ("RotateMenuCog360").GetComponent<InstructionSingleInstance> ().Run ();
+				//GameObject.Find ("RotateMenuCog360").GetComponent<InstructionSingleInstance> ().Run ();
 
 				if (level > 1) {
 

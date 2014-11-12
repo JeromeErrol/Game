@@ -1,8 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class UserInputManager : MonoBehaviour
 {
+		private bool pressed = false;
+		public List<UserInteractive> itemsClicked = new List<UserInteractive> ();
+
 		void Update ()
 		{
 				RuntimePlatform platform = Application.platform;
@@ -10,12 +14,38 @@ public class UserInputManager : MonoBehaviour
 				if (platform == RuntimePlatform.Android || platform == RuntimePlatform.IPhonePlayer) {
 						if (Input.touchCount > 0) {
 								if (Input.GetTouch (0).phase == TouchPhase.Began) {
-										checkTouch (Input.GetTouch (0).position);
+										if (!pressed) {
+												pressed = true;
+												checkTouch (Input.GetTouch (0).position);
+										}
 								}
-						}
+						} 
 				} else if (Application.platform == RuntimePlatform.WindowsEditor) {
 						if (Input.GetMouseButtonDown (0)) {
-								checkTouch (Input.mousePosition);
+								if (!pressed) {
+										print ("Pressed");
+										pressed = true;
+
+										Vector3 wp = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+										Vector2 touchPos = new Vector2 (wp.x, wp.y);
+										var hit = Physics2D.OverlapPoint (touchPos);
+										if (hit) {
+												UserInteractive userInteractive = hit.transform.gameObject.GetComponent<UserInteractive> ();
+												if (userInteractive != null) {
+														itemsClicked.Add (userInteractive);
+												}
+										}
+								}
+						} else if (Input.GetMouseButtonUp (0)) {
+								if (pressed) {
+										pressed = false;
+										print ("Released");
+										
+										foreach (UserInteractive userInteractive in itemsClicked) {
+												userInteractive.Pressed ();
+										}
+										itemsClicked.Clear ();
+								}
 						}
 				}
 		}
