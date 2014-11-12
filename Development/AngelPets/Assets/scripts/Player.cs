@@ -22,24 +22,26 @@ public class Player : MonoBehaviour
 
 		void FixedUpdate ()
 		{
-				moving = false;
-				ReadKeyboardInput ();
-				ReadScreenInput ();
-				GameObject.Find ("glintGenerator").GetComponent<ParticleGenerator> ().enabled = moving;
-				SpriteSheet cat = Player.instance.GetComponent<SpriteSheet> ();		
-				if (moving) {
-						cat.timePerFrame = fastFlapSpeed;
+				if (Game.Instance.Paused == false) {
+						moving = false;
+						ReadKeyboardInput ();
+						ReadScreenInput ();
+						GameObject.Find ("glintGenerator").GetComponent<ParticleGenerator> ().enabled = moving;
+						SpriteSheet cat = Player.instance.GetComponent<SpriteSheet> ();		
+						if (moving) {
+								cat.SetTimePerFrame (fastFlapSpeed);
 
-				} else {
-						cat.timePerFrame = slowFlapSpeed;
-				}
+						} else {
+								cat.SetTimePerFrame (slowFlapSpeed);
+						}
 
-				if (gameObject.Left () < -17.906f) {
-						gameObject.Left (-17.906f);
-				}
+						if (gameObject.Left () < -17.906f) {
+								gameObject.Left (-17.906f);
+						}
 
-				if (transform.position.x > 18.073) {
-						Level.instance.NextLevel ();
+						if (transform.position.x > 18.073) {
+								Level.instance.NextLevel ();
+						}
 				}
 		}
 

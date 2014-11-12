@@ -27,9 +27,9 @@ public class Eyes : CharacterPart
 				timeUntilNextBlink = timeBetweenBlinks.GiveOrTake (timeBetweenBlinksRange);
 		}
 	
-		void Update ()
+		void FixedUpdate ()
 		{
-				timeUntilNextBlink--;
+				timeUntilNextBlink -= gameObject.GetRelativeSpeed ();
 				if (timeUntilNextBlink <= 0) {
 						Blink ();
 				}

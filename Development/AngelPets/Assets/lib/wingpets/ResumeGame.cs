@@ -3,9 +3,9 @@ using System.Collections;
 
 public class ResumeGame : InstructionRunOnce
 {
-	public override void RunOnce ()
-	{
-		Fps.GameSpeed = 1;
-	}
+		public override void RunOnce ()
+		{
+				Game.Instance.Paused = false;
+		}
 }
 

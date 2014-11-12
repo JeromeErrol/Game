@@ -5,35 +5,49 @@ using System.Collections.Generic;
 public class SpriteSheet : MonoBehaviour
 {
 		public List<Sprite> frames = new List<Sprite> ();
-		public int timePerFrame;
+		public float timePerFrame;
 		public bool reverseOnFinish = true;
-		private int currentIndex;
 		private int currentDirection;
 		private float nextFrame;
-	
+		private float maxTime;
+		private float currentTime;
+
 		void Start ()
 		{
-				currentIndex = 0;
 				currentDirection = -1;
 				nextFrame = timePerFrame;
+				currentTime = timePerFrame;
+				maxTime = timePerFrame * frames.Count;
 		}
 	
 		void Update ()
 		{		
+				
 				gameObject.SetSprite (CurrentSprite);
-				nextFrame -= Fps.Correct;
-				if (nextFrame <= 0) {
-						nextFrame = timePerFrame;
-						if (reverseOnFinish && currentIndex >= frames.Count - 1 || currentIndex <= 0) {
+				float speed = gameObject.GetRelativeSpeed ();
+				currentTime += (speed * currentDirection);
+				
+				if (currentTime > maxTime || currentTime < 0) {
+						if (reverseOnFinish) {
 								currentDirection = -currentDirection;
+								currentTime += (speed * currentDirection);
+						} else {
+								currentTime = 0;
 						}
-						currentIndex += currentDirection;
 				}
+		}
+
+		public void SetTimePerFrame (float value)
+		{
+				float difference = value / timePerFrame;
+				timePerFrame = value;
+				maxTime = timePerFrame * frames.Count;
+				currentTime *= difference;
 		}
 	
 		public Sprite CurrentSprite {
 				get {
-						return frames [currentIndex];
+						return frames [(int)(currentTime / timePerFrame)];
 				}
 		}
 }

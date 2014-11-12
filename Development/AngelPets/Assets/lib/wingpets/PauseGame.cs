@@ -6,7 +6,7 @@ public class PauseGame : InstructionRunOnce
 
 		public override void RunOnce ()
 		{
-				Fps.GameSpeed = 0;
+				Game.Instance.Paused = true;
 		}
 }
 
