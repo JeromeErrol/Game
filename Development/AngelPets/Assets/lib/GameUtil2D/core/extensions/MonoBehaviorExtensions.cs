@@ -15,10 +15,15 @@ public static class MonoBehaviorExtensions
 				return position;
 		}
 
-		public static RotationInstruction GameObject2D (this MonoBehaviour monoBehavior)
+		public static Speed Speed (this MonoBehaviour monoBehavior)
 		{
-				return monoBehavior.GetComponent<RotationInstruction> ();
+				return monoBehavior.gameObject.GetOrCreateComponent<Speed> ();
 		}
 
+		public static float RelativeSpeed (this MonoBehaviour monoBehavior)
+		{
+				return monoBehavior.gameObject.GetOrCreateComponent<Speed> ().RelativeSpeed;
+		}
+		
 }
 

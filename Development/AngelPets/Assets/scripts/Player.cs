@@ -93,8 +93,8 @@ public class Player : MonoBehaviour
 
 		void Accelerate ()
 		{
-				GetComponent<Velocity> ().AddAcceleration (acceleration);
-				
+				Movement movement = gameObject.GetComponent<Movement> ();
+				movement.acceleration.x += this.acceleration;
 				Vector3 scale = gameObject.transform.localScale;
 				scale.x = Mathf.Abs (scale.x);
 				transform.localScale = scale;
@@ -103,8 +103,8 @@ public class Player : MonoBehaviour
 
 		void Reverse ()
 		{
-				GetComponent<Velocity> ().AddAcceleration (-acceleration);
-
+				Movement movement = gameObject.GetComponent<Movement> ();
+				movement.acceleration.x -= this.acceleration;
 				Vector3 scale = gameObject.transform.localScale;
 				scale.x = -Mathf.Abs (scale.x);
 				transform.localScale = scale;

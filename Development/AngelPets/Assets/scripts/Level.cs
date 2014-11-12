@@ -41,8 +41,8 @@ public class Level : MonoBehaviour
 		void RotateStar ()
 		{
 
-				GameObject.Find ("MenuCog").GetComponent<InstructionSingleInstance> ().Run ();
-				GameObject.Find ("MenuStar").GetComponent<InstructionSingleInstance> ().Run ();
+			//	GameObject.Find ("MenuCog").GetComponent<InstructionSingleInstance> ().Run ();
+			//	GameObject.Find ("MenuStar").GetComponent<InstructionSingleInstance> ().Run ();
 		}
 
 		void FlashWhiteScreen ()

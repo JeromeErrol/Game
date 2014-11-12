@@ -54,6 +54,7 @@
      <Compile Include="Assets\lib\GameAI\TargetedAnimation.cs" />
      <Compile Include="Assets\lib\GameCore\Game.cs" />
      <Compile Include="Assets\lib\GameCore\Movement.cs" />
+     <Compile Include="Assets\lib\GameCore\MovementController.cs" />
      <Compile Include="Assets\lib\GameCore\Rotation.cs" />
      <Compile Include="Assets\lib\GameCore\Speed.cs" />
      <Compile Include="Assets\lib\GameUI\camera\OrthographicsCameraManager.cs" />
@@ -144,6 +145,7 @@
      <Compile Include="Assets\lib\GameUtil2D\util\StageUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\TextureUtil2D.cs" />
      <Compile Include="Assets\lib\wingpets\Die.cs" />
+     <Compile Include="Assets\lib\wingpets\InGameObject.cs" />
      <Compile Include="Assets\lib\wingpets\LevelInstructions.cs" />
      <Compile Include="Assets\lib\wingpets\PauseGame.cs" />
      <Compile Include="Assets\lib\wingpets\ResumeGame.cs" />

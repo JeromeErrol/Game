@@ -5,11 +5,7 @@ public class Rotation : MonoBehaviour
 {
 		public float value;
 
-		void Start(){
-			
-		}
-
-		void Update ()
+		void FixedUpdate ()
 		{
 				Vector3 angle = gameObject.transform.eulerAngles;
 				angle.z = value;
@@ -18,7 +14,7 @@ public class Rotation : MonoBehaviour
 
 		public void RotateBy (float degrees)
 		{
-			value += (degrees * (gameObject.GetOrCreateComponent<Speed> ().RelativeSpeed)); 
+				value += (degrees * (gameObject.GetOrCreateComponent<Speed> ().RelativeSpeed)); 
 		}
 }
 

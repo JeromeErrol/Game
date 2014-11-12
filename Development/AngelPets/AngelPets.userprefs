@@ -1,44 +1,33 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\lib\GameAI\GoToTargetRotation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\lib\wingpets\InGameObject.cs">
     <Files>
-      <File FileName="Assets\lib\GameAI\GoToTargetRotation.cs" Line="25" Column="38" />
+      <File FileName="Assets\lib\GameAI\GoToTargetRotation.cs" Line="24" Column="4" />
       <File FileName="Assets\lib\GameUtil2D\core\extensions\FloatExtensions.cs" Line="5" Column="2" />
       <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\extensions\GameObjectEntensions.cs" Line="89" Column="16" />
       <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\extensions\TransformExtensions.cs" Line="15" Column="83" />
       <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\scripts\physics\Velocity.cs" Line="25" Column="4" />
       <File FileName="Assets\lib\GameUtil2D\core\InstructionSingleInstance.cs" Line="25" Column="6" />
-      <File FileName="Assets\scripts\Player.cs" Line="29" Column="1" />
-      <File FileName="Assets\scripts\characters\Wings.cs" Line="30" Column="4" />
-      <File FileName="Assets\lib\GameCore\Movement.cs" Line="16" Column="2" />
-      <File FileName="Assets\lib\GameCore\Rotation.cs" Line="7" Column="1" />
-      <File FileName="Assets\lib\GameCore\Game.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Player.cs" Line="21" Column="4" />
+      <File FileName="Assets\scripts\characters\Wings.cs" Line="37" Column="6" />
+      <File FileName="Assets\lib\GameCore\Movement.cs" Line="13" Column="4" />
+      <File FileName="Assets\lib\GameCore\Rotation.cs" Line="17" Column="5" />
+      <File FileName="Assets\lib\GameCore\Game.cs" Line="8" Column="2" />
       <File FileName="Assets\lib\GameUtil2D\core\behaviors\BehaviorInteractive.cs" Line="16" Column="4" />
-      <File FileName="Assets\lib\GameUtil2D\core\extensions\MonoBehaviorExtensions.cs" Line="18" Column="3" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\RotationInstruction.cs" Line="14" Column="4" />
+      <File FileName="Assets\lib\GameUtil2D\core\extensions\MonoBehaviorExtensions.cs" Line="8" Column="4" />
+      <File FileName="Assets\lib\GameUtil2D\core\instructions\RotationInstruction.cs" Line="3" Column="18" />
+      <File FileName="Assets\lib\GameCore\Speed.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\PlayerInteractive.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\wingpets\InGameObject.cs" Line="12" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="lib" expanded="True">
-              <Node name="GameAI" expanded="True">
-                <Node name="GoToTargetRotation.cs" selected="True" />
-              </Node>
-              <Node name="GameCore" expanded="True" />
-              <Node name="GameUtil2D" expanded="True">
-                <Node name="core" expanded="True">
-                  <Node name="extensions" expanded="True" />
-                  <Node name="instructions" expanded="True" />
-                </Node>
-              </Node>
-            </Node>
-            <Node name="scripts" expanded="True">
-              <Node name="characters" expanded="True" />
-              <Node name="physics" expanded="True" />
+              <Node name="wingpets" expanded="True" selected="True" />
             </Node>
           </Node>
-          <Node name="Assembly-CSharp-Editor" expanded="True" />
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">

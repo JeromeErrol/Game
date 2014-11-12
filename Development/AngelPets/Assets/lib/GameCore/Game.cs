@@ -9,11 +9,14 @@ public class Game : MonoBehaviour
 		void Awake ()
 		{
 				Instance = this;
+				gameObject.GetOrCreateComponent<Speed> ();
+				gameObject.GetOrCreateComponent<Fps> ();
 		}
 	
-		void Update ()
+		void FixedUpdate ()
 		{
 				_currentFrame++;
+				print (Time.deltaTime);
 		}
 		
 		public int CurrentFrame {

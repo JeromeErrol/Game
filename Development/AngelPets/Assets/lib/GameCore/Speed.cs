@@ -9,9 +9,9 @@ public class Speed : MonoBehaviour
 		public float RelativeSpeed {
 				get {
 						if (relativeTo != null) {
-								return value * relativeTo.RelativeSpeed;
+								return this.value * relativeTo.RelativeSpeed;
 						} else {
-								return value;
+							return this.value / Time.deltaTime / 50f;
 						}
 				}
 		}
