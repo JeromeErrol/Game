@@ -29,21 +29,17 @@ public static class GameObjectEntensions
 
 		public static void X (this GameObject gameobject, float value)
 		{
-				Vector3 pos = gameobject.transform.position;
-				pos.x = value;
-				gameobject.transform.position = pos;
+				gameobject.GetComponent<Movement> ().position.x = value;
 		}
 
 		public static float Y (this GameObject gameobject)
 		{
 				return gameobject.transform.position.y;
 		}
-	
+
 		public static void Y (this GameObject gameobject, float value)
 		{
-				Vector3 pos = gameobject.transform.position;
-				pos.y = value;
-				gameobject.transform.position = pos;
+			gameobject.GetComponent<Movement> ().position.y = value;
 		}
 	
 		public static float Bottom (this GameObject gameobject)
@@ -63,7 +59,7 @@ public static class GameObjectEntensions
 
 		public static void Left (this GameObject gameobject, float value)
 		{				
-				gameobject.X (value + (gameobject.Width () / 2f));
+				gameobject.X((value + (gameobject.Width () / 2f)));
 		}
 
 		public static float Right (this GameObject gameobject)

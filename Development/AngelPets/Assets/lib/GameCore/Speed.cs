@@ -11,7 +11,7 @@ public class Speed : MonoBehaviour
 						if (relativeTo != null) {
 								return this.value * relativeTo.RelativeSpeed;
 						} else {
-							return this.value / Time.deltaTime / 50f;
+								return this.value / Time.deltaTime / 50f;
 						}
 				}
 		}

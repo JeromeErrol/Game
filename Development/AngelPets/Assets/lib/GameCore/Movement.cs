@@ -20,6 +20,12 @@ public class Movement : MonoBehaviour
 				position.y += y * speed;
 		}
 
+		public void Stop ()
+		{
+				acceleration = Vector2.zero;
+				velocity = Vector2.zero;
+		}
+
 		void FixedUpdate ()
 		{
 				float speed = gameObject.GetOrCreateComponent<Speed> ().RelativeSpeed;
@@ -29,11 +35,16 @@ public class Movement : MonoBehaviour
 				velocity.y *= (friction * speed);
 				acceleration = Vector2.zero;
 				position.x += velocity.x * speed;
-				if (velocity.x != 0) {
-						print ("hah");
-				}
 				position.y += velocity.y * speed;
 				transform.position = position;
+		}
+
+		public void AccelerateTowards (Vector2 position, float distance)
+		{
+				Vector2 difference = position - this.position;
+				difference.Normalize ();
+				acceleration.x += difference.x * distance;
+				acceleration.y = difference.y * distance;
 		}
 
 		public static float CalculateAcceleration (float initialVelocity, float finalVelocity, float distance)

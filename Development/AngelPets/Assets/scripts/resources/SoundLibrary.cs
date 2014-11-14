@@ -10,6 +10,7 @@ public class SoundLibrary : MonoBehaviour
 		public AudioClip death;
 		public AudioClip gameOver;
 		public AudioClip newGame;
+		public AudioClip openMenu;
 		public static SoundLibrary Instance;
 	
 		void Awake ()
@@ -28,6 +29,11 @@ public class SoundLibrary : MonoBehaviour
 		public static void PlayDeath ()
 		{
 				Instance.audio.PlayOneShot (Instance.death);
+		}
+
+		public static void PlayOpenMenu ()
+		{
+				Instance.audio.PlayOneShot (Instance.openMenu);
 		}
 
 		public static void PlayGameOver ()

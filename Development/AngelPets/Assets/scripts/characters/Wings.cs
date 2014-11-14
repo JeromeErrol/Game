@@ -3,23 +3,21 @@ using System.Collections;
 
 public class Wings : MonoBehaviour
 {
-		public float height;
+		public float averageHeight;
+		public float peakHeight;
 		public float speed;
-		private float _value = 0;
-		private float direction = 1;
+		public float direction = 1f;
 
-		void Start ()
+		void FixedUpdate ()
 		{
-			
-		}
-
-		void Update ()
-		{
-				//Movement movement = Player.instance.gameObject.GetComponent<Movement> ();
+				Movement movement = gameObject.GetComponent<Movement> ();
+				movement.acceleration.y += speed * direction;
 				
-			
-			//	movement.acceleration.y += (speed * direction);
-		
+				if (movement.position.y > averageHeight + peakHeight) {
+						direction = -1;
+				} else if (movement.position.y < averageHeight - peakHeight) {
+						direction = 1;
+				}
 		}
 }
 

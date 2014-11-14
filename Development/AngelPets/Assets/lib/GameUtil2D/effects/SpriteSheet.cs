@@ -8,14 +8,12 @@ public class SpriteSheet : MonoBehaviour
 		public float timePerFrame;
 		public bool reverseOnFinish = true;
 		private int currentDirection;
-		private float nextFrame;
 		private float maxTime;
 		private float currentTime;
 
 		void Start ()
 		{
 				currentDirection = -1;
-				nextFrame = timePerFrame;
 				currentTime = timePerFrame;
 				maxTime = timePerFrame * frames.Count;
 		}

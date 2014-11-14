@@ -28,13 +28,20 @@ public class UserInputManager : MonoBehaviour
 
 										Vector3 wp = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 										Vector2 touchPos = new Vector2 (wp.x, wp.y);
-										var hit = Physics2D.OverlapPoint (touchPos);
-										if (hit) {
-												UserInteractive userInteractive = hit.transform.gameObject.GetComponent<UserInteractive> ();
+										//var hit = Physics2D.OverlapPoint (touchPos);
+										Collider2D[] collisions = Physics2D.OverlapCircleAll (wp, 1f);
+										foreach (Collider2D collision in collisions) {
+												UserInteractive userInteractive = collision.transform.gameObject.GetComponent<UserInteractive> ();
 												if (userInteractive != null) {
 														itemsClicked.Add (userInteractive);
 												}
 										}
+										//	if (hit) {
+										//			UserInteractive userInteractive = hit.transform.gameObject.GetComponent<UserInteractive> ();
+										//			if (userInteractive != null) {
+										//					itemsClicked.Add (userInteractive);
+										//			}
+										//	}
 								}
 						} else if (Input.GetMouseButtonUp (0)) {
 								if (pressed) {

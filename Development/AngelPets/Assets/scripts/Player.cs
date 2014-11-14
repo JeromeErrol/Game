@@ -30,10 +30,10 @@ public class Player : MonoBehaviour
 						SpriteSheet cat = Player.instance.GetComponent<SpriteSheet> ();		
 						if (moving) {
 								cat.SetTimePerFrame (fastFlapSpeed);
-
 						} else {
 								cat.SetTimePerFrame (slowFlapSpeed);
 						}
+
 
 						if (gameObject.Left () < -17.906f) {
 								gameObject.Left (-17.906f);

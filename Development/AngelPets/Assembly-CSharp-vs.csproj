@@ -46,17 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\lib\GameAI\GoToTargetRotation.cs" />
-     <Compile Include="Assets\lib\GameAI\SetTargetRotation.cs" />
-     <Compile Include="Assets\lib\GameAI\SetTargetState.cs" />
-     <Compile Include="Assets\lib\GameAI\StateManager.cs" />
-     <Compile Include="Assets\lib\GameAI\TargetState.cs" />
-     <Compile Include="Assets\lib\GameAI\TargetedAnimation.cs" />
      <Compile Include="Assets\lib\GameCore\Game.cs" />
      <Compile Include="Assets\lib\GameCore\Movement.cs" />
-     <Compile Include="Assets\lib\GameCore\MovementController.cs" />
      <Compile Include="Assets\lib\GameCore\Rotation.cs" />
      <Compile Include="Assets\lib\GameCore\Speed.cs" />
+     <Compile Include="Assets\lib\GameCore\attributes\Gravity.cs" />
      <Compile Include="Assets\lib\GameUI\camera\OrthographicsCameraManager.cs" />
      <Compile Include="Assets\lib\GameUI\camera\PerspectiveCameraManager.cs" />
      <Compile Include="Assets\lib\GameUI\userinput\UserInputManager.cs" />
@@ -99,6 +93,7 @@
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Fade.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToDestination.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToPosition.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToTargetRotation.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\LoadScene.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Pause.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\PlaySound.cs" />
@@ -149,6 +144,10 @@
      <Compile Include="Assets\lib\wingpets\LevelInstructions.cs" />
      <Compile Include="Assets\lib\wingpets\PauseGame.cs" />
      <Compile Include="Assets\lib\wingpets\ResumeGame.cs" />
+     <Compile Include="Assets\lib\wingpets\powers\Boost.cs" />
+     <Compile Include="Assets\lib\wingpets\powers\BulletTime.cs" />
+     <Compile Include="Assets\lib\wingpets\powers\NormalTime.cs" />
+     <Compile Include="Assets\lib\wingpets\powers\Power.cs" />
      <Compile Include="Assets\scripts\AppInfo.cs" />
      <Compile Include="Assets\scripts\FlyingEnemy.cs" />
      <Compile Include="Assets\scripts\GameScreen.cs" />
@@ -160,6 +159,9 @@
      <Compile Include="Assets\scripts\Player.cs" />
      <Compile Include="Assets\scripts\PlayerInteractive.cs" />
      <Compile Include="Assets\scripts\Res.cs" />
+     <Compile Include="Assets\scripts\ai\GoToX.cs" />
+     <Compile Include="Assets\scripts\ai\GoToY.cs" />
+     <Compile Include="Assets\scripts\ai\ShakeTime.cs" />
      <Compile Include="Assets\scripts\behaviors\ActivateOnCollision.cs" />
      <Compile Include="Assets\scripts\behaviors\DeactivateOnCollision.cs" />
      <Compile Include="Assets\scripts\behaviors\DestroyOnCollision.cs" />
@@ -171,6 +173,7 @@
      <Compile Include="Assets\scripts\characters\AnimatedFly.cs" />
      <Compile Include="Assets\scripts\characters\CharacterPart.cs" />
      <Compile Include="Assets\scripts\characters\Eyes.cs" />
+     <Compile Include="Assets\scripts\characters\Glow.cs" />
      <Compile Include="Assets\scripts\characters\GravitateToMiddle.cs" />
      <Compile Include="Assets\scripts\characters\Mouth.cs" />
      <Compile Include="Assets\scripts\characters\Wings.cs" />
@@ -184,9 +187,11 @@
      <Compile Include="Assets\scripts\gameflow\RestartLevel.cs" />
      <Compile Include="Assets\scripts\gameflow\StartNewGame.cs" />
      <Compile Include="Assets\scripts\gameflow\Toggle.cs" />
+     <Compile Include="Assets\scripts\instructions\AddComponentGravity.cs" />
      <Compile Include="Assets\scripts\instructions\NextLevel.cs" />
      <Compile Include="Assets\scripts\instructions\PreviousLevel.cs" />
      <Compile Include="Assets\scripts\instructions\RunInstructionOnUserInput.cs" />
+     <Compile Include="Assets\scripts\instructions\StopMovement.cs" />
      <Compile Include="Assets\scripts\items\Collectable.cs" />
      <Compile Include="Assets\scripts\items\HoverButton.cs" />
      <Compile Include="Assets\scripts\items\PressButton.cs" />

@@ -13,7 +13,6 @@ public class RunAll : Instruction
 
 		public override void Run ()
 		{
-				Begin ();
 				for (int i = 0; i < instructions.Count; i++) {
 						if (instructions [i].IsFinished () == false) {
 								instructions [i].Run ();
