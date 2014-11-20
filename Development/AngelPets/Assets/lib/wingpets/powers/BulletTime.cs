@@ -3,13 +3,11 @@ using System.Collections;
 
 public class BulletTime : Power
 {
-		public float gameSpeed;
-		public float playerBoost;
 
 		public override void Activated ()
 		{
-				Game.Instance.Speed ().value = gameSpeed;
-				Player.instance.Speed ().value += playerBoost;
+				Game.Instance.Speed ().value = GameState.Instance.bulletTimeGameSpeed;
+				Player.instance.Speed ().value += GameState.Instance.bulletTimePlayerBoost;
 		}
 	
 		public override void Deactivated ()

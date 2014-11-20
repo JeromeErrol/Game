@@ -12,8 +12,8 @@ public class Player : MonoBehaviour
 		public int heldDownFor = 0;
 		public bool moving = false;
 		public static Player instance;
-		public int fastFlapSpeed = 2;
-		public int slowFlapSpeed = 5;
+		private float fastFlapSpeed = 1.5f;
+		private float slowFlapSpeed = 4f;
 
 		void Start ()
 		{
@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
 						moving = false;
 						ReadKeyboardInput ();
 						ReadScreenInput ();
+						
 						GameObject.Find ("glintGenerator").GetComponent<ParticleGenerator> ().enabled = moving;
 						SpriteSheet cat = Player.instance.GetComponent<SpriteSheet> ();		
 						if (moving) {
@@ -33,7 +34,6 @@ public class Player : MonoBehaviour
 						} else {
 								cat.SetTimePerFrame (slowFlapSpeed);
 						}
-
 
 						if (gameObject.Left () < -17.906f) {
 								gameObject.Left (-17.906f);
@@ -51,18 +51,22 @@ public class Player : MonoBehaviour
 						Touch touch = Input.GetTouch (i);
 
 						if (activated == false) {
-
 								if (touch.phase == TouchPhase.Began) {
 										activated = true;
 								}
 						}						
 
-						if (activated) {
+						if (activated) {		
 								if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Began || touch.phase == TouchPhase.Moved) {
-										if (touch.position.x > (Screen.width / 2)) {
-												Accelerate ();
-										} else {
-												Reverse ();
+										float touchX = touch.position.x;
+										
+										if (touch.position.y > (Screen.height / 6)) {
+
+												if (touchX > (Screen.width / 2)) {
+														Accelerate ();
+												} else {
+														Reverse ();
+												}
 										}
 								}
 						} 

@@ -7,6 +7,17 @@ public class Game : MonoBehaviour
 		private int _currentFrame = 0;
 		private float gameSpeedStore;
 		private bool paused = false;
+		public static float gameSpeed = 1.0f;
+
+		public static float GameSpeed {
+				get {
+						if (Instance.Paused) {
+								return 0;
+						} else {
+								return gameSpeed * (1f / Time.deltaTime);
+						}
+				}
+		}
 
 		void Awake ()
 		{

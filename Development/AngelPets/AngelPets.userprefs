@@ -1,59 +1,47 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ai\GoToY.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\lib\GameEngine2D\automatic\GoToPosition.cs">
     <Files>
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\GoToDestination.cs" Line="2" Column="26" />
-      <File FileName="Assets\lib\GameCore\Movement.cs" Line="42" Column="4" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\extensions\TransformExtensions.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameCore\Rotation.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameCore\Game.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameCore\Speed.cs" Line="17" Column="4" />
-      <File FileName="Assets\lib\GameUtil2D\core\Instructions.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\characters\Glow.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\wingpets\powers\BulletTime.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\wingpets\powers\Boost.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\wingpets\powers\Power.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\wingpets\powers\NormalTime.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\instructions\RunInstructionOnUserInput.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameUtil2D\effects\SpriteSheet.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameEngine2D\GameObject2D.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameEngine2D\Game2D.cs" Line="42" Column="31" />
+      <File FileName="Assets\lib\GameCore\Game.cs" Line="10" Column="40" />
+      <File FileName="Assets\lib\GameCore\Speed.cs" Line="1" Column="1" />
       <File FileName="Assets\lib\GameUI\userinput\UserInputManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Player.cs" Line="28" Column="26" />
-      <File FileName="Assets\lib\GameUtil2D\core\InstructionSingleInstance.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\characters\Wings.cs" Line="22" Column="2" />
-      <File FileName="Assets\scripts\ai\GoToX.cs" Line="9" Column="2" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\GoToPosition.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\ai\Patrol.cs" Line="5" Column="20" />
-      <File FileName="Assets\lib\GameUtil2D\effects\SpriteSheet.cs" Line="16" Column="27" />
-      <File FileName="Assets\lib\GameUtil2D\core\TargetedInstruction.cs" Line="4" Column="1" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\AngelPets\Assets\lib\GameUtil2D\core\Instruction.cs" Line="4" Column="1" />
-      <File FileName="Assets\lib\GameUtil2D\core\instructions\Fade.cs" Line="1" Column="1" />
-      <File FileName="Assets\lib\GameCore\attributes\Gravity.cs" Line="13" Column="1" />
-      <File FileName="Assets\scripts\behaviors\SetGravityScale.cs" Line="4" Column="1" />
-      <File FileName="Assets\scripts\instructions\AddComponentGravity.cs" Line="8" Column="3" />
-      <File FileName="Assets\scripts\ai\GoToY.cs" Line="6" Column="19" />
+      <File FileName="Assets\lib\GameEngine2D\automatic\GameAction.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameEngine2D\automatic\GameActionList.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameEngine2D\automatic\GameActionPlayer.cs" Line="7" Column="8" />
+      <File FileName="Assets\scripts\ai\GoToY.cs" Line="28" Column="7" />
+      <File FileName="Assets\lib\GameCore\Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameUtil2D\core\extensions\GameObjectEntensions.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameUtil2D\ai\Patrol.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ai\ShakeTime.cs" Line="1" Column="1" />
+      <File FileName="Assets\lib\GameEngine2D\debug\DebugObject.cs" Line="12" Column="1" />
+      <File FileName="Assets\lib\GameEngine2D\automatic\GoToPosition.cs" Line="8" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="lib" expanded="True">
-              <Node name="GameCore" expanded="True">
-                <Node name="attributes" expanded="True" />
+              <Node name="GameEngine2D" expanded="True">
+                <Node name="automatic" expanded="True">
+                  <Node name="GoToPosition.cs" selected="True" />
+                </Node>
               </Node>
-            </Node>
-            <Node name="scripts" expanded="True">
-              <Node name="ai" expanded="True">
-                <Node name="GoToY.cs" selected="True" />
+              <Node name="GameUtil2D" expanded="True">
+                <Node name="core" expanded="True">
+                  <Node name="instructions" expanded="True" />
+                </Node>
               </Node>
-              <Node name="instructions" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State>
-          <Value>this.value / Time.deltaTime</Value>
-          <Value>value</Value>
-          <Value>Time.deltaTime</Value>
+          <Value>Time.deltaTime * 50f</Value>
         </State>
       </Pad>
     </Pads>

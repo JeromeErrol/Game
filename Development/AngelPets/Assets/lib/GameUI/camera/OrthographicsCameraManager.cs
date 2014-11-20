@@ -6,7 +6,7 @@ public class OrthographicsCameraManager : MonoBehaviour
 		public float width = 16;
 		public float height = 9;
 
-		void Update ()
+		void FixedUpdate ()
 		{
 				Camera camera = GetComponent<Camera> ();
 				camera.orthographic = true;

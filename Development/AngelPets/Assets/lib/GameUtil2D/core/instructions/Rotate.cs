@@ -8,7 +8,7 @@ public class Rotate : TargetedInstruction
 
 	public override void Run ()
 	{
-		Target.transform.Rotate (new Vector3(0, 0, amount));
+		Target.GetOrCreateComponent<Rotation> ().RotateBy (amount);
 		run = true;
 	}
 	

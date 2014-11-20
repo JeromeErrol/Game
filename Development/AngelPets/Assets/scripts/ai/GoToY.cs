@@ -14,7 +14,7 @@ public class GoToY : TargetedInstruction
 		{
 				velocity += acceleration;
 				Movement movement = Target.gameObject.GetOrCreateComponent<Movement> ();
-				float futurePosY = movement.position.y + movement.velocity.y + velocity * movement.friction;
+				float futurePosY = movement.position.y + (movement.velocity.y * 2);
 
 				if (!destinationY.position.y.IsBetween (Target.transform.position.y, futurePosY)) {
 						float currentY = movement.position.y;

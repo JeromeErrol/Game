@@ -51,6 +51,13 @@
      <Compile Include="Assets\lib\GameCore\Rotation.cs" />
      <Compile Include="Assets\lib\GameCore\Speed.cs" />
      <Compile Include="Assets\lib\GameCore\attributes\Gravity.cs" />
+     <Compile Include="Assets\lib\GameEngine2D\Game2D.cs" />
+     <Compile Include="Assets\lib\GameEngine2D\GameObject2D.cs" />
+     <Compile Include="Assets\lib\GameEngine2D\automatic\GameAction.cs" />
+     <Compile Include="Assets\lib\GameEngine2D\automatic\GameActionList.cs" />
+     <Compile Include="Assets\lib\GameEngine2D\automatic\GameActionPlayer.cs" />
+     <Compile Include="Assets\lib\GameEngine2D\automatic\GoToPosition.cs" />
+     <Compile Include="Assets\lib\GameEngine2D\debug\DebugObject.cs" />
      <Compile Include="Assets\lib\GameUI\camera\OrthographicsCameraManager.cs" />
      <Compile Include="Assets\lib\GameUI\camera\PerspectiveCameraManager.cs" />
      <Compile Include="Assets\lib\GameUI\userinput\UserInputManager.cs" />
@@ -92,7 +99,6 @@
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\ExitGame.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Fade.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToDestination.cs" />
-     <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToPosition.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\GoToTargetRotation.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\LoadScene.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Pause.cs" />
@@ -100,6 +106,7 @@
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Print.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Rotate.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\RotationInstruction.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\instructions\RunContinous.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\ToggleBehavior.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\Translate.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\animate\Animate.cs" />
@@ -110,6 +117,7 @@
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetAlpha.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetPosition.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetRotation.cs" />
+     <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\SetX.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\instructions\setters\Setter.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\values\RotationEValue.cs" />
      <Compile Include="Assets\lib\GameUtil2D\core\values\Tween.cs" />

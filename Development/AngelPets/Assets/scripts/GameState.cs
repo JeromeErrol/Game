@@ -6,7 +6,8 @@ public class GameState
 		private static GameState _instance;
 		public int totalStarPieces = 5;
 		public int livesRemaining;
-	
+		public float bulletTimePlayerBoost = 0.5f;
+		public float bulletTimeGameSpeed = 0.5f;
 
 		public static GameState Instance {
 				get {
