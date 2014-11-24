@@ -1,5 +1,0 @@
-
-When a level starts. The "Level" + level number appears with the amount of hearts
-supplied for the level.
-
-When the user loses a life. The hearts appear and one dissappears.
