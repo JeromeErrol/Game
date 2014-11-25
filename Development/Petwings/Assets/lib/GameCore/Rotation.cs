@@ -5,6 +5,7 @@ public class Rotation : MonoBehaviour
 {
 		public float value;
 
+
 		void FixedUpdate ()
 		{
 				Vector3 angle = gameObject.transform.eulerAngles;

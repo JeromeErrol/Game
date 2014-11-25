@@ -28,6 +28,7 @@ public class Movement : MonoBehaviour
 
 		void FixedUpdate ()
 		{
+				position = transform.position;
 				float speed = gameObject.GetOrCreateComponent<Speed> ().RelativeSpeed;
 				velocity.x += acceleration.x;
 				velocity.y += acceleration.y;

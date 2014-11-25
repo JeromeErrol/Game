@@ -22,6 +22,7 @@ public class GameObject2D : MonoBehaviour
 
 		void FixedUpdate ()
 		{
+				position = transform.position;
 				float relativeTime = RelativeTime;
 
 				velocity += acceleration * relativeTime;

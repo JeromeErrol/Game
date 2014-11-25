@@ -201,6 +201,8 @@
      <Compile Include="Assets\scripts\instructions\NextLevel.cs" />
      <Compile Include="Assets\scripts\instructions\PreviousLevel.cs" />
      <Compile Include="Assets\scripts\instructions\RunInstructionOnUserInput.cs" />
+     <Compile Include="Assets\scripts\instructions\SetMovementVelocity.cs" />
+     <Compile Include="Assets\scripts\instructions\SetRotationalVelocity.cs" />
      <Compile Include="Assets\scripts\instructions\StopMovement.cs" />
      <Compile Include="Assets\scripts\items\Collectable.cs" />
      <Compile Include="Assets\scripts\items\HoverButton.cs" />
