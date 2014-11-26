@@ -5,14 +5,12 @@ public class FlyingEnemy : MonoBehaviour
 {
 		private Vector3 previousPosition;
 
-		// Use this for initialization
 		void Start ()
 		{
 				previousPosition = transform.position;
 		}
 	
-		// Update is called once per frame
-		void Update ()
+		void FixedUpdate ()
 		{
 				Vector3 velocity = transform.position - previousPosition;
 				

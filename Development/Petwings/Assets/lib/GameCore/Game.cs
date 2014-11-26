@@ -52,7 +52,6 @@ public class Game : MonoBehaviour
 								paused = false;
 						}
 				}
-
 		}
 }
 

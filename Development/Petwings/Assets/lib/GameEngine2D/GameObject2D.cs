@@ -39,6 +39,19 @@ public class GameObject2D : MonoBehaviour
 				eulerAngles.z = rotation;
 				gameObject.transform.eulerAngles = eulerAngles;
 		}
+
+		/// <summary>
+		/// Converts the current rotational value back to a value between 0 - 360	/// </summary>
+		/// <value>The normalize rotation.</value>
+		public float NormalizedRotation {
+				get {
+						if (rotation >= 0) {
+								return rotation % 360f;
+						} else {
+								return (Mathf.Abs (360f + rotation)) % 360f;
+						}
+				}
+		}
 	
 		public float RelativeTime {
 				get {

@@ -6,7 +6,7 @@ public class Wings : MonoBehaviour
 		public float averageHeight;
 		public float peakHeight;
 		public float speed;
-		public float direction = 1f;
+		private float direction = 1f;
 
 		void FixedUpdate ()
 		{

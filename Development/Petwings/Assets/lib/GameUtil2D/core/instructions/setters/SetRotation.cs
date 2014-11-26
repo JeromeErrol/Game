@@ -11,6 +11,5 @@ public class SetRotation : Setter
 		q.z = rotation;
 		Target.transform.rotation = q;
 	}
-		
 }
 
