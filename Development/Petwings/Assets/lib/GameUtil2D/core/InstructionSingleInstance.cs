@@ -7,6 +7,7 @@ public class InstructionSingleInstance : InstructionRunOnce
 		private string instanceName = System.Guid.NewGuid ().ToString ();
 		public Instruction instruction;
 		public string overwriteName;
+		public bool runIfGamePaused = false;
 
 		public override void RunOnce ()
 		{
@@ -14,6 +15,7 @@ public class InstructionSingleInstance : InstructionRunOnce
 						if (GameObject.Find (instanceName) == null) {
 								GameObject gameObject = new GameObject (instanceName);
 								Instructions instructions = gameObject.AddComponent<Instructions> ();
+								instructions.runIfGamePaused = runIfGamePaused;
 								instructions.instructions.Add (instruction);
 								instructions.runAutomatically = true;
 								Destroy destroy = gameObject.AddComponent<Destroy> ();
@@ -26,6 +28,7 @@ public class InstructionSingleInstance : InstructionRunOnce
 						}
 						GameObject gameObject = new GameObject (overwriteName);
 						Instructions instructions = gameObject.AddComponent<Instructions> ();
+						instructions.runIfGamePaused = runIfGamePaused;
 						instructions.instructions.Add (instruction);
 						instruction.Begin ();
 						instructions.runAutomatically = true;

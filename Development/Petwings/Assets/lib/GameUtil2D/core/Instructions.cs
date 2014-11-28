@@ -7,6 +7,7 @@ public class Instructions : Instruction
 		public List<Instruction> instructions = new List<Instruction> ();
 		private int _currentIndex = 0;
 		public bool loop;
+		public bool runIfGamePaused = false;
 
 		public Instruction CurrentInstruction {
 				get {
@@ -45,11 +46,16 @@ public class Instructions : Instruction
 
 		public override void Run ()
 		{
-				if (CurrentInstruction == null || CurrentInstruction.IsFinished () || CurrentInstruction.enabled == false) {
-						NextInstruction ();
-				} else {
-						CurrentInstruction.Run ();
+				if (!Game.Instance.Paused || runIfGamePaused) {
+				
+						if (CurrentInstruction == null || CurrentInstruction.IsFinished () || CurrentInstruction.enabled == false) {
+								NextInstruction ();
+						} else {
+								CurrentInstruction.Run ();
+						}
+
 				}
+				
 		}
 	
 		public override bool IsFinished ()
