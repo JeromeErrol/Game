@@ -1,8 +1,36 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\Game2DTemplate\Assets\Blep.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\Petwings\Assets\lib\GameCore\Game.cs">
     <Files>
-      <File FileName="..\Game2DTemplate\Assets\Blep.cs" Line="13" Column="4" />
+      <File FileName="..\..\Prototypes\Shooter\Unity\Assets\test.cs" Line="8" Column="2" />
+      <File FileName="..\Petwings\Assets\lib\GameUI\camera\OrthographicsCameraManager.cs" Line="1" Column="1" />
+      <File FileName="GameEngine2D\GameEngine2D\Core\Game2D.cs" Line="13" Column="15" />
+      <File FileName="GameEngine2D\GameEngine2D\UI\Camera\OrthographicsCameraManager.cs" Line="15" Column="4" />
+      <File FileName="..\Petwings\Assets\lib\GameUtil2D\core\behaviors\InstructionOnTouch.cs" Line="4" Column="39" />
+      <File FileName="..\Petwings\Assets\lib\GameUI\userinput\UserInteractive.cs" Line="9" Column="1" />
+      <File FileName="GameEngine2D\GameEngine2D\UI\Input\UserInputManager.cs" Line="12" Column="17" />
+      <File FileName="GameEngine2D\GameEngine2D\UI\Input\UserInteractive.cs" Line="1" Column="1" />
+      <File FileName="..\Petwings\Assets\lib\GameUI\userinput\UserInputManager.cs" Line="14" Column="4" />
+      <File FileName="..\..\Prototypes\Shooter\Unity\Assets\Creep.cs" Line="12" Column="21" />
+      <File FileName="..\Petwings\Assets\lib\GameEngine2D\GameObject2D.cs" Line="56" Column="18" />
+      <File FileName="..\Petwings\Assets\scripts\ai\GoToX.cs" Line="11" Column="36" />
+      <File FileName="..\Petwings\Assets\lib\GameUtil2D\core\instructions\GoToDestination.cs" Line="19" Column="2" />
+      <File FileName="..\Petwings\Assets\lib\GameUtil2D\core\Instructions.cs" Line="53" Column="1" />
+      <File FileName="..\Petwings\Assets\lib\GameUtil2D\core\Instruction.cs" Line="21" Column="1" />
+      <File FileName="..\Petwings\Assets\lib\GameCore\Movement.cs" Line="20" Column="29" />
+      <File FileName="..\Petwings\Assets\lib\GameCore\Speed.cs" Line="12" Column="19" />
+      <File FileName="..\Petwings\Assets\scripts\Obstacle.cs" Line="4" Column="31" />
+      <File FileName="..\Petwings\Assets\scripts\EnemyObstacle.cs" Line="10" Column="2" />
+      <File FileName="..\Petwings\Assets\scripts\PlayerInteractive.cs" Line="6" Column="33" />
+      <File FileName="..\Petwings\Assets\lib\GameCore\attributes\Gravity.cs" Line="11" Column="4" />
+      <File FileName="..\Petwings\Assets\scripts\instructions\MovementStop.cs" Line="10" Column="13" />
+      <File FileName="..\Petwings\Assets\scripts\behaviors\SetGravityScale.cs" Line="7" Column="15" />
+      <File FileName="..\Petwings\Assets\scripts\instructions\SetMovementVelocity.cs" Line="1" Column="1" />
+      <File FileName="..\Petwings\Assets\lib\GameEngine2D\instructions\SetVelocity.cs" Line="9" Column="24" />
+      <File FileName="..\Petwings\Assets\lib\GameEngine2D\Game2D.cs" Line="38" Column="33" />
+      <File FileName="..\Petwings\Assets\lib\GameEngine2D\Force2D.cs" Line="12" Column="4" />
+      <File FileName="..\Petwings\Assets\lib\GameCore\Game.cs" Line="21" Column="4" />
+      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Development\Petwings\Assets\lib\GameEngine2D\debug\DebugObject.cs" Line="6" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

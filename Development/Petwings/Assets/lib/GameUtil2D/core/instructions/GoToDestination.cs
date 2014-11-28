@@ -5,6 +5,7 @@ public class GoToDestination : TargetedInstruction
 {
 		public GameObject destination;
 		public float movementSpeed = 0.01f;
+		public float targetDistance = 0.25f;
 
 		public override void Run ()
 		{
@@ -19,7 +20,7 @@ public class GoToDestination : TargetedInstruction
 		public override bool IsFinished ()
 		{
 				float dist = Vector3.Distance (Target.transform.position, destination.transform.position);
-				return dist <= (movementSpeed + 0.01f);	
+				return dist <= targetDistance;
 		}
 }
 

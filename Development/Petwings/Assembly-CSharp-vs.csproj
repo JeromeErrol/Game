@@ -51,6 +51,7 @@
      <Compile Include="Assets\lib\GameCore\Rotation.cs" />
      <Compile Include="Assets\lib\GameCore\Speed.cs" />
      <Compile Include="Assets\lib\GameCore\attributes\Gravity.cs" />
+     <Compile Include="Assets\lib\GameEngine2D\Force2D.cs" />
      <Compile Include="Assets\lib\GameEngine2D\Game2D.cs" />
      <Compile Include="Assets\lib\GameEngine2D\GameObject2D.cs" />
      <Compile Include="Assets\lib\GameEngine2D\automatic\GameAction.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\lib\GameEngine2D\automatic\GameActionPlayer.cs" />
      <Compile Include="Assets\lib\GameEngine2D\automatic\GoToPosition.cs" />
      <Compile Include="Assets\lib\GameEngine2D\debug\DebugObject.cs" />
+     <Compile Include="Assets\lib\GameEngine2D\instructions\SetVelocity.cs" />
      <Compile Include="Assets\lib\GameUI\camera\OrthographicsCameraManager.cs" />
      <Compile Include="Assets\lib\GameUI\camera\PerspectiveCameraManager.cs" />
      <Compile Include="Assets\lib\GameUI\userinput\UserInputManager.cs" />
@@ -160,6 +162,7 @@
      <Compile Include="Assets\lib\wingpets\powers\NormalTime.cs" />
      <Compile Include="Assets\lib\wingpets\powers\Power.cs" />
      <Compile Include="Assets\scripts\AppInfo.cs" />
+     <Compile Include="Assets\scripts\EnemyObstacle.cs" />
      <Compile Include="Assets\scripts\FlyingEnemy.cs" />
      <Compile Include="Assets\scripts\GameScreen.cs" />
      <Compile Include="Assets\scripts\GameState.cs" />
@@ -199,6 +202,7 @@
      <Compile Include="Assets\scripts\gameflow\StartNewGame.cs" />
      <Compile Include="Assets\scripts\gameflow\Toggle.cs" />
      <Compile Include="Assets\scripts\instructions\AddComponentGravity.cs" />
+     <Compile Include="Assets\scripts\instructions\MovementStop.cs" />
      <Compile Include="Assets\scripts\instructions\NextLevel.cs" />
      <Compile Include="Assets\scripts\instructions\PreviousLevel.cs" />
      <Compile Include="Assets\scripts\instructions\RunInstructionAtRotation.cs" />

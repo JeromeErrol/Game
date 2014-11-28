@@ -41,7 +41,9 @@ public static class GameObjectEntensions
 
 		public static void Y (this GameObject gameobject, float value)
 		{
-				gameobject.GetComponent<Movement> ().position.y = value;
+				Vector3 pos = gameobject.transform.position;
+				pos.y = value;
+				gameobject.transform.position = pos;
 		}
 	
 		public static float Bottom (this GameObject gameobject)

@@ -7,7 +7,7 @@ public class SetY : Setter
 
 		public override void Set ()
 		{
-				Target.GetOrCreateComponent<Movement> ().position.y = y.position.y;
+			Target.transform.gameObject.Y(y.position.y);
 		}
 }
 

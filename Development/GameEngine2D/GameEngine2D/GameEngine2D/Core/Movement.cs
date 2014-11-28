@@ -3,50 +3,50 @@ using System.Collections;
 
 public class Movement : MonoBehaviour
 {
-	public Vector2 position;
 	public Vector2 acceleration;
 	public Vector2 velocity;
 	public float friction = 1f;
+	public bool inGameObject = true;
 	
-	void Start ()
+	
+	void FixedUpdate ()
 	{
-		position = transform.position;
+		float speed = RelativeTime;
+		velocity.x += acceleration.x;
+		velocity.y += acceleration.y;
+		velocity.x *= (friction * speed);
+		velocity.y *= (friction * speed);
+		Vector3 position = transform.position;
+		position.x += velocity.x * speed;
+		position.y += velocity.y * speed;
+		transform.position = position;
 	}
-	
-	public void Translate (float x, float y)
-	{
-		float speed = gameObject.GetOrCreateComponent<Speed> ().RelativeSpeed;
-		position.x += x * speed;
-		position.y += y * speed;
-	}
-	
+
 	public void Stop ()
 	{
 		acceleration = Vector2.zero;
 		velocity = Vector2.zero;
 	}
 	
-	void FixedUpdate ()
-	{
-		position = transform.position;
-		float speed = gameObject.GetOrCreateComponent<Speed> ().RelativeSpeed;
-		velocity.x += acceleration.x;
-		velocity.y += acceleration.y;
-		velocity.x *= (friction * speed);
-		velocity.y *= (friction * speed);
-		acceleration = Vector2.zero;
-		position.x += velocity.x * speed;
-		position.y += velocity.y * speed;
-		transform.position = position;
+	public float RelativeTime {
+		get {
+			if (inGameObject) { 
+				return Game2D.GameSpeed;
+			} else {
+				return (Game2D.FrameRate / Time.deltaTime);
+			}
+		}
 	}
-	
+
+	/*
 	public void AccelerateTowards (Vector2 position, float distance)
 	{
-		Vector2 difference = position - this.position;
+		Vector3 difference = position - transform.position;
 		difference.Normalize ();
 		acceleration.x += difference.x * distance;
 		acceleration.y = difference.y * distance;
 	}
+	*/
 	
 	public static float CalculateAcceleration (float initialVelocity, float finalVelocity, float distance)
 	{
