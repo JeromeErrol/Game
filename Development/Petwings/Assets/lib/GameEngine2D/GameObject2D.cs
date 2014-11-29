@@ -20,6 +20,12 @@ public class GameObject2D : MonoBehaviour
 				rotation = transform.eulerAngles.z;
 		}
 
+		public void Stop ()
+		{
+				acceleration = Vector2.zero;
+				velocity = Vector2.zero;
+		}
+
 		void FixedUpdate ()
 		{
 				position = transform.position;

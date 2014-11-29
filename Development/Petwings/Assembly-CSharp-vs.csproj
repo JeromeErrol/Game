@@ -60,6 +60,7 @@
      <Compile Include="Assets\lib\GameEngine2D\automatic\GameActionPlayer.cs" />
      <Compile Include="Assets\lib\GameEngine2D\automatic\GoToPosition.cs" />
      <Compile Include="Assets\lib\GameEngine2D\debug\DebugObject.cs" />
+     <Compile Include="Assets\lib\GameEngine2D\instructions\GameObject2D_Stop.cs" />
      <Compile Include="Assets\lib\GameEngine2D\instructions\SetVelocity.cs" />
      <Compile Include="Assets\lib\GameUI\camera\OrthographicsCameraManager.cs" />
      <Compile Include="Assets\lib\GameUI\camera\PerspectiveCameraManager.cs" />
@@ -152,6 +153,7 @@
      <Compile Include="Assets\lib\GameUtil2D\util\ScreenUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\StageUtil2D.cs" />
      <Compile Include="Assets\lib\GameUtil2D\util\TextureUtil2D.cs" />
+     <Compile Include="Assets\lib\wingpets\BossSpikeCollision.cs" />
      <Compile Include="Assets\lib\wingpets\Die.cs" />
      <Compile Include="Assets\lib\wingpets\InGameObject.cs" />
      <Compile Include="Assets\lib\wingpets\LevelInstructions.cs" />
