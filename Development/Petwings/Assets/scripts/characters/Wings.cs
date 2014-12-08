@@ -10,7 +10,7 @@ public class Wings : MonoBehaviour
 
 		void FixedUpdate ()
 		{
-				Movement movement = gameObject.GetComponent<Movement> ();
+				Movement movement = gameObject.GetOrCreateComponent<Movement> ();
 				movement.acceleration.y += speed * direction;
 				
 				if (movement.position.y > averageHeight + peakHeight) {

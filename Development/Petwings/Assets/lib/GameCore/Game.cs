@@ -25,6 +25,7 @@ public class Game : MonoBehaviour
 				Instance = this;
 				gameObject.GetOrCreateComponent<Speed> ();
 				gameObject.GetOrCreateComponent<Fps> ();
+				gameObject.GetOrCreateComponent<SceneAdvertisement> ();
 		}
 	
 		void FixedUpdate ()

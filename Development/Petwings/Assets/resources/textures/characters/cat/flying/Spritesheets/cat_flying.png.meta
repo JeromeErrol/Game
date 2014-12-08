@@ -1,0 +1,102 @@
+fileFormatVersion: 2
+guid: d156bff6f06f96a41b81eebc2ead5cd5
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: a1
+    21300002: a2
+    21300004: a3
+    21300006: a4
+    21300008: a5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: a1
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 5
+        width: 371
+        height: 338
+      alignment: 9
+      pivot: {x: .456873327, y: .383136094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: a2
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 345
+        width: 394
+        height: 337
+      alignment: 9
+      pivot: {x: .488578677, y: .38724035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: a3
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 684
+        width: 405
+        height: 338
+      alignment: 9
+      pivot: {x: .502469122, y: .383136094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: a4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 224
+        width: 374
+        height: 378
+      alignment: 9
+      pivot: {x: .46122995, y: .448412687}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: a5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 604
+        width: 355
+        height: 418
+      alignment: 9
+      pivot: {x: .432394356, y: .501196146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

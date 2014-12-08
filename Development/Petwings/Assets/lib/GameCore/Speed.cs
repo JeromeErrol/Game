@@ -11,8 +11,7 @@ public class Speed : MonoBehaviour
 						if (relativeTo != null) {
 								return this.value * relativeTo.RelativeSpeed;
 						} else {
-								float val = this.value * (50f / (1f / Time.deltaTime));
-								return val;
+								return this.value * (Game.TargetFrameRate * Time.deltaTime);
 						}
 				}
 		}

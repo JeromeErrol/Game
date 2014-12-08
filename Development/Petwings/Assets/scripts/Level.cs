@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using GameUtil2D;
 using System;
+using UnityEngine.Advertisements;
 
 public class Level : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Level : MonoBehaviour
 		public string sceneName;
 		public string previousScene;
 		public string nextScene;
+		public static int DeathCount = 0;
+		public static int DeathsPerAdd = 3;
 
 		void Start ()
 		{
@@ -36,13 +39,16 @@ public class Level : MonoBehaviour
 				FlashWhiteScreen ();
 				GetComponent<FadeAGUI> ().text = "";
 				RotateStar ();
+				if (Level.DeathCount % DeathsPerAdd == 0) {
+						SceneAdvertisement.Show ();
+				}
 		}
 
 		void RotateStar ()
 		{
 
-			//	GameObject.Find ("MenuCog").GetComponent<InstructionSingleInstance> ().Run ();
-			//	GameObject.Find ("MenuStar").GetComponent<InstructionSingleInstance> ().Run ();
+				//	GameObject.Find ("MenuCog").GetComponent<InstructionSingleInstance> ().Run ();
+				//	GameObject.Find ("MenuStar").GetComponent<InstructionSingleInstance> ().Run ();
 		}
 
 		void FlashWhiteScreen ()
@@ -96,6 +102,8 @@ public class Level : MonoBehaviour
 
 		public void LoseLife ()
 		{
+				Level.DeathCount++;
+				
 				GameObject.Find ("DIE()").GetComponent<Instructions> ().runAutomatically = true;
 		}
 	

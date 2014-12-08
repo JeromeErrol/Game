@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class BossSpikeCollision : InstructionRunOnce
 {
 		public Transform enemy;
