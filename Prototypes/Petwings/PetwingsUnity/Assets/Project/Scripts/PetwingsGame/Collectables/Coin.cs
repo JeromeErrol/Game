@@ -6,6 +6,9 @@ namespace Petwings.Game.Collectables
 {
 		public class Coin : Collectable
 		{
-				
+				public override void Collected ()
+				{
+						
+				}
 		}
 }
