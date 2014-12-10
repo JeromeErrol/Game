@@ -15,6 +15,7 @@ namespace Petwings.Game.Obstacles
 
 				public void Explode ()
 				{
+						SoundLibrary.PlayExplosion ();
 						anim.SetTrigger ("explode");
 				}
 

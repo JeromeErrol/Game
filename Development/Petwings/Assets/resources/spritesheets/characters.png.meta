@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: ead657a4fa3384f4fb600741d631e03c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: devil2
+    21300002: devil1
+    21300004: devil3
+    21300006: devil4
+    21300008: devil5
+    21300010: dark3
+    21300012: dark4
+    21300014: dark2
+    21300016: dark5
+    21300018: dark1
+    21300020: cat3
+    21300022: cat4
+    21300024: cat1
+    21300026: cat2
+    21300028: cat5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: 5
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: devil2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 550
+        height: 587
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: devil1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 588
+        width: 550
+        height: 587
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: devil3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1176
+        width: 550
+        height: 587
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: devil4
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 0
+        width: 550
+        height: 587
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: devil5
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 588
+        width: 550
+        height: 587
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dark3
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 1176
+        width: 569
+        height: 542
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dark4
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 0
+        width: 569
+        height: 542
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dark2
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 543
+        width: 569
+        height: 542
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dark5
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 1086
+        width: 569
+        height: 542
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dark1
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 0
+        width: 569
+        height: 542
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cat3
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 543
+        width: 413
+        height: 423
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cat4
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 967
+        width: 413
+        height: 423
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cat1
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 543
+        width: 413
+        height: 423
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cat2
+      rect:
+        serializedVersion: 2
+        x: 2242
+        y: 0
+        width: 413
+        height: 423
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cat5
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 1391
+        width: 413
+        height: 423
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -669,6 +669,11 @@
      <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenShakeScale.cs" />
      <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenStop.cs" />
      <Compile Include="Assets\PlayMaker\Include\iTweenFSMEvents.cs" />
+     <Compile Include="Assets\Simple Sprite Packer\Scripts\SPAction.cs" />
+     <Compile Include="Assets\Simple Sprite Packer\Scripts\SPActionType.cs" />
+     <Compile Include="Assets\Simple Sprite Packer\Scripts\SPInstance.cs" />
+     <Compile Include="Assets\Simple Sprite Packer\Scripts\SPSpriteInfo.cs" />
+     <Compile Include="Assets\Simple Sprite Packer\Scripts\UITexturePacker.cs" />
      <Compile Include="Assets\iTween\iTween.cs" />
      <Compile Include="Assets\lib\GameAds\AdvertisementTest.cs" />
      <Compile Include="Assets\lib\GameAds\SceneAdvertisement.cs" />
@@ -877,6 +882,8 @@
      <None Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\library\release_history.txt" />
      <None Include="Assets\link.xml" />
      <None Include="Assets\Plugins\Android\unityads\res\values\strings.xml" />
+     <None Include="Assets\Simple Sprite Packer\Changelog.txt" />
+     <None Include="Assets\Simple Sprite Packer\readme.txt" />
      <None Include="Assets\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\PlayMaker\Resources\PlayMakerAssemblies.txt" />

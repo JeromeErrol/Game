@@ -10,7 +10,7 @@
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
-	<TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
@@ -642,6 +642,7 @@
      <Compile Include="Assets\Project\Scripts\PetwingsGame\Collectables\Cherry.cs" />
      <Compile Include="Assets\Project\Scripts\PetwingsGame\Collectables\Coin.cs" />
      <Compile Include="Assets\Project\Scripts\PetwingsGame\Collectables\Collectable.cs" />
+     <Compile Include="Assets\Project\Scripts\PetwingsGame\Collectables\Poison.cs" />
      <Compile Include="Assets\Project\Scripts\PetwingsGame\Obstacles\Barrel.cs" />
      <Compile Include="Assets\Simple Sprite Packer\Scripts\SPAction.cs" />
      <Compile Include="Assets\Simple Sprite Packer\Scripts\SPActionType.cs" />

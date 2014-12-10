@@ -5,6 +5,7 @@ using BaseEngine.Extensions;
 public class SoundLibrary : MonoBehaviour
 {
 		public AudioClip pickupCoin;
+		public AudioClip explosion;
 		private static SoundLibrary instance;
 		private AudioSource audioSource;
 
@@ -18,6 +19,11 @@ public class SoundLibrary : MonoBehaviour
 		public static void PlayCoin ()
 		{
 				instance.audioSource.PlayOneShot (instance.pickupCoin);
+		}
+
+		public static void PlayExplosion ()
+		{
+			instance.audioSource.PlayOneShot (instance.explosion);
 		}
 
 		public static void Play (AudioClip clip)

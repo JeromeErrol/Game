@@ -82,6 +82,13 @@
      <Compile Include="Assets\PlayMaker\Editor\PlayMakerMainMenu.cs" />
      <Compile Include="Assets\PlayMaker\Editor\PlayMakerWelcomeWindow.cs" />
      <Compile Include="Assets\PlayMaker\Editor\ReportWindow.cs" />
+     <Compile Include="Assets\Simple Sprite Packer\Scripts\Editor\SPAtlasBuilder.cs" />
+     <Compile Include="Assets\Simple Sprite Packer\Scripts\Editor\SPDropWindow.cs" />
+     <Compile Include="Assets\Simple Sprite Packer\Scripts\Editor\SPInstanceEditor.cs" />
+     <Compile Include="Assets\Simple Sprite Packer\Scripts\Editor\SPReferenceReplacerWindow.cs" />
+     <Compile Include="Assets\Simple Sprite Packer\Scripts\Editor\SPSettings.cs" />
+     <Compile Include="Assets\Simple Sprite Packer\Scripts\Editor\SPSpriteImportData.cs" />
+     <Compile Include="Assets\Simple Sprite Packer\Scripts\Editor\SPTools.cs" />
      <Compile Include="Assets\codeandweb.com\Editor\TexturePackerImporter.cs" />
      <Compile Include="Assets\iTween\PlayMaker\Editor\iTweenMoveToActionEditor.cs" />
      <None Include="Assets\Plugins\Android\unityads\proguard-project.txt" />
@@ -92,6 +99,8 @@
      <None Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\library\release_history.txt" />
      <None Include="Assets\link.xml" />
      <None Include="Assets\Plugins\Android\unityads\res\values\strings.xml" />
+     <None Include="Assets\Simple Sprite Packer\Changelog.txt" />
+     <None Include="Assets\Simple Sprite Packer\readme.txt" />
      <None Include="Assets\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\PlayMaker\Resources\PlayMakerAssemblies.txt" />

@@ -7,17 +7,21 @@ public class Player : MonoBehaviour
 		public KeyCode accelerateKey = KeyCode.RightArrow;
 		public KeyCode breakKey = KeyCode.LeftArrow;
 		public float acceleration;
-		public static int currentLevel = 0;
 		public bool activated = false;
 		public int heldDownFor = 0;
 		public bool moving = false;
+		private float movingFlapSpeed = 3f;
+		private float normalFlapSpeed = 1f;
+		private Animator animator;
+		private ParticleGenerator glintGenerator;
 		public static Player instance;
-		private float fastFlapSpeed = 1.5f;
-		private float slowFlapSpeed = 4f;
+		public static int currentLevel = 0;
 
-		void Start ()
+		void Awake ()
 		{
 				Player.instance = this;
+				animator = GetComponent<Animator> ();
+				glintGenerator = GameObject.Find ("glintGenerator").GetComponent<ParticleGenerator> ();
 		}
 
 		void FixedUpdate ()
@@ -27,12 +31,11 @@ public class Player : MonoBehaviour
 						ReadKeyboardInput ();
 						ReadScreenInput ();
 						
-						GameObject.Find ("glintGenerator").GetComponent<ParticleGenerator> ().enabled = moving;
-						SpriteSheet cat = Player.instance.GetComponent<SpriteSheet> ();		
+						glintGenerator.enabled = moving;
 						if (moving) {
-								cat.SetTimePerFrame (fastFlapSpeed);
+								animator.speed = movingFlapSpeed;
 						} else {
-								cat.SetTimePerFrame (slowFlapSpeed);
+								animator.speed = normalFlapSpeed;
 						}
 
 						if (gameObject.Left () < -17.906f) {
