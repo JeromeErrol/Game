@@ -1,19 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Project\Scripts\PetwingsEngine\Base\Player.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\NoFlap\Assets\Source\Scripts\Game\Test.cs">
     <Files>
-      <File FileName="Assets\Project\Scripts\PetwingsEngine\Base\SoundLibrary.cs" Line="18" Column="2" />
-      <File FileName="Assets\Project\Scripts\PetwingsGame\Collectables\Coin.cs" Line="7" Column="27" />
-      <File FileName="Assets\Project\Scripts\PetwingsGame\Collectables\Collectable.cs" Line="8" Column="47" />
-      <File FileName="Assets\Project\Scripts\PetwingsEngine\Base\Player.cs" Line="25" Column="35" />
-      <File FileName="Assets\Project\Scripts\PetwingsGame\Obstacles\Barrel.cs" Line="25" Column="15" />
-      <File FileName="Assets\Project\Scripts\PetwingsEngine\Base\Obstacle.cs" Line="10" Column="13" />
-      <File FileName="Assets\Project\Scripts\PetwingsGame\Collectables\Cherry.cs" Line="1" Column="1" />
-      <File FileName="Assets\Project\Scripts\BaseEngine\Extensions\MonoBehaviorExtensions.cs" Line="1" Column="1" />
-      <File FileName="Assets\Project\Scripts\PetwingsEngine\Base\PlayerInteractive.cs" Line="1" Column="1" />
-      <File FileName="Assets\Project\Scripts\PetwingsEngine\Base\Scene.cs" Line="1" Column="1" />
-      <File FileName="Assets\Project\Scripts\PetwingsEngine\Environment\Repeatable.cs" Line="1" Column="1" />
-      <File FileName="Assets\Project\Scripts\PetwingsGame\Collectables\Poison.cs" Line="11" Column="16" />
+      <File FileName="..\..\NoFlap\Assets\Source\Scripts\Game\Test.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

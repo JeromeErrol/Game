@@ -1,11 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Prototypes\Petwings\PetwingsUnity\Assets\Project\Scripts\PetwingsEngine\Base\Player.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Player.cs">
     <Files>
-      <File FileName="..\..\Prototypes\Petwings\PetwingsUnity\Assets\Project\Scripts\PetwingsEngine\Base\SoundLibrary.cs" Line="17" Column="4" />
-      <File FileName="..\..\Prototypes\Petwings\PetwingsUnity\Assets\Project\Scripts\PetwingsGame\Collectables\Coin.cs" Line="7" Column="27" />
-      <File FileName="..\..\Prototypes\Petwings\PetwingsUnity\Assets\Project\Scripts\PetwingsGame\Collectables\Collectable.cs" Line="19" Column="4" />
-      <File FileName="..\..\Prototypes\Petwings\PetwingsUnity\Assets\Project\Scripts\PetwingsEngine\Base\Player.cs" Line="12" Column="11" />
+      <File FileName="Assets\scripts\Player.cs" Line="25" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,0 +1,84 @@
+-target:library
+-nowarn:0169
+-out:Temp/Assembly-CSharp.dll
+-debug
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:"C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll"
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll"
+-define:UNITY_4_6_0
+-define:UNITY_4_6
+-define:UNITY_STANDALONE_WIN
+-define:ENABLE_MICROPHONE
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_NEW_HIERARCHY 
+-define:ENABLE_AUDIO_FMOD
+-define:UNITY_STANDALONE
+-define:ENABLE_MONO
+-define:ENABLE_TERRAIN
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GENERICS
+-define:INCLUDE_WP8SUPPORT
+-define:ENABLE_MOVIES
+-define:ENABLE_WWW
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_4_6_FEATURES
+-define:INCLUDE_WP_BLUE_SUPPORT
+-define:ENABLE_WEBCAM
+-define:INCLUDE_METROSUPPORT
+-define:RENDER_SOFTWARE_CURSOR
+-define:ENABLE_NETWORK
+-define:ENABLE_PHYSICS
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_2D_PHYSICS
+-define:ENABLE_SHADOWS
+-define:ENABLE_AUDIO
+-define:ENABLE_NAVMESH_CARVING
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_WIN
+"Assets/PlayMaker Unity 2D/Actions/AddForce2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/AddTorque2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/Collision2dEvent.cs"
+"Assets/PlayMaker Unity 2D/Actions/GetCollision2dInfo.cs"
+"Assets/PlayMaker Unity 2D/Actions/GetMass2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/GetNextLineCast2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/GetNextOverlapArea2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/GetNextOverlapCircle2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/GetNextOverlapPoint2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/GetNextRayCast2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/GetRayCastHit2dInfo.cs"
+"Assets/PlayMaker Unity 2D/Actions/GetSpeed2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/GetTrigger2dInfo.cs"
+"Assets/PlayMaker Unity 2D/Actions/GetVelocity2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/Internal/IFsmCollider2DStateAction.cs"
+"Assets/PlayMaker Unity 2D/Actions/Internal/RigidBody2dActionBase.cs"
+"Assets/PlayMaker Unity 2D/Actions/IsFixedAngle2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/IsKinematic2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/IsSleeping2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/LineCast2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/LookAt2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/LookAt2dGameObject.cs"
+"Assets/PlayMaker Unity 2D/Actions/MousePick2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/MousePick2dEvent.cs"
+"Assets/PlayMaker Unity 2D/Actions/RayCast2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/ScreenPick2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/SetGravity2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/SetGravity2dScale.cs"
+"Assets/PlayMaker Unity 2D/Actions/SetIsFixedAngle2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/SetIsKinematic2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/SetMass2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/SetVelocity2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/Sleep2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/SmoothLookAt2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/Touch Object 2d Event.cs"
+"Assets/PlayMaker Unity 2D/Actions/Trigger2dEvent.cs"
+"Assets/PlayMaker Unity 2D/Actions/WakeAllRigidBodies2d.cs"
+"Assets/PlayMaker Unity 2D/Actions/WakeUp2d.cs"
+"Assets/PlayMaker Unity 2D/Components/PlayMakerUnity2DProxy.cs"
+"Assets/PlayMaker Unity 2D/Scripts/PlayMakerUnity2d.cs"
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Runtime.Serialization.dll"
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Xml.Linq.dll"

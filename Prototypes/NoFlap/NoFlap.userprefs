@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Jerome\Google Drive\Projects\Game\Prototypes\NoFlap\Assets\PlayMaker\Editor\FsmComponentInspector.cs">
+    <Files>
+      <File FileName="Assets\Source\Scripts\Game\Player.cs" Line="41" Column="4" />
+      <File FileName="Assets\Source\Scripts\Game\Obstacle.cs" Line="12" Column="4" />
+      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Prototypes\NoFlap\Assets\Standard Assets\UnityAds\Scripts\Advertisement.cs" Line="38" Column="45" />
+      <File FileName="Assets\Source\Scripts\Game\Scene.cs" Line="17" Column="37" />
+      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Prototypes\NoFlap\Assets\Standard Assets\Editor\UnityAds\XCodeEditor\PBXBuildFile.cs" Line="15" Column="3" />
+      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Prototypes\NoFlap\Assets\PlayMaker\Editor\FsmComponentInspector.cs" Line="128" Column="13" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
