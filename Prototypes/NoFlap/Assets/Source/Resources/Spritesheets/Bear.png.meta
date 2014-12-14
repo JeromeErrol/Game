@@ -1,12 +1,14 @@
 fileFormatVersion: 2
-guid: 23bfd05a95a231745bdea21063736757
+guid: fa170caafe7097e4b918aae51ceed7f9
 TextureImporter:
   fileIDToRecycleName:
-    21300000: bear4
-    21300002: bear5
-    21300004: bear3
-    21300006: bear1
-    21300008: bear2
+    21300000: bear3
+    21300002: bear4
+    21300004: bear5
+    21300006: bear2
+    21300008: bear1
+    21300010: bear_eyes_closed
+    21300012: bear_eyes_open
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -48,7 +50,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: bear4
+    - name: bear3
       rect:
         serializedVersion: 2
         x: 0
@@ -58,7 +60,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bear5
+    - name: bear4
       rect:
         serializedVersion: 2
         x: 0
@@ -68,7 +70,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bear3
+    - name: bear5
       rect:
         serializedVersion: 2
         x: 0
@@ -78,7 +80,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bear1
+    - name: bear2
       rect:
         serializedVersion: 2
         x: 499
@@ -88,13 +90,33 @@ TextureImporter:
       alignment: 9
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: bear2
+    - name: bear1
       rect:
         serializedVersion: 2
         x: 998
         y: 0
         width: 498
         height: 552
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bear_eyes_closed
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1659
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bear_eyes_open
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1659
+        width: 256
+        height: 256
       alignment: 9
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

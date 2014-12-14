@@ -1,17 +1,26 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Jerome\Google Drive\Projects\Game\Prototypes\NoFlap\Assets\PlayMaker\Editor\FsmComponentInspector.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Source\Scripts\Game\Globals\Player.cs">
     <Files>
-      <File FileName="Assets\Source\Scripts\Game\Player.cs" Line="41" Column="4" />
-      <File FileName="Assets\Source\Scripts\Game\Obstacle.cs" Line="12" Column="4" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Prototypes\NoFlap\Assets\Standard Assets\UnityAds\Scripts\Advertisement.cs" Line="38" Column="45" />
-      <File FileName="Assets\Source\Scripts\Game\Scene.cs" Line="17" Column="37" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Prototypes\NoFlap\Assets\Standard Assets\Editor\UnityAds\XCodeEditor\PBXBuildFile.cs" Line="15" Column="3" />
-      <File FileName="c:\Users\Jerome\Google Drive\Projects\Game\Prototypes\NoFlap\Assets\PlayMaker\Editor\FsmComponentInspector.cs" Line="128" Column="13" />
+      <File FileName="Assets\Source\Scripts\Game\Eyes.cs" Line="1" Column="1" />
+      <File FileName="Assets\UnityUtil\Extensions\MonoBehaviorExtensions.cs" Line="1" Column="1" />
+      <File FileName="Assets\Source\Scripts\Game\Collectable.cs" Line="41" Column="4" />
+      <File FileName="Assets\Source\Scripts\Game\Obstacle.cs" Line="1" Column="1" />
+      <File FileName="Assets\UnityUtil\Extensions\GameObjectEntensions.cs" Line="1" Column="1" />
+      <File FileName="Assets\Source\Scripts\Game\UI\ScoreText.cs" Line="9" Column="4" />
+      <File FileName="Assets\Source\Scripts\Game\UI\HighScoreText.cs" Line="13" Column="4" />
+      <File FileName="Assets\Source\Scripts\Game\UI\StreakText.cs" Line="9" Column="3" />
+      <File FileName="Assets\Source\Scripts\Game\UI\NextBonusText.cs" Line="8" Column="28" />
+      <File FileName="Assets\Source\Scripts\Game\Globals\CollectablesManager.cs" Line="14" Column="2" />
+      <File FileName="Assets\Source\Scripts\Game\Globals\ForwardMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Source\Scripts\Game\Globals\DistanceManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Source\Scripts\Game\Globals\Player.cs" Line="23" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Assets\Source\Scripts\Game\Collectable.cs" line="28" offsetX="437" offsetY="459" expression="gameObject" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
 </Properties>
