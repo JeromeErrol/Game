@@ -5,10 +5,11 @@ using UnityUtil.Extensions;
 public class Collectable : MonoBehaviour
 {
 		private bool missed = false;
+		private bool collected = false;
 
 		void FixedUpdate ()
 		{
-				if (!missed) {
+				if (!collected && !missed) {
 						CheckIfMissed ();
 				}
 		}
@@ -23,21 +24,25 @@ public class Collectable : MonoBehaviour
 		void Missed ()
 		{
 				missed = true;
-				GameObject.Destroy (gameObject);
+				CollectablesManager.ResetCollectionStreak ();
+				GetComponent<PlayMakerFSM> ().SendEvent ("Miss");
 		}
 
 		void OnTriggerEnter2D (Collider2D collider2D)
 		{		
-				Player player = collider2D.GetComponent<Player> ();
-				if (player != null) {
-						Collected ();
+				if (collected == false) {
+						Player player = collider2D.GetComponent<Player> ();
+						if (player != null) {
+								Collected ();
+						}
 				}
 		}
 	
 		void Collected ()
 		{
+				collected = true;
 				CollectablesManager.IncrementStreakAndAddToScore ();
-				GameObject.Destroy (gameObject);
+				GetComponent<PlayMakerFSM> ().SendEvent ("Collect");
 		}
 }
 
