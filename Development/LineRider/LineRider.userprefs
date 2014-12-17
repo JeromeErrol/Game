@@ -1,6 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Project\Scripts\UserInterface\PausePlayButton.cs">
+    <Files>
+      <File FileName="Assets\Project\Scripts\Engine\Player.cs" Line="27" Column="4" />
+      <File FileName="Assets\Project\Scripts\Engine\PlayerController.cs" Line="7" Column="33" />
+      <File FileName="Assets\Project\Scripts\Engine\GameFSM.cs" Line="1" Column="1" />
+      <File FileName="Assets\Project\Scripts\Engine\Rules.cs" Line="11" Column="26" />
+      <File FileName="Assets\Project\Scripts\Libraries\Extensions\GameObjectEntensions.cs" Line="1" Column="1" />
+      <File FileName="Assets\Project\Scripts\Engine\Guide.cs" Line="9" Column="4" />
+      <File FileName="Assets\Project\Scripts\UserInterface\PausePlayButton.cs" Line="13" Column="38" />
+      <File FileName="Assets\Project\Scripts\Libraries\UI\UserInputListener.cs" Line="15" Column="8" />
+      <File FileName="Assets\Project\Scripts\Libraries\UI\UIComponent.cs" Line="8" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

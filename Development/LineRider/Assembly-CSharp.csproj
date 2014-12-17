@@ -641,6 +641,9 @@
      <Compile Include="Assets\Project\Scripts\Libraries\Extensions\FloatExtensions.cs" />
      <Compile Include="Assets\Project\Scripts\Libraries\Extensions\GameObjectEntensions.cs" />
      <Compile Include="Assets\Project\Scripts\Libraries\Extensions\MonoBehaviorExtensions.cs" />
+     <Compile Include="Assets\Project\Scripts\Libraries\UI\UIComponent.cs" />
+     <Compile Include="Assets\Project\Scripts\Libraries\UI\UserInputListener.cs" />
+     <Compile Include="Assets\Project\Scripts\UserInterface\PausePlayButton.cs" />
      <Compile Include="Assets\Simple Sprite Packer\Scripts\SPAction.cs" />
      <Compile Include="Assets\Simple Sprite Packer\Scripts\SPActionType.cs" />
      <Compile Include="Assets\Simple Sprite Packer\Scripts\SPInstance.cs" />

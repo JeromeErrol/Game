@@ -16,6 +16,11 @@ public class Player : MonoBehaviour
 
 		void FixedUpdate ()
 		{
+				PreventPlayerFromLeavingTheStage ();	
+		}
+
+		private void PreventPlayerFromLeavingTheStage ()
+		{
 				if (transform.position.x < -9.299999f) {
 						gameObject.X (-9.299999f);
 				}
