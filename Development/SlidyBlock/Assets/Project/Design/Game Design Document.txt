@@ -1,0 +1,105 @@
+Line Rider - Game Design Document
+----------------------------------
+
+Overview
+--------
+The aim of the game is navigate the player from the left side of the screen to the right. The player can only
+move horizontally. Each level has obstacles to avoid or puzzles to solve (or both). As the game progresses
+the levels become more difficult. In some levels the player has control over two avatars (at the same time) and
+has to ensure that they both reach the right side of the screen. 
+
+Puzzles and Buttons
+-------------------
+Some levels contain buttons which when pressed cause some effect to the level, for example - freezing a block for
+five seconds. The button appears somewhere on the screen and the user has to press it.
+Timed Button: A timed button contains a display showing how much time is remaining.
+Switch Button: Displays whether or not the button is on or off.
+
+
+Background
+----------
+The idea of the game is to invoke the imagination of the player rather than resorting to graphics. I 
+use blocks to show characters and empty backgrounds. 
+
+I use the story to invoke the imagination of the player. The game becomes just as much about 
+uncovering the story as it does about playing the game. 
+
+The gameplay is limited to animated blocks. The player has to work out secrets to continue.
+
+
+Level Types
+-----------
+Standard - Left to Right 
+The player simply navigates the avatar/s through obstacles to the right side of the screen.
+    
+Puzzle
+The player has to solve a puzzle to reach the end
+
+
+Game Modes
+----------
+Continue - (Continue from the level that you are up to)
+Level Select - (Select a previously completed level) (Each level displays the best time completed in)
+Single Life - (How far can you get with only one life?) [Highest score]
+
+
+Freshness and Level Uniqueness
+------------------------------
+One requirement of each level is that it requires a quality that makes it unique from any
+previous levels. The player will become bored if they have beat the same level multiple times.
+
+
+Afterward
+---------
+The beautiful thing about block run is its simplicity. Due to this simplicity, as the developer I am
+forced to make the most of the tools that I have which are the variety of tweens supplied by Itween.
+This makes the game an extremely valuable learning resource for getting to know the different types of
+tweens and the effect that they have on the game. Tweening is what brings the game to life like in animation.
+
+
+Game Structure
+--------------
+In total there are 50 levels. Each level gets progressively more difficult.
+
+Level Components
+----------------
+- Obstacles
+  Basic things to avoid
+
+- Key Collection
+  In key collection levels the player must collect a certain number of keys to continue
+    
+- Time Remaining
+  In timed levels the player only has a certain amount of time to complete the level
+  
+- Puzzle
+  Puzzle level contain a puzzle that the player must solve to proceed
+  
+- Block Count
+  The number of blocks that the player has to manage.
+
+
+Advertisements?
+---------------
+Play very rarely and not in the beginning stages of the game and only occur when the player dies.
+
+
+
+Gameplay
+---------------
+Button
+When the player reaches a button it will appear at the bottom of the screen for the player to press. 
+Simply walking over it does not press it.
+
+Trigger
+A trigger is activated when the player walks over it.
+
+
+
+
+
+
+
+
+
+ 

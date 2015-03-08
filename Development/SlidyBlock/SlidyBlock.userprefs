@@ -1,0 +1,22 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Project\Scripts\Engine\Player.cs">
+    <Files>
+      <File FileName="Assets\Project\Scripts\Engine\Button.cs" Line="1" Column="1" />
+      <File FileName="Assets\Project\Scripts\Engine\Player.cs" Line="26" Column="4" />
+      <File FileName="Assets\Project\Scripts\Engine\GameFSM.cs" Line="1" Column="1" />
+      <File FileName="Assets\Project\Scripts\Engine\Obstacle.cs" Line="1" Column="1" />
+      <File FileName="Assets\Project\Scripts\Engine\SoundLibrary.cs" Line="1" Column="1" />
+      <File FileName="Assets\Project\Scripts\Engine\History\EventHistory.cs" Line="1" Column="1" />
+      <File FileName="Assets\Project\Scripts\Engine\History\GameEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets\Project\Scripts\Engine\Guide.cs" Line="1" Column="1" />
+      <File FileName="Assets\Project\Scripts\Engine\Rules.cs" Line="1" Column="1" />
+      <File FileName="Assets\Project\Scripts\Engine\Key.cs" Line="1" Column="1" />
+      <File FileName="Assets\Project\Scripts\Libraries\PlayMaker Extensions\PlaymakerCollisionTrigger.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

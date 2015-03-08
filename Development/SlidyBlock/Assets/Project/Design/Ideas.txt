@@ -1,0 +1,4 @@
+<Credits>
+Have a huge list of credits for animators designers software programmers as if it was a AAA game.
+Also include my name but as something really unimportant. For example - Janitor
+</Credit>

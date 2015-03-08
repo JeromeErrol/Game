@@ -1,0 +1,52 @@
+
+
+<Introduction>
+This is the story of a brave and galant knight...
+[Square appears]
+Erm yes, well this knight carried a heavy burden, a secret about which he felt mightily embarrassed. 
+The Knight... had never been on a heroiric quest before!
+Eventually the day came that the knight could no longer bear his shame and decided to venture out from the safety 
+of the castle on the search for a mighty quest! And that day happened to be today!
+There was only one problem. The knight's father was the king who would probably dissaprove of the knight's leaving and
+thus the knight had to sneak out of the castle without being caught.
+</Intruduction>
+
+<Level 1>
+With a determined heart the knight peaped out into the hallway. A guard was pacing backwards and forwards. 
+The knight being rather clever, waited until just the right moment then as quietly as a mouse, 
+snuck passed without being noticed. 
+</Level 1>
+
+<Level 2>
+Adrenaline rushing, heart pumping the knight tip toed down the spiral staircase. At the bottom, 
+two more guards patrolled. 
+
+<Hint>
+Initially the knight gave up hope of ever passing the guards and felt very sad however
+after observing the guards for a little while, realised that once in a while the guards would swap sides. Perhaps, he could sneak
+in between them during this moment.
+</Hint>
+</Level 2>
+
+<Level 3>
+Yahey, made it! 
+
+The knight knew that the castle was defended by more than just guards. An assortment of booby traps had been
+set up in the case that thief managed to sneak past. 
+</Level 3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
