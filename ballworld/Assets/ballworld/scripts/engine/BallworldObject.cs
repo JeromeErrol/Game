@@ -14,11 +14,11 @@ public class BallworldObject : MonoBehaviour {
 
     public void moveVertically(float distance)
     {
-        transform.RotateAround(Vector3.zero, -Vector3.back, distance);
+        transform.RotateAround(Vector3.zero, Vector3.Cross(transform.position, Vector3.up), distance);
     }
 
     public void moveHorizontally(float distance)
     {
-        transform.RotateAround(Vector3.zero, -Vector3.up, distance);
+        transform.RotateAround(Vector3.zero, Vector3.down, distance);
     }
 }

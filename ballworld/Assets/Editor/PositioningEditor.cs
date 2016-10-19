@@ -7,26 +7,28 @@ public class PositioningEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        BallworldPositioning ballworldPositioning = (BallworldPositioning) target;       
+        BallworldPositioning ballworldPositioning = (BallworldPositioning) target;
+
+        float distance = 6;   
 
         if (GUILayout.Button("Up"))
         {
-            ballworldPositioning.moveVertically(1);
+            ballworldPositioning.moveVertically(distance);
         }
 
         if (GUILayout.Button("Down"))
         {
-            ballworldPositioning.moveVertically(-1);
+            ballworldPositioning.moveVertically(-distance);
         }
 
         if (GUILayout.Button("Left"))
         {
-            ballworldPositioning.moveHorizontally(-1);
+            ballworldPositioning.moveHorizontally(-distance);
         }
 
         if (GUILayout.Button("Right"))
         {
-            ballworldPositioning.moveHorizontally(1);
+            ballworldPositioning.moveHorizontally(distance);
         }
     }
 }

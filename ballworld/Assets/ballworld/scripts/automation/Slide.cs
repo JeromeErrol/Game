@@ -2,8 +2,12 @@
 using System.Collections;
 
 public class Slide : MonoBehaviour {
-    
-	void Update () {
-        GetComponent<Unit>().runForward();
+
+    public float verticalSpeed = 0;
+    public float horizontalSpeed = 0;
+
+    void FixedUpdate () {
+        GetComponent<BallworldObject>().moveHorizontally(horizontalSpeed);
+        GetComponent<BallworldObject>().moveVertically(verticalSpeed);
     }
 }
