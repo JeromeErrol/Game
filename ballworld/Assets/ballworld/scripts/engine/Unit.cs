@@ -16,23 +16,32 @@
         }
     }
 
+    public void standStill()
+    {
+        GetComponent<RunAnimation>().running = false;
+    }
+
     public void runForward()
     {
         moveForward(Speed);
+        GetComponent<RunAnimation>().running = true;
     }
 
     public void runBackward()
     {
         moveForward(-Speed);
+        GetComponent<RunAnimation>().running = true;
     }
 
     public void strafeLeft()
     {
         moveSideways(-Speed);
+        GetComponent<RunAnimation>().running = true;
     }
 
     public void strafeRight()
     {
         moveSideways(Speed);
+        GetComponent<RunAnimation>().running = true;
     }
 }

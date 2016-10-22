@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Slide : MonoBehaviour {
 
-    public float verticalSpeed = 0;
-    public float horizontalSpeed = 0;
+    public float forwardSpeed = 0;
+    public float sidewaysSpeed = 0;
 
     void FixedUpdate () {
-        GetComponent<BallworldObject>().moveHorizontally(horizontalSpeed);
-        GetComponent<BallworldObject>().moveVertically(verticalSpeed);
+        GetComponent<BallworldObject>().moveSideways(sidewaysSpeed);
+        GetComponent<BallworldObject>().moveForward(forwardSpeed);
     }
 }

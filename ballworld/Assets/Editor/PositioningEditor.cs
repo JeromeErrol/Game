@@ -9,7 +9,7 @@ public class PositioningEditor : Editor
     {
         BallworldPositioning ballworldPositioning = (BallworldPositioning) target;
 
-        float distance = 6;   
+        float distance = 1;   
 
         if (GUILayout.Button("Up"))
         {

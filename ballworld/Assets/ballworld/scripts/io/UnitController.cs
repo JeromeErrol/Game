@@ -3,7 +3,7 @@ using System.Collections;
 
 public class UnitController : MonoBehaviour {
 
-    public Unit unit;
+    private Unit unit;
 
     public KeyCode runKey = KeyCode.W;
     public KeyCode backKey = KeyCode.S;
@@ -12,8 +12,13 @@ public class UnitController : MonoBehaviour {
 
     public float sensitivityX = 4;
 
-    void Update () {
+    void Start()
+    {
+        this.unit = GetComponent<Unit>();
+    }
 
+    void Update () {
+        unit.standStill();
         if (Input.GetKey(runKey))
         {
             unit.runForward();
@@ -31,7 +36,14 @@ public class UnitController : MonoBehaviour {
             unit.strafeRight();
         }
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            GetComponent<Gun>().fire();
+        }
+
         unit.boost = Input.GetMouseButton(1);
+        
+        Camera.main.orthographicSize -= Input.GetAxis("Mouse ScrollWheel");
     }
 
     void LateUpdate()

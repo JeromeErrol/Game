@@ -67,13 +67,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ballworld\scripts\automation\Slide.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\Spin.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\UnitBehavior.cs" />
+    <Compile Include="Assets\ballworld\scripts\effects\Foot.cs" />
+    <Compile Include="Assets\ballworld\scripts\effects\RunAnimation.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\BallworldObject.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\BallworldPositioning.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Unit.cs" />
+    <Compile Include="Assets\ballworld\scripts\gameobjects\Bullet.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Enemy.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Gold.cs" />
+    <Compile Include="Assets\ballworld\scripts\gameobjects\Gun.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Player.cs" />
+    <Compile Include="Assets\ballworld\scripts\gameobjects\SpawnPoint.cs" />
     <Compile Include="Assets\ballworld\scripts\io\UnitController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\TSF\Shaders\TSF.shader" />
+    <None Include="Assets\TSF\Shaders\TSFOutline.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

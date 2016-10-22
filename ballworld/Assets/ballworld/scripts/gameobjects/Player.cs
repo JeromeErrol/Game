@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
 
         if (collider.gameObject.GetComponent<Gold>() != null) {
             GameObject.Destroy(collider.gameObject);
-        };
-    }    
+        };       
+    }  
+    
 }
