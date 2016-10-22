@@ -1,4 +1,6 @@
-﻿public class Unit : BallworldObject {
+﻿using UnityEngine;
+
+public class Unit : BallworldObject {
 
     public float runSpeed = 0.3f;
     public bool boost = false;
@@ -43,5 +45,21 @@
     {
         moveSideways(Speed);
         GetComponent<RunAnimation>().running = true;
+    }
+
+    void OnTriggerStay(Collider collider)
+    {
+        if (collider.gameObject.GetComponent<CircleObstacle>() != null)
+        {
+            transform.RotateAround(Vector3.zero, Vector3.Cross(gameObject.transform.position, collider.gameObject.transform.position), -1f);
+        }
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.GetComponent<CircleObstacle>() != null)
+        {
+            transform.RotateAround(Vector3.zero, Vector3.Cross(gameObject.transform.position, collider.gameObject.transform.position), -0.5f);
+        }
     }
 }

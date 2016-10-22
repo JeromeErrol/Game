@@ -73,6 +73,7 @@
     <Compile Include="Assets\ballworld\scripts\effects\RunAnimation.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\BallworldObject.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\BallworldPositioning.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\CircleObstacle.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Unit.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Bullet.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Enemy.cs" />
