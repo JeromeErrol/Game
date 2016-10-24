@@ -12,7 +12,23 @@ public class Player : MonoBehaviour {
 
         if (collider.gameObject.GetComponent<Gold>() != null) {
             GameObject.Destroy(collider.gameObject);
-        };       
-    }  
-    
+        };
+        
+        if(collider.gameObject.GetComponent<Signpost>() != null)
+        {
+            collider.gameObject.GetComponent<Signpost>().viewFront();
+        }       
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        if (collider.gameObject.GetComponent<Signpost>() != null)
+        {
+            collider.gameObject.GetComponent<Signpost>().viewTop();
+        }
+    }
+
+
+
+
 }
