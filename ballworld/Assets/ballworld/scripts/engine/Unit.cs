@@ -6,7 +6,7 @@ public class Unit : BallworldObject {
     public bool boost = false;
     public float boostAmount = 1.1f;
     public GameObject externalSpriteRenderer;
-
+    
     public float Speed
     {
         get
@@ -61,7 +61,8 @@ public class Unit : BallworldObject {
     {
         if (collider.gameObject.GetComponent<CircleObstacle>() != null)
         {
-            transform.RotateAround(Vector3.zero, Vector3.Cross(gameObject.transform.position, collider.gameObject.transform.position), -1f);
+            //  transform.RotateAround(Vector3.zero, Vector3.Cross(gameObject.transform.position, collider.gameObject.transform.position), -1f);
+            OnTriggerEnter(collider);
         }
     }
 
@@ -69,12 +70,14 @@ public class Unit : BallworldObject {
     {
         if (collider.gameObject.GetComponent<CircleObstacle>() != null)
         {
-            transform.RotateAround(Vector3.zero, Vector3.Cross(gameObject.transform.position, collider.gameObject.transform.position), -0.5f);
-        }
+          //  transform.RotateAround(Vector3.zero, Vector3.Cross(gameObject.transform.position, collider.gameObject.transform.position), -1f);
 
-        if(collider.gameObject.GetComponent<Fog>() != null)
-        {
-            GameObject.Destroy(collider.gameObject);
-        }
+            float distanceBetween = Vector3.Distance(transform.position, collider.gameObject.transform.position);
+            float combinedRadius = GetComponent<SphereCollider>().radius + collider.GetComponent<SphereCollider>().radius;
+
+            float crossOver = distanceBetween - combinedRadius;
+
+            transform.RotateAround(Vector3.zero, Vector3.Cross(gameObject.transform.position, collider.gameObject.transform.position), crossOver * collider.GetComponent<CircleObstacle>().pushAmount);
+        }      
     }
 }
