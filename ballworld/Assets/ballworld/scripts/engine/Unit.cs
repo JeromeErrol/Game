@@ -61,23 +61,32 @@ public class Unit : BallworldObject {
     {
         if (collider.gameObject.GetComponent<CircleObstacle>() != null)
         {
-            //  transform.RotateAround(Vector3.zero, Vector3.Cross(gameObject.transform.position, collider.gameObject.transform.position), -1f);
             OnTriggerEnter(collider);
         }
     }
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.GetComponent<CircleObstacle>() != null)
+        if (collider.gameObject.GetComponent<CircleObstacle>() != null && collider.GetComponent<SphereCollider>() != null)
         {
-          //  transform.RotateAround(Vector3.zero, Vector3.Cross(gameObject.transform.position, collider.gameObject.transform.position), -1f);
-
+            //  transform.RotateAround(Vector3.zero, Vector3.Cross(gameObject.transform.position, collider.gameObject.transform.position), -1f);
             float distanceBetween = Vector3.Distance(transform.position, collider.gameObject.transform.position);
             float combinedRadius = GetComponent<SphereCollider>().radius + collider.GetComponent<SphereCollider>().radius;
-
             float crossOver = distanceBetween - combinedRadius;
-
             transform.RotateAround(Vector3.zero, Vector3.Cross(gameObject.transform.position, collider.gameObject.transform.position), crossOver * collider.GetComponent<CircleObstacle>().pushAmount);
-        }      
-    }
+        }
+
+        if (collider.gameObject.GetComponent<BoxObstacle>() != null && collider.GetComponent<BoxCollider>() != null)
+        {
+            BoxCollider boxCollider = collider.GetComponent<BoxCollider>();
+            Vector3 difference = (collider.gameObject.transform.position - gameObject.transform.position);
+
+            float a = Vector2.Angle(Vector2.zero, new Vector2(difference.x, difference.y));
+            float fraction = boxCollider.size.x / boxCollider.size.y;
+
+            float angle = Mathf.Atan2(boxCollider.size.x, boxCollider.size.y);
+
+            float blep = 5f;
+        }
+    }   
 }
