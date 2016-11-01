@@ -6,6 +6,7 @@ public class Unit : BallworldObject {
     public bool boost = false;
     public float boostAmount = 1.1f;
     public GameObject externalSpriteRenderer;
+    public Sword sword;
     
     public float Speed
     {
@@ -26,6 +27,14 @@ public class Unit : BallworldObject {
         // set the animation state to standing
         if(externalSpriteRenderer != null) {
             externalSpriteRenderer.GetComponent<Animator>().SetBool("running", false);
+        }
+    }
+
+    public void attack()
+    {
+        if(sword != null)
+        {
+            sword.attack();
         }
     }
 
@@ -78,15 +87,7 @@ public class Unit : BallworldObject {
 
         if (collider.gameObject.GetComponent<BoxObstacle>() != null && collider.GetComponent<BoxCollider>() != null)
         {
-            BoxCollider boxCollider = collider.GetComponent<BoxCollider>();
-            Vector3 difference = (collider.gameObject.transform.position - gameObject.transform.position);
-
-            float a = Vector2.Angle(Vector2.zero, new Vector2(difference.x, difference.y));
-            float fraction = boxCollider.size.x / boxCollider.size.y;
-
-            float angle = Mathf.Atan2(boxCollider.size.x, boxCollider.size.y);
-
-            float blep = 5f;
+            transform.RotateAround(Vector3.zero, collider.transform.up, 0.5f);
         }
     }   
 }

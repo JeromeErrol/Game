@@ -38,7 +38,7 @@ public class UnitController : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-            GetComponent<Gun>().fire();
+            unit.attack();
         }
 
         unit.boost = Input.GetMouseButton(1);

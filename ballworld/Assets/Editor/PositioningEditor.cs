@@ -2,33 +2,81 @@
 using System.Collections;
 using UnityEditor;
 
-[CustomEditor(typeof(BallworldPositioning))]
+[CustomEditor(typeof(BallworldObject))]
 public class PositioningEditor : Editor
 {
-    public override void OnInspectorGUI()
+    /*
+    void OnSceneGUI()
     {
-        BallworldPositioning ballworldPositioning = (BallworldPositioning) target;
+        BallworldObject ballworldPositioning = (BallworldObject) target;
 
-        float distance = 1;   
-
-        if (GUILayout.Button("Up"))
+        switch (Event.current.type)
         {
-            ballworldPositioning.moveVertically(distance);
+            case EventType.keyDown:
+                {
+                    if (Event.current.keyCode == (KeyCode.A))
+                    {
+                        ballworldPositioning.moveHorizontally(-distance);
+                    }
+
+                    if (Event.current.keyCode == (KeyCode.D))
+                    {
+                        ballworldPositioning.moveHorizontally(distance);
+                    }
+
+                    if (Event.current.keyCode == (KeyCode.W))
+                    {
+                        ballworldPositioning.moveVertically(distance);
+                    }
+
+                    if (Event.current.keyCode == (KeyCode.S))
+                    {
+                        ballworldPositioning.moveVertically(-distance);
+                    }
+                    break;
+                }
         }
+    }
+    */
 
-        if (GUILayout.Button("Down"))
+    void OnSceneGUI()
+    {
+        BallworldObject script = (BallworldObject)target;
+        Event e = Event.current;
+        switch (e.type)
         {
-            ballworldPositioning.moveVertically(-distance);
+            case EventType.keyDown:
+                {
+                    if (Event.current.keyCode == (KeyCode.A))
+                    {
+                        script.moveHorizontally(-distance);
+                    }
+                    if (Event.current.keyCode == (KeyCode.D))
+                    {
+                        script.moveHorizontally(distance);
+                    }
+                    if (Event.current.keyCode == (KeyCode.W))
+                    {
+                        script.moveVertically(distance);
+                    }
+                    if (Event.current.keyCode == (KeyCode.S))
+                    {
+                        script.moveVertically(-distance);
+                    }
+                    break;
+                }
         }
-
-        if (GUILayout.Button("Left"))
+    }
+    
+    public float distance
+    {
+        get
         {
-            ballworldPositioning.moveHorizontally(-distance);
-        }
-
-        if (GUILayout.Button("Right"))
-        {
-            ballworldPositioning.moveHorizontally(distance);
+            if (Event.current.shift)
+            {
+                return 0.1f;
+            }
+            return 1f;
         }
     }
 }

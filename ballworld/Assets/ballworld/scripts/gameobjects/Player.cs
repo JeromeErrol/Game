@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
             Debug.Log("game over");
         }
 
-        if (collider.gameObject.GetComponent<Gold>() != null) {
+        if (collider.gameObject.GetComponent<Coin>() != null) {
             GameObject.Destroy(collider.gameObject);
         };
         
