@@ -1,47 +1,29 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEditor;
 
 [CustomEditor(typeof(BallworldObject))]
+[CanEditMultipleObjects]
 public class PositioningEditor : Editor
 {
-    /*
-    void OnSceneGUI()
+    BallworldObject ballworldObject;
+
+    void OnEnable()
     {
-        BallworldObject ballworldPositioning = (BallworldObject) target;
-
-        switch (Event.current.type)
-        {
-            case EventType.keyDown:
-                {
-                    if (Event.current.keyCode == (KeyCode.A))
-                    {
-                        ballworldPositioning.moveHorizontally(-distance);
-                    }
-
-                    if (Event.current.keyCode == (KeyCode.D))
-                    {
-                        ballworldPositioning.moveHorizontally(distance);
-                    }
-
-                    if (Event.current.keyCode == (KeyCode.W))
-                    {
-                        ballworldPositioning.moveVertically(distance);
-                    }
-
-                    if (Event.current.keyCode == (KeyCode.S))
-                    {
-                        ballworldPositioning.moveVertically(-distance);
-                    }
-                    break;
-                }
-        }
+        ballworldObject = (BallworldObject)target;
     }
-    */
 
     void OnSceneGUI()
     {
-        BallworldObject script = (BallworldObject)target;
+        Handles.Label(ballworldObject.transform.position, "Hello");
+
+      //  Vector3 a = Handles.DoPositionHandle(ballworldObject.transform.position, ballworldObject.transform.rotation);
+
+      //  Vector3 lookTarget = Handles.PositionHandle(ballworldObject.transform.position, Quaternion.identity);
+
+      //  ballworldObject.transform.RotateAround(Vector3.zero, lookTarget, 0.1f);
+        
+
+
         Event e = Event.current;
         switch (e.type)
         {
@@ -49,19 +31,26 @@ public class PositioningEditor : Editor
                 {
                     if (Event.current.keyCode == (KeyCode.A))
                     {
-                        script.moveHorizontally(-distance);
+                        ballworldObject.moveHorizontally(-distance);
                     }
                     if (Event.current.keyCode == (KeyCode.D))
                     {
-                        script.moveHorizontally(distance);
+                        ballworldObject.moveHorizontally(distance);
                     }
                     if (Event.current.keyCode == (KeyCode.W))
                     {
-                        script.moveVertically(distance);
+                        ballworldObject.moveVertically(distance);
                     }
                     if (Event.current.keyCode == (KeyCode.S))
                     {
-                        script.moveVertically(-distance);
+                        ballworldObject.moveVertically(-distance);
+                    }
+
+                    if (Event.current.keyCode == (KeyCode.V))
+                    {
+                        Vector3 forward = ballworldObject.transform.position.normalized;
+                        Vector3 upwards = Vector3.Cross(Vector3.zero, forward);                        
+                        ballworldObject.transform.rotation = Quaternion.LookRotation(forward, upwards);
                     }
                     break;
                 }

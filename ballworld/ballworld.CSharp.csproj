@@ -76,9 +76,11 @@
     <Compile Include="Assets\ballworld\scripts\engine\BoxObstacle.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\CircleObstacle.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\GameObjects.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\Sword.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Unit.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\ActivateOnStart.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Bullet.cs" />
+    <Compile Include="Assets\ballworld\scripts\gameobjects\Coin.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Enemy.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Fog.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Gold.cs" />

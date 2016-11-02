@@ -85,9 +85,9 @@ public class Unit : BallworldObject {
             transform.RotateAround(Vector3.zero, Vector3.Cross(gameObject.transform.position, collider.gameObject.transform.position), crossOver * collider.GetComponent<CircleObstacle>().pushAmount);
         }
 
-        if (collider.gameObject.GetComponent<BoxObstacle>() != null && collider.GetComponent<BoxCollider>() != null)
+         if (collider.gameObject.GetComponent<BoxObstacle>() != null && collider.GetComponent<BoxCollider>() != null)
         {
-            transform.RotateAround(Vector3.zero, collider.transform.up, 0.5f);
+            transform.RotateAround(Vector3.zero, collider.gameObject.transform.right, 0.5f);
         }
     }   
 }
