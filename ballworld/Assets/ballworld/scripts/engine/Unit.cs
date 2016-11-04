@@ -22,8 +22,6 @@ public class Unit : BallworldObject {
 
     public void standStill()
     {
-        GetComponent<RunAnimation>().running = false;
-
         // set the animation state to standing
         if(externalSpriteRenderer != null) {
             externalSpriteRenderer.GetComponent<Animator>().SetBool("running", false);
@@ -41,7 +39,6 @@ public class Unit : BallworldObject {
     public void runForward()
     {
         moveForward(Speed);
-        GetComponent<RunAnimation>().running = true;
         if (externalSpriteRenderer != null)
         {
             externalSpriteRenderer.GetComponent<Animator>().SetBool("running", true);
@@ -51,19 +48,20 @@ public class Unit : BallworldObject {
     public void runBackward()
     {
         moveForward(-Speed);
-        GetComponent<RunAnimation>().running = true;
+        if (externalSpriteRenderer != null)
+        {
+            externalSpriteRenderer.GetComponent<Animator>().SetBool("running", true);
+        }
     }
 
     public void strafeLeft()
     {
         moveSideways(-Speed);
-        GetComponent<RunAnimation>().running = true;
     }
 
     public void strafeRight()
     {
         moveSideways(Speed);
-        GetComponent<RunAnimation>().running = true;
     }    
 
     void OnTriggerStay(Collider collider)
