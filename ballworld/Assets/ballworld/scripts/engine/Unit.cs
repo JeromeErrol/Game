@@ -64,17 +64,9 @@ public class Unit : BallworldObject {
     {
         moveSideways(Speed);
         GetComponent<RunAnimation>().running = true;
-    }
+    }    
 
     void OnTriggerStay(Collider collider)
-    {
-        if (collider.gameObject.GetComponent<CircleObstacle>() != null)
-        {
-            OnTriggerEnter(collider);
-        }
-    }
-
-    void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.GetComponent<CircleObstacle>() != null && collider.GetComponent<SphereCollider>() != null)
         {
@@ -87,7 +79,7 @@ public class Unit : BallworldObject {
 
          if (collider.gameObject.GetComponent<BoxObstacle>() != null && collider.GetComponent<BoxCollider>() != null)
         {
-            transform.RotateAround(Vector3.zero, collider.gameObject.transform.right, 0.5f);
+            transform.RotateAround(Vector3.zero, collider.gameObject.transform.right, 1f);
         }
     }   
 }

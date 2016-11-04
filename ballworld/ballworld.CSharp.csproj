@@ -82,6 +82,7 @@
     <Compile Include="Assets\ballworld\scripts\gameobjects\Bullet.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Coin.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Enemy.cs" />
+    <Compile Include="Assets\ballworld\scripts\gameobjects\Entrance.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Fog.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Gold.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Gun.cs" />

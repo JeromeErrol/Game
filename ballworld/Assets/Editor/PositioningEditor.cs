@@ -46,8 +46,26 @@ public class PositioningEditor : Editor
                         ballworldObject.moveVertically(-distance);
                     }
 
+                    if (Event.current.keyCode == (KeyCode.I))
+                    {
+                        ballworldObject.moveForward(distance);
+                    }
+                    if (Event.current.keyCode == (KeyCode.K))
+                    {
+                        ballworldObject.moveForward(-distance);
+                    }
+                    if (Event.current.keyCode == (KeyCode.J))
+                    {
+                        ballworldObject.moveSideways(distance);
+                    }
+                    if (Event.current.keyCode == (KeyCode.L))
+                    {
+                        ballworldObject.moveSideways(-distance);
+                    }
+
                     if (Event.current.keyCode == (KeyCode.V))
                     {
+                        float rotation = ballworldObject.transform.rotation.z;
                         Vector3 forward = ballworldObject.transform.position.normalized;
                         Vector3 upwards = Vector3.Cross(Vector3.zero, forward);                        
                         ballworldObject.transform.rotation = Quaternion.LookRotation(forward, upwards);
