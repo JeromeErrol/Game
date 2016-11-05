@@ -15,13 +15,11 @@ public class PositioningEditor : Editor
     void OnSceneGUI()
     {
         Handles.Label(ballworldObject.transform.position, "Hello");
+     //   Handles.DrawLine(ballworldObject.transform.position, ballworldObject.topLeft);
+     //   Handles.DrawLine(ballworldObject.transform.position, ballworldObject.bottomLeft);
+        //  Vector3 a = Handles.DoPositionHandle(Vector3.zero, ballworldObject.transform.rotation);
 
-      //  Vector3 a = Handles.DoPositionHandle(ballworldObject.transform.position, ballworldObject.transform.rotation);
-
-      //  Vector3 lookTarget = Handles.PositionHandle(ballworldObject.transform.position, Quaternion.identity);
-
-      //  ballworldObject.transform.RotateAround(Vector3.zero, lookTarget, 0.1f);
-        
+        //  ballworldObject.transform.RotateAround(Vector3.zero, a, 0.1f);      
 
 
         Event e = Event.current;
@@ -34,7 +32,8 @@ public class PositioningEditor : Editor
                         if (Event.current.shift)
                         {
                             BallworldObject duplicate = (BallworldObject)Object.Instantiate(ballworldObject, ballworldObject.transform.parent, true);
-                            duplicate.moveForward(-duplicate.width * 1.15f);
+                            duplicate.moveForward(-duplicate.width);
+                            Debug.Log(duplicate.width);
                             Selection.activeGameObject = duplicate.gameObject;
                         }else
                         {
@@ -90,6 +89,7 @@ public class PositioningEditor : Editor
                     if (Event.current.keyCode == (KeyCode.L))
                     {
                         ballworldObject.moveSideways(-distance);
+
                     }
 
                     if (Event.current.keyCode == (KeyCode.Z))
