@@ -31,15 +31,44 @@ public class PositioningEditor : Editor
                 {
                     if (Event.current.keyCode == (KeyCode.A))
                     {
-                        ballworldObject.moveHorizontally(-distance);
+                        if (Event.current.shift)
+                        {
+                            BallworldObject duplicate = (BallworldObject)Object.Instantiate(ballworldObject, ballworldObject.transform.parent, true);
+                            duplicate.moveForward(-duplicate.width * 1.15f);
+                            Selection.activeGameObject = duplicate.gameObject;
+                        }else
+                        {
+                            ballworldObject.moveHorizontally(-distance);
+                        }
+                        
                     }
                     if (Event.current.keyCode == (KeyCode.D))
                     {
-                        ballworldObject.moveHorizontally(distance);
+                        if (Event.current.shift)
+                        {
+                            BallworldObject duplicate = (BallworldObject)Object.Instantiate(ballworldObject, ballworldObject.transform.parent, true);
+                            duplicate.moveForward(duplicate.width);
+                            Selection.activeGameObject = duplicate.gameObject;
+                        }
+                        else
+                        {
+                            ballworldObject.moveHorizontally(distance);
+                        }
                     }
                     if (Event.current.keyCode == (KeyCode.W))
                     {
-                        ballworldObject.moveVertically(distance);
+                        
+
+                        if (Event.current.shift)
+                        {
+                            BallworldObject duplicate = (BallworldObject)Object.Instantiate(ballworldObject, ballworldObject.transform.parent, true);
+                            duplicate.moveSideways(duplicate.width);
+                            Selection.activeGameObject = duplicate.gameObject;
+                        }
+                        else
+                        {
+                            ballworldObject.moveVertically(distance);
+                        }
                     }
                     if (Event.current.keyCode == (KeyCode.S))
                     {
@@ -61,6 +90,13 @@ public class PositioningEditor : Editor
                     if (Event.current.keyCode == (KeyCode.L))
                     {
                         ballworldObject.moveSideways(-distance);
+                    }
+
+                    if (Event.current.keyCode == (KeyCode.Z))
+                    {
+                        BallworldObject duplicate = (BallworldObject)Object.Instantiate(ballworldObject, ballworldObject.transform.parent, true);
+                        duplicate.moveForward(duplicate.width);
+                       // duplicate.moveForward(0.1f);
                     }
 
                     if (Event.current.keyCode == (KeyCode.V))

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ballworld/scenes/forest.unity
+- path: Assets/ballworld/scenes/cave.unity
   isLoaded: 1
   isActive: 1

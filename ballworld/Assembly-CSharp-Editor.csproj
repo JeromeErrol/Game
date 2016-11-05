@@ -160,26 +160,26 @@
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
+ <Reference Include="ConditionalExpression">
+ <HintPath>C:/Users/Jerome/Game/ballworld/Assets/PlayMaker/ConditionalExpression.dll</HintPath>
+ </Reference>
+ <Reference Include="ConditionalExpressionEditor">
+ <HintPath>C:/Users/Jerome/Game/ballworld/Assets/PlayMaker/Editor/ConditionalExpressionEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditor">
+ <HintPath>C:/Users/Jerome/Game/ballworld/Assets/PlayMaker/Editor/PlayMakerEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMakerEditorResources">
+ <HintPath>C:/Users/Jerome/Game/ballworld/Assets/PlayMaker/Editor/PlayMakerEditorResources.dll</HintPath>
+ </Reference>
+ <Reference Include="PlayMaker">
+ <HintPath>C:/Users/Jerome/Game/ballworld/Assets/Plugins/PlayMaker/PlayMaker.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="PlayMakerEditorResources">
- <HintPath>C:/Users/Jerome/Game/ballworld/Assets/PlayMaker/Editor/PlayMakerEditorResources.dll</HintPath>
- </Reference>
- <Reference Include="PlayMakerEditor">
- <HintPath>C:/Users/Jerome/Game/ballworld/Assets/PlayMaker/Editor/PlayMakerEditor.dll</HintPath>
- </Reference>
- <Reference Include="ConditionalExpressionEditor">
- <HintPath>C:/Users/Jerome/Game/ballworld/Assets/PlayMaker/Editor/ConditionalExpressionEditor.dll</HintPath>
- </Reference>
- <Reference Include="ConditionalExpression">
- <HintPath>C:/Users/Jerome/Game/ballworld/Assets/PlayMaker/ConditionalExpression.dll</HintPath>
- </Reference>
- <Reference Include="PlayMaker">
- <HintPath>C:/Users/Jerome/Game/ballworld/Assets/Plugins/PlayMaker/PlayMaker.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
