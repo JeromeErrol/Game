@@ -1,6 +1,16 @@
 ﻿using UnityEngine;
 
 public class BallworldObject : MonoBehaviour {
+
+    public int layer;
+
+    void Start()
+    {
+        if (GetComponent<MeshRenderer>() != null)
+        {
+            GetComponent<MeshRenderer>().sortingOrder = layer;
+        }
+    }
     
     public void rotateAroundRightXRed(float distance)
     {
@@ -66,6 +76,12 @@ public class BallworldObject : MonoBehaviour {
         }
     }
 
+    public void moveTowards(Vector3 position, float distance)
+    {
+        transform.RotateAround(Vector3.zero, Vector3.Cross(transform.position, position), distance);
+    }
+
+    /*
     public float degreesBetween(Transform otherTransform)
     {
         Vector3 relative = transform.position - otherTransform.position;
@@ -101,4 +117,5 @@ public class BallworldObject : MonoBehaviour {
             return transform.position + left + bottom;
         }
     }
+    */
 }

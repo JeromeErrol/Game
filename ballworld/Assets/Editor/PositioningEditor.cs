@@ -15,12 +15,6 @@ public class PositioningEditor : Editor
     void OnSceneGUI()
     {
         Handles.Label(ballworldObject.transform.position, "Hello");
-     //   Handles.DrawLine(ballworldObject.transform.position, ballworldObject.topLeft);
-     //   Handles.DrawLine(ballworldObject.transform.position, ballworldObject.bottomLeft);
-        //  Vector3 a = Handles.DoPositionHandle(Vector3.zero, ballworldObject.transform.rotation);
-
-        //  ballworldObject.transform.RotateAround(Vector3.zero, a, 0.1f);      
-
 
         Event e = Event.current;
         switch (e.type)
@@ -105,6 +99,13 @@ public class PositioningEditor : Editor
                         Vector3 forward = ballworldObject.transform.position.normalized;
                         Vector3 upwards = Vector3.Cross(Vector3.zero, forward);                        
                         ballworldObject.transform.rotation = Quaternion.LookRotation(forward, upwards);
+
+
+                        World world = GameObject.FindObjectOfType<World>();
+
+                        ballworldObject.transform.position = ballworldObject.transform.forward * (world.radius);
+                     
+
                     }
                     break;
                 }
