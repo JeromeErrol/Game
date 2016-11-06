@@ -811,6 +811,7 @@
      <Compile Include="Assets\ballworld\scripts\gameobjects\Fog.cs" />
      <Compile Include="Assets\ballworld\scripts\gameobjects\Gold.cs" />
      <Compile Include="Assets\ballworld\scripts\gameobjects\Gun.cs" />
+     <Compile Include="Assets\ballworld\scripts\gameobjects\ObstacleAware.cs" />
      <Compile Include="Assets\ballworld\scripts\gameobjects\Player.cs" />
      <Compile Include="Assets\ballworld\scripts\gameobjects\Shadow.cs" />
      <Compile Include="Assets\ballworld\scripts\gameobjects\Signpost.cs" />
