@@ -11,10 +11,6 @@ public class Bullet : MonoBehaviour {
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.GetComponent<Enemy>() != null)
-        {
-            GameObject.Destroy(collider.gameObject);
-            GameObject.Destroy(gameObject);
-        }        
+          
     }
 }

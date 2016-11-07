@@ -4,12 +4,7 @@ using Assets.ballworld.scripts.engine;
 public class Player : MonoBehaviour {
     
     void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.GetComponent<Enemy>() != null)
-        {           
-            Debug.Log("game over");
-        }
-
+    {  
         if (collider.gameObject.GetComponent<Coin>() != null) {
             GameObject.Destroy(collider.gameObject);
         };
@@ -18,24 +13,7 @@ public class Player : MonoBehaviour {
         {
             collider.gameObject.GetComponent<Signpost>().viewFront();
         }        
-    }
-
-    void OnTriggerStay(Collider collider)
-    {
-        if (collider.gameObject.GetComponent<Fog>() != null)
-        {
-            float distance = Vector3.Distance(transform.position, collider.gameObject.transform.position);
-
-            // float radius = GetComponent<SphereCollider>().radius;
-
-            // if(distance < radius)
-            //   // {
-            float a = distance * 2;
-            Debug.Log(a);
-            GameObjects.setAlpha(collider.gameObject, a);
-            // }            
-        }
-    }
+    }    
 
     void OnTriggerExit(Collider collider)
     {

@@ -791,7 +791,6 @@
      <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenStop.cs" />
      <Compile Include="Assets\PlayMaker\Include\iTweenFSMEvents.cs" />
      <Compile Include="Assets\PlayMaker\UpdateHelper.cs" />
-     <Compile Include="Assets\ballworld\scripts\automation\Automation.cs" />
      <Compile Include="Assets\ballworld\scripts\combat\Strike.cs" />
      <Compile Include="Assets\ballworld\scripts\effects\Foot.cs" />
      <Compile Include="Assets\ballworld\scripts\effects\RunAnimation.cs" />

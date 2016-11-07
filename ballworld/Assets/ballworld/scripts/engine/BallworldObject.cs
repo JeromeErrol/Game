@@ -11,29 +11,24 @@ public class BallworldObject : MonoBehaviour {
             GetComponent<MeshRenderer>().sortingOrder = layer;
         }
     }
-    
-    public void rotateAroundRightXRed(float distance)
-    {
-        transform.RotateAround(Vector3.zero, transform.right, distance);
-    }
-    public void rotateAroundUpYGreen(float distance)
-    {
-        transform.RotateAround(Vector3.zero, transform.up, distance);
-    }
 
-    public void rotateAroundForwardZBlue(float distance)
-    {
-        transform.RotateAround(Vector3.zero, transform.forward, distance);
-    }
-
+    /// <summary>
+    /// rotateAroundRightXRed
+    /// </summary>
+    /// <param name="distance"></param>
     public void moveForward(float distance)
     {
-        transform.RotateAround(Vector3.zero, transform.up, distance);
+        transform.RotateAround(Vector3.zero, transform.right, -distance);
     }
 
     public void moveSideways(float distance)
     {
-        transform.RotateAround(Vector3.zero, -transform.right, distance);
+        transform.RotateAround(Vector3.zero, transform.up, -distance);
+    }
+
+    public void rotate(float distance)
+    {
+        transform.RotateAround(Vector3.zero, transform.forward, distance);
     }
 
     /***
@@ -79,6 +74,24 @@ public class BallworldObject : MonoBehaviour {
     public void moveTowards(Vector3 position, float distance)
     {
         transform.RotateAround(Vector3.zero, Vector3.Cross(transform.position, position), distance);
+    }
+
+    public void faceTowards(Vector3 position)
+    {
+        transform.rotation = Quaternion.LookRotation(transform.forward, transform.position - position);
+    }
+
+    /// <summary>
+    /// Moves the object to the correct distance and rotation to the world
+    /// </summary>
+    public void correctPosition()
+    {
+        Vector3 forward = transform.position.normalized;
+        Vector3 upwards = Vector3.Cross(Vector3.zero, forward);
+        transform.rotation = Quaternion.LookRotation(forward, upwards);
+
+        World world = GameObject.FindObjectOfType<World>();
+        transform.position = transform.forward * (world.radius);
     }
 
     /*
