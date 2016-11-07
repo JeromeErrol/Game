@@ -5,7 +5,7 @@ public class Unit : BallworldObject {
     public float runSpeed = 0.3f;
     public bool boost = false;
     public float boostAmount = 1.1f;
-    public GameObject externalSpriteRenderer;
+    public Animator animator;
     public Sword sword;
     
     public float Speed
@@ -22,10 +22,7 @@ public class Unit : BallworldObject {
 
     public void standStill()
     {
-        // set the animation state to standing
-        if(externalSpriteRenderer != null) {
-            externalSpriteRenderer.GetComponent<Animator>().SetBool("running", false);
-        }
+        animator.SetBool("running", false);
     }
 
     public void attack()
@@ -38,20 +35,14 @@ public class Unit : BallworldObject {
 
     public void runForward()
     {
+        animator.SetBool("running", true);
         moveForward(Speed);
-        if (externalSpriteRenderer != null)
-        {
-          //  externalSpriteRenderer.GetComponent<Animator>().SetBool("running", true);
-        }
     }
 
     public void runBackward()
     {
+        animator.SetBool("running", true);
         moveForward(-Speed);
-        if (externalSpriteRenderer != null)
-        {
-            externalSpriteRenderer.GetComponent<Animator>().SetBool("running", true);
-        }
     }
 
     public void strafeLeft()

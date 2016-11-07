@@ -78,7 +78,7 @@ public class BallworldObject : MonoBehaviour {
 
     public void faceTowards(Vector3 position)
     {
-        transform.rotation = Quaternion.LookRotation(transform.forward, transform.position - position);
+        transform.rotation = Quaternion.LookRotation(transform.forward, position - transform.position);
     }
 
     /// <summary>

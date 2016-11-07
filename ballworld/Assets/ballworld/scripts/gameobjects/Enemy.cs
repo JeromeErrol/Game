@@ -3,46 +3,42 @@ using UnityEngine;
 
 public class Enemy : Unit
 {
-    public Animator animator;
     public List<Transform> path;
     public int pathIndex = 0;
+    public float chaseDistance = 0.4f;
+    public float attackDistance = 0.25f;
+
+    public int direction = 1;
+
 
     void Update()
     {
-        if (animator.GetBool("running"))
-        {
-            faceTowards(currentTarget.position);
-            runForward();
-        }
-    }
+        Player player = FindObjectOfType<Player>();
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.GetComponent<Player>() != null)
+        if (distanceToPlayer < chaseDistance)
         {
-            animator.SetBool("running", false);
-        }
-    }
-
-    void OnTriggerExit(Collider collider)
-    {
-        if (collider.GetComponent<Player>() != null)
-        {
-            animator.SetBool("running", true);
-        }
-    }
-
-    public Transform currentTarget
-    {
-        get
+            faceTowards(player.transform.position);
+            animator.SetBool("running", distanceToPlayer > attackDistance);            
+        }else
         {
             Transform target = path[pathIndex];
-            
-            if (Vector3.Distance(transform.position, target.position) < 0.022f)
+            if (Vector3.Distance(transform.position, target.position) <= 0.1f)
+            {
+                pathIndex = pathIndex + direction;
+                if(pathIndex < 0 || pathIndex >= path.Count)
                 {
-                    return path[(pathIndex + 1) % path.Count];
+                    direction = -direction;
+                    pathIndex += direction;
                 }
-            return target;
+                target = path[pathIndex];
+            }
+            faceTowards(target.position);
         }
+
+        if (animator.GetBool("running"))
+        {
+            runForward();
+        }        
     }
 }
