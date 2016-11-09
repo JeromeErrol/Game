@@ -2,6 +2,11 @@
 
 public class World : MonoBehaviour {
 
+    void Start()
+    {
+        GetComponent<MeshRenderer>().sortingOrder = -1;
+    }
+
     public float radius
     {
         get

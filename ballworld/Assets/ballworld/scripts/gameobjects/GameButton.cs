@@ -3,13 +3,13 @@ using System.Collections;
 
 public class GameButton : MonoBehaviour {
 
-    public GameObject gate;
+    public Gate gate;
 
     void OnTriggerStay(Collider collider)
     {
         if (collider.gameObject.GetComponent<Player>() != null)
         {
-            gate.GetComponent<PlayMakerFSM>().SendEvent("open");
+            gate.open();
         }
     }
 }

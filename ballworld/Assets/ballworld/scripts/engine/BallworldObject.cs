@@ -9,6 +9,9 @@ public class BallworldObject : MonoBehaviour {
         if (GetComponent<MeshRenderer>() != null)
         {
             GetComponent<MeshRenderer>().sortingOrder = layer;
+
+            World world = GameObject.FindObjectOfType<World>();
+            transform.position = transform.forward * (world.radius) + (transform.forward.normalized * ((float)layer / 1000f));
         }
     }
 

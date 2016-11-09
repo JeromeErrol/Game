@@ -818,14 +818,19 @@
     <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenStop.cs" />
     <Compile Include="Assets\PlayMaker\Include\iTweenFSMEvents.cs" />
     <Compile Include="Assets\PlayMaker\UpdateHelper.cs" />
-    <Compile Include="Assets\ballworld\scripts\combat\Strike.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\Action.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\State.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\StateMachine.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\Transition.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\actions\MoveTowards.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\actions\Wait.cs" />
     <Compile Include="Assets\ballworld\scripts\effects\Foot.cs" />
     <Compile Include="Assets\ballworld\scripts\effects\RunAnimation.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\BallworldObject.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\BallworldPhysics.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\BoxObstacle.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\CircleObstacle.cs" />
-    <Compile Include="Assets\ballworld\scripts\engine\GameObjects.cs" />
-    <Compile Include="Assets\ballworld\scripts\engine\Sword.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\Hitbox.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Unit.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\World.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\ActivateOnStart.cs" />
@@ -835,6 +840,7 @@
     <Compile Include="Assets\ballworld\scripts\gameobjects\Entrance.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Fog.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\GameButton.cs" />
+    <Compile Include="Assets\ballworld\scripts\gameobjects\Gate.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Gold.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Gun.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\ObstacleAware.cs" />
@@ -842,6 +848,7 @@
     <Compile Include="Assets\ballworld\scripts\gameobjects\Shadow.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Signpost.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\SpawnPoint.cs" />
+    <Compile Include="Assets\ballworld\scripts\gameobjects\Sword.cs" />
     <Compile Include="Assets\ballworld\scripts\io\UnitController.cs" />
     <Compile Include="Assets\iTween\iTween.cs" />
   </ItemGroup>

@@ -29,7 +29,7 @@ public class Unit : BallworldObject {
     {
         if(sword != null)
         {
-            sword.attack();
+            sword.attack = true;
         }
     }
 
@@ -53,5 +53,5 @@ public class Unit : BallworldObject {
     public void strafeRight()
     {
         moveSideways(Speed);
-    }     
+    }
 }
