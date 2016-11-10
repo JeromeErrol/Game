@@ -6,7 +6,6 @@ public class Unit : BallworldObject {
     public bool boost = false;
     public float boostAmount = 1.1f;
     public Animator animator;
-    public Sword sword;
     
     public float Speed
     {
@@ -23,14 +22,6 @@ public class Unit : BallworldObject {
     public void standStill()
     {
         animator.SetBool("running", false);
-    }
-
-    public void attack()
-    {
-        if(sword != null)
-        {
-            sword.attack = true;
-        }
     }
 
     public void runForward()

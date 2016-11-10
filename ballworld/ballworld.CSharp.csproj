@@ -831,6 +831,7 @@
     <Compile Include="Assets\ballworld\scripts\engine\BoxObstacle.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\CircleObstacle.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Hitbox.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\Hurtbox.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Unit.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\World.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\ActivateOnStart.cs" />

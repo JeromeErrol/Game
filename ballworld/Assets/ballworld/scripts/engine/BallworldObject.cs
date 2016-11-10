@@ -9,16 +9,14 @@ public class BallworldObject : MonoBehaviour {
         if (GetComponent<MeshRenderer>() != null)
         {
             GetComponent<MeshRenderer>().sortingOrder = layer;
-
             World world = GameObject.FindObjectOfType<World>();
             transform.position = transform.forward * (world.radius) + (transform.forward.normalized * ((float)layer / 1000f));
         }
     }
 
     /// <summary>
-    /// rotateAroundRightXRed
+    /// Rotate Around Right X Red
     /// </summary>
-    /// <param name="distance"></param>
     public void moveForward(float distance)
     {
         transform.RotateAround(Vector3.zero, transform.right, -distance);

@@ -4,7 +4,9 @@ using System.Collections;
 public class UnitController : MonoBehaviour {
 
     private Unit unit;
+    public Sword sword;
 
+    public KeyCode attack = KeyCode.Space;
     public KeyCode runKey = KeyCode.W;
     public KeyCode backKey = KeyCode.S;
     public KeyCode strafeLeftKey = KeyCode.A;
@@ -38,7 +40,11 @@ public class UnitController : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-            unit.attack();
+           
+        }
+        if (Input.GetKeyDown(attack))
+        {
+            sword.attack();
         }
 
         unit.boost = Input.GetMouseButton(1);

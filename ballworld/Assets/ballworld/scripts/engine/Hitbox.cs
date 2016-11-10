@@ -12,9 +12,6 @@ public class Hitbox : MonoBehaviour {
         if (unit != null)
         {
             Debug.Log("strike");
-            // direction of the force
-            Vector3 difference = (unit.transform.position - owner.transform.position).normalized;
-            unit.transform.position += (difference * power);
         }
     }
 }
