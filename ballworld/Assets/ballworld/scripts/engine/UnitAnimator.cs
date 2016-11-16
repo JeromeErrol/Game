@@ -3,9 +3,11 @@
 public class UnitAnimator : MonoBehaviour {
 
     private Animator animator;
+    public Unit unit;
+
         
 	void Start () {
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();       
 	}
 
     public void startRunning()

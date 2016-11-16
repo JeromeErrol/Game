@@ -7,7 +7,6 @@ public class Enemy : Unit
     public int pathIndex = 0;
     public float chaseDistance = 0.4f;
     public float attackDistance = 0.25f;
-
     public int direction = 1;
 
 
@@ -34,6 +33,9 @@ public class Enemy : Unit
                 target = path[pathIndex];
             }
             faceTowards(target.position);
+        }else
+        {
+
         }
 
         if (animator.GetBool("running"))

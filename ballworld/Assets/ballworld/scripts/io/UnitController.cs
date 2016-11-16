@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class UnitController : MonoBehaviour {
 
     private Unit unit;
-    public Sword sword;
 
-    public KeyCode attack = KeyCode.Space;
+    public KeyCode jump = KeyCode.Space;
     public KeyCode runKey = KeyCode.W;
     public KeyCode backKey = KeyCode.S;
     public KeyCode strafeLeftKey = KeyCode.A;
@@ -20,36 +18,38 @@ public class UnitController : MonoBehaviour {
     }
 
     void Update () {
-        unit.standStill();
+
         if (Input.GetKey(runKey))
         {
             unit.runForward();
-        }
+        }else
         if (Input.GetKey(backKey))
         {
             unit.runBackward();
-        }
+        }else
         if (Input.GetKey(strafeLeftKey))
         {
             unit.strafeLeft();
-        }
+        }else
         if (Input.GetKey(strafeRightKey))
         {
             unit.strafeRight();
-        }
+        }else
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             unit.attack();
-        }
-        if (Input.GetKeyDown(attack))
+        }else
+        if (Input.GetMouseButtonDown(1))
         {
-           // unit.attack();
-        }
-
-        if (Input.GetKey(KeyCode.Space))
+            unit.attack();
+        }else
+        if (Input.GetKey(jump))
         {
             unit.transform.position += unit.transform.forward * jumpSpeed;
+        }else
+        {
+            unit.idle();
         }
         
         Camera.main.orthographicSize -= Input.GetAxis("Mouse ScrollWheel");

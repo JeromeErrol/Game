@@ -2,53 +2,80 @@
 
 public class Unit : BallworldObject {
 
-    public float runSpeed = 0.3f;
+    public const int IDLE = 0;
+    public const int RUNNING = 1;
+    public const int ATTACKING = 2;
+    public const int DIE = 4;
+
+    public float speed = 0.3f;
     public Animator animator;
-    public int health = 100;
+    public int health = 5;
 
-    public void attack()
+    void Start()
     {
-        animator.SetBool("attacking", true);
+        animator = GetComponent<Animator>();
     }
 
-    public void attackFinished()
+    void Update()
     {
-        animator.SetBool("attacking", false);
-    }
-    
-    public float Speed
-    {
-        get
-        {
-            return runSpeed;
+        switch (state)
+        {            
+            case IDLE:
+                break;
+            case RUNNING:
+                moveForward(speed);
+                break;
+            default:                
+                break;
         }
     }
 
-    public void standStill()
+    public int state
     {
-        animator.SetBool("running", false);
+        get
+        {
+            return animator.GetInteger("state");
+        }
+        set
+        {
+            animator.SetInteger("state", value);
+        }
+    }
+
+    public void idle()
+    {
+        state = IDLE;
+    }
+
+    public void attack()
+    {
+        Debug.Log("attack");
+        state = ATTACKING;
+    }    
+    
+    public void stopRunning()
+    {        
+        state = IDLE;
     }
 
     public void runForward()
     {
-        animator.SetBool("running", true);
-        moveForward(Speed);
+        state = RUNNING;
     }
 
     public void runBackward()
     {
-        animator.SetBool("running", true);
-        moveForward(-Speed);
+        animator.SetBool("running-backward", true);
     }
 
     public void strafeLeft()
     {
-        moveSideways(-Speed);
+        animator.SetBool("left", true);
     }
 
     public void strafeRight()
     {
-        moveSideways(Speed);
+        animator.SetBool("strafing-right", true);
     }
 
     public void takeDamage()
@@ -63,7 +90,6 @@ public class Unit : BallworldObject {
 
     public void die()
     {
-        Debug.Log("dead");
-        animator.SetTrigger("die");
+        state = DIE;
     }
 }
