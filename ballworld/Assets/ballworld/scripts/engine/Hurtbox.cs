@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Hurtbox : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public Unit owner;
+
+    void OnTriggerEnter(Collider collider)
+    {
+        Hitbox hitBox = collider.GetComponent<Hitbox>();
+
+        if (hitBox != null && hitBox.owner != owner)
+        {
+            owner.takeDamage();
+        }
+    }
 }

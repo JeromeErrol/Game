@@ -20,7 +20,7 @@ public class Enemy : Unit
         {
             faceTowards(player.transform.position);
             animator.SetBool("running", distanceToPlayer > attackDistance);            
-        }else
+        }else if(path.Count > 0)
         {
             Transform target = path[pathIndex];
             if (Vector3.Distance(transform.position, target.position) <= 0.1f)

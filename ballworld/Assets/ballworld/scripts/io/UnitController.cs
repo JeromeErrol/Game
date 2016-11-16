@@ -10,8 +10,8 @@ public class UnitController : MonoBehaviour {
     public KeyCode runKey = KeyCode.W;
     public KeyCode backKey = KeyCode.S;
     public KeyCode strafeLeftKey = KeyCode.A;
-    public KeyCode strafeRightKey = KeyCode.D;    
-
+    public KeyCode strafeRightKey = KeyCode.D;
+    public float jumpSpeed = 1f;
     public float sensitivityX = 4;
 
     void Start()
@@ -40,16 +40,20 @@ public class UnitController : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-           
+            unit.attack();
         }
         if (Input.GetKeyDown(attack))
         {
-            sword.attack();
+           // unit.attack();
         }
 
-        unit.boost = Input.GetMouseButton(1);
+        if (Input.GetKey(KeyCode.Space))
+        {
+            unit.transform.position += unit.transform.forward * jumpSpeed;
+        }
         
         Camera.main.orthographicSize -= Input.GetAxis("Mouse ScrollWheel");
+        Camera.main.fieldOfView -= (Input.GetAxis("Mouse ScrollWheel") * 10);
     }
 
     void LateUpdate()

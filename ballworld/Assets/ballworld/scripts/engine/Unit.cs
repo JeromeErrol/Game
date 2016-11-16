@@ -3,18 +3,23 @@
 public class Unit : BallworldObject {
 
     public float runSpeed = 0.3f;
-    public bool boost = false;
-    public float boostAmount = 1.1f;
     public Animator animator;
+    public int health = 100;
+
+    public void attack()
+    {
+        animator.SetBool("attacking", true);
+    }
+
+    public void attackFinished()
+    {
+        animator.SetBool("attacking", false);
+    }
     
     public float Speed
     {
         get
         {
-            if (boost)
-            {
-                return runSpeed * boostAmount;
-            }
             return runSpeed;
         }
     }
@@ -44,5 +49,21 @@ public class Unit : BallworldObject {
     public void strafeRight()
     {
         moveSideways(Speed);
+    }
+
+    public void takeDamage()
+    {
+        health--;
+        Debug.Log("Damage taken: " + health);
+        if (health <= 0)
+        {
+            die();
+        }
+    }
+
+    public void die()
+    {
+        Debug.Log("dead");
+        animator.SetTrigger("die");
     }
 }
