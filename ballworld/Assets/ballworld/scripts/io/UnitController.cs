@@ -3,6 +3,7 @@
 public class UnitController : MonoBehaviour {
 
     private Unit unit;
+    public Sword sword;
 
     public KeyCode jump = KeyCode.Space;
     public KeyCode runKey = KeyCode.W;
@@ -58,23 +59,32 @@ public class UnitController : MonoBehaviour {
             unit.unitState = UnitState.STRAFING_RIGHT;
         }
         else
-
-        if (Input.GetMouseButton(0))
-        {
-           // unit.attack();
-        }else
-        if (Input.GetMouseButtonDown(1))
-        {
-          //  unit.attack();
-        }else
-        if (Input.GetKey(jump))
-        {
-            unit.transform.position += unit.transform.forward * jumpSpeed;
-        }else
         {
             unit.unitState = UnitState.IDLE;
         }
+
         
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            sword.attack();
+        }
+        
+        
+        
+        if (Input.GetMouseButtonDown(1))
+        {
+            //  unit.attack();
+        }
+        
+
+        if (Input.GetKey(jump))
+        {
+            unit.transform.position += unit.transform.forward * jumpSpeed;
+        }
+
+
+
         Camera.main.orthographicSize -= Input.GetAxis("Mouse ScrollWheel");
         Camera.main.fieldOfView -= (Input.GetAxis("Mouse ScrollWheel") * 10);
     }

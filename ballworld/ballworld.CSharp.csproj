@@ -68,6 +68,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ballworld\scripts\actors\Sword.cs" />
+    <Compile Include="Assets\ballworld\scripts\actors\SwordState.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\AnimatorState.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\BallworldObject.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Gravity.cs" />
@@ -76,7 +78,6 @@
     <Compile Include="Assets\ballworld\scripts\engine\Hurtbox.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Obstacle.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Unit.cs" />
-    <Compile Include="Assets\ballworld\scripts\engine\UnitAnimator.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\UnitState.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\World.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\ActivateOnStart.cs" />
@@ -94,7 +95,6 @@
     <Compile Include="Assets\ballworld\scripts\gameobjects\Shadow.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Signpost.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\SpawnPoint.cs" />
-    <Compile Include="Assets\ballworld\scripts\gameobjects\Sword.cs" />
     <Compile Include="Assets\ballworld\scripts\io\UnitController.cs" />
   </ItemGroup>
   <ItemGroup>

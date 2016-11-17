@@ -5,7 +5,6 @@ public class Unit : BallworldObject {
     public UnitState unitState = UnitState.IDLE; 
     public float speed = 0.3f;
     public int health = 5;
-
     private Animator animator;
 
     void Start()
@@ -16,47 +15,45 @@ public class Unit : BallworldObject {
     void Update()
     {
         switch (unitState)
-        {            
-            case UnitState.IDLE:
-                setAnimatorState(AnimatorState.IDLE);
-                break;
+        {                      
             case UnitState.RUNNING_FORWARD:
-                setAnimatorState(AnimatorState.RUNNING);
+                animator.SetInteger("state", AnimatorState.RUNNING);
                 moveForward(speed);
                 break;
             case UnitState.RUNNING_BACKWARD:
-                setAnimatorState(AnimatorState.RUNNING);
+                animator.SetInteger("state", AnimatorState.RUNNING);
                 moveForward(-speed);
                 break;
             case UnitState.STRAFING_LEFT:
-                setAnimatorState(AnimatorState.STRAFING);
+                animator.SetInteger("state", AnimatorState.STRAFING);
                 moveSideways(-speed);
                 break;
             case UnitState.STRAFING_RIGHT:
-                setAnimatorState(AnimatorState.STRAFING);
+                animator.SetInteger("state", AnimatorState.STRAFING);
                 moveSideways(speed);
                 break;
             case UnitState.RUNNING_FORWARD_LEFT:
-                setAnimatorState(AnimatorState.CROSSING);
+                animator.SetInteger("state", AnimatorState.CROSSING);
                 moveSideways(-halfSpeed);
                 moveForward(halfSpeed);
                 break;
             case UnitState.RUNNING_FORWARD_RIGHT:
-                setAnimatorState(AnimatorState.CROSSING_CW);
+                animator.SetInteger("state", AnimatorState.CROSSING_CW);
                 moveSideways(halfSpeed);
                 moveForward(halfSpeed);
                 break;
             case UnitState.RUNNING_BACKWARDS_LEFT:
-                setAnimatorState(AnimatorState.CROSSING);
+                animator.SetInteger("state", AnimatorState.CROSSING_CW);
                 moveSideways(-halfSpeed);
                 moveForward(-halfSpeed);
                 break;
             case UnitState.RUNNING_BACKWARDS_RIGHT:
-                setAnimatorState(AnimatorState.CROSSING_CW);
+                animator.SetInteger("state", AnimatorState.CROSSING);
                 moveSideways(halfSpeed);
                 moveForward(-halfSpeed);
                 break;
-            default:                
+            default:
+                animator.SetInteger("state", AnimatorState.IDLE);
                 break;
         }
     }
@@ -65,14 +62,9 @@ public class Unit : BallworldObject {
     {
         get
         {
-            return speed / 2;
+            return speed * 0.66f;
         }
     }
-
-    private void setAnimatorState(int state)
-    {
-        animator.SetInteger("state", state);
-    }    
 
     public void takeDamage()
     {

@@ -7,4 +7,6 @@ public class AnimatorState
     public const int STRAFING = 2;
     public const int CROSSING = 3;
     public const int CROSSING_CW = 4;
+
+    public const int SWORD_ATTACKING = 1;
 }
