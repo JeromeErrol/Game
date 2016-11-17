@@ -1,14 +1,23 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Unit
+public class Enemy : MonoBehaviour
 {
     public List<Transform> path;
     public int pathIndex = 0;
     public float chaseDistance = 0.4f;
-    public float attackDistance = 0.25f;
+    public float attackDistance = 0.1f;
     public int direction = 1;
+    public Sword sword;
+    public Unit unit;
 
+    void Start()
+    {
+        if(unit == null)
+        {
+            unit = GetComponent<Unit>();
+        }
+    }
 
     void Update()
     {
@@ -17,28 +26,35 @@ public class Enemy : Unit
 
         if (distanceToPlayer < chaseDistance)
         {
-            faceTowards(player.transform.position);
-            if(distanceToPlayer > attackDistance)
+            unit.faceTowards(player.transform.position);
+            if (distanceToPlayer < attackDistance)
             {
-                unitState = UnitState.RUNNING_FORWARD;
-            }           
-        }else if(path.Count > 0)
+                sword.attack();
+                unit.idle();
+            }
+            else
+            {
+                unit.runForward();
+            }
+        }
+        else if (path.Count > 0)
         {
             Transform target = path[pathIndex];
             if (Vector3.Distance(transform.position, target.position) <= 0.1f)
             {
                 pathIndex = pathIndex + direction;
-                if(pathIndex < 0 || pathIndex >= path.Count)
+                if (pathIndex < 0 || pathIndex >= path.Count)
                 {
                     direction = -direction;
                     pathIndex += direction;
                 }
                 target = path[pathIndex];
             }
-            faceTowards(target.position);
+            unit.faceTowards(target.position);
+            unit.runForward();
         }else
         {
-
-        }   
+            unit.idle();
+        }
     }
 }

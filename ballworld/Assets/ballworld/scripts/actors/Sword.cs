@@ -3,7 +3,7 @@
 public class Sword : MonoBehaviour {
 
     private SwordState state;
-    private Animator animator;    
+    private Animator animator;
 
     void Start()
     {

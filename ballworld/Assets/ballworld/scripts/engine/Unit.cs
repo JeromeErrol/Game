@@ -12,7 +12,7 @@ public class Unit : BallworldObject {
         animator = GetComponent<Animator>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         switch (unitState)
         {                      
@@ -74,5 +74,15 @@ public class Unit : BallworldObject {
         {
             //die();
         }
+    }
+
+    public void idle()
+    {
+        unitState = UnitState.IDLE;
+    }
+
+    public void runForward()
+    {
+        unitState = UnitState.RUNNING_FORWARD;
     }
 }
