@@ -21,35 +21,58 @@ public class UnitController : MonoBehaviour {
 
         if (Input.GetKey(runKey))
         {
-            unit.runForward();
-        }else
+            unit.unitState = UnitState.RUNNING_FORWARD;
+
+            if (Input.GetKey(strafeLeftKey))
+            {
+                unit.unitState = UnitState.RUNNING_FORWARD_LEFT;
+            }else 
+            if (Input.GetKey(strafeRightKey))
+            {
+                unit.unitState = UnitState.RUNNING_FORWARD_RIGHT;
+            }
+        }
+        else
         if (Input.GetKey(backKey))
         {
-            unit.runBackward();
-        }else
+            unit.unitState = UnitState.RUNNING_BACKWARD;
+
+            if (Input.GetKey(strafeLeftKey))
+            {
+                unit.unitState = UnitState.RUNNING_BACKWARDS_LEFT;
+            }
+            else
+            if (Input.GetKey(strafeRightKey))
+            {
+                unit.unitState = UnitState.RUNNING_BACKWARDS_RIGHT;
+            }
+        }
+        else
         if (Input.GetKey(strafeLeftKey))
         {
-            unit.strafeLeft();
-        }else
+            unit.unitState = UnitState.STRAFING_LEFT;
+        }
+        else
         if (Input.GetKey(strafeRightKey))
         {
-            unit.strafeRight();
-        }else
+            unit.unitState = UnitState.STRAFING_RIGHT;
+        }
+        else
 
         if (Input.GetMouseButton(0))
         {
-            unit.attack();
+           // unit.attack();
         }else
         if (Input.GetMouseButtonDown(1))
         {
-            unit.attack();
+          //  unit.attack();
         }else
         if (Input.GetKey(jump))
         {
             unit.transform.position += unit.transform.forward * jumpSpeed;
         }else
         {
-            unit.idle();
+            unit.unitState = UnitState.IDLE;
         }
         
         Camera.main.orthographicSize -= Input.GetAxis("Mouse ScrollWheel");

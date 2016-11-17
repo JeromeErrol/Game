@@ -18,7 +18,10 @@ public class Enemy : Unit
         if (distanceToPlayer < chaseDistance)
         {
             faceTowards(player.transform.position);
-            animator.SetBool("running", distanceToPlayer > attackDistance);            
+            if(distanceToPlayer > attackDistance)
+            {
+                unitState = UnitState.RUNNING_FORWARD;
+            }           
         }else if(path.Count > 0)
         {
             Transform target = path[pathIndex];
@@ -36,11 +39,6 @@ public class Enemy : Unit
         }else
         {
 
-        }
-
-        if (animator.GetBool("running"))
-        {
-            runForward();
-        }        
+        }   
     }
 }
