@@ -82,17 +82,11 @@ public class BallworldObject : MonoBehaviour {
         transform.rotation = Quaternion.LookRotation(transform.forward, position - transform.position);
     }
 
-    /// <summary>
-    /// Moves the object to the correct distance and rotation to the world
-    /// </summary>
-    public void correctPosition()
+    public void addForce(Vector3 axis, float amount)
     {
-        Vector3 forward = transform.position.normalized;
-        Vector3 upwards = Vector3.Cross(Vector3.zero, forward);
-        transform.rotation = Quaternion.LookRotation(forward, upwards);
-
-        World world = GameObject.FindObjectOfType<World>();
-        transform.position = transform.forward * (world.radius);
+        Force force = gameObject.AddComponent<Force>();
+        force.axis = axis;
+        force.amount = amount;
     }
 
     /*

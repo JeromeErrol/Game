@@ -6,6 +6,7 @@ public class Unit : BallworldObject {
     public float speed = 0.3f;
     public int health = 5;
     private Animator animator;
+    public HitGroup hitGroup;
 
     void Start()
     {

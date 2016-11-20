@@ -95,14 +95,7 @@ public class PositioningEditor : Editor
 
                     if (Event.current.keyCode == (KeyCode.V))
                     {
-                        Vector3 forward = ballworldObject.transform.position.normalized;
-                        Vector3 upwards = Vector3.Cross(Vector3.zero, forward);                        
-                        ballworldObject.transform.rotation = Quaternion.LookRotation(forward, upwards);
-
-                        World world = GameObject.FindObjectOfType<World>();
-                        ballworldObject.transform.position = ballworldObject.transform.forward * (world.radius);
-                     
-
+                        FindObjectOfType<World>().correctPosition(ballworldObject.transform);
                     }
                     break;
                 }

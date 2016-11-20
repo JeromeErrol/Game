@@ -68,15 +68,16 @@ public class UnitController : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             sword.attack();
-        }
+        }        
         
-        
-        
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButton(1))
         {
-            //  unit.attack();
+            sword.drawBow();
         }
-        
+        if (Input.GetMouseButtonUp(1))
+        {
+            sword.bowReleaseArrow();
+        }
 
         if (Input.GetKey(jump))
         {
