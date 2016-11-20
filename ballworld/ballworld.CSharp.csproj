@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.4.1f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -68,30 +66,37 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ballworld\scripts\actors\Bow.cs" />
+    <Compile Include="Assets\ballworld\scripts\actors\BowAnimator.cs" />
+    <Compile Include="Assets\ballworld\scripts\actors\BowState.cs" />
     <Compile Include="Assets\ballworld\scripts\actors\Sword.cs" />
+    <Compile Include="Assets\ballworld\scripts\actors\SwordAnimator.cs" />
     <Compile Include="Assets\ballworld\scripts\actors\SwordState.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\Anim.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\AnimatorState.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\BallworldObject.cs" />
-    <Compile Include="Assets\ballworld\scripts\engine\HitGroup.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Force.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\GameUtil.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Gravity.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Hazard.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\HitGroup.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Hitbox.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Obstacle.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Unit.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\UnitAnimator.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\UnitState.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\Weapon.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\WeaponAnimator.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\WeaponState.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\World.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\ActivateOnStart.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Arrow.cs" />
-    <Compile Include="Assets\ballworld\scripts\gameobjects\Bullet.cs" />
-    <Compile Include="Assets\ballworld\scripts\gameobjects\Coin.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Enemy.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Entrance.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Fog.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\GameButton.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Gate.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Gold.cs" />
-    <Compile Include="Assets\ballworld\scripts\gameobjects\Gun.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\ObstacleAware.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Player.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Shadow.cs" />

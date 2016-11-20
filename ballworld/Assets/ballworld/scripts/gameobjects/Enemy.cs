@@ -8,14 +8,14 @@ public class Enemy : MonoBehaviour
     public float chaseDistance = 0.4f;
     public float attackDistance = 0.1f;
     public int direction = 1;
-    public Sword sword;
-    public Unit unit;
+    public Weapon weapon;
+    private Unit unit;
 
     void Start()
     {
         if(unit == null)
         {
-            unit = GetComponent<Unit>();
+            unit = GetComponent<Unit>();            
         }
     }
 
@@ -28,13 +28,20 @@ public class Enemy : MonoBehaviour
         {
             unit.faceTowards(player.transform.position);
             if (distanceToPlayer < attackDistance)
-            {
-                sword.attack();
+            {  
                 unit.idle();
+                if (weapon.readyToRelease)
+                {
+                    weapon.release();
+                }else
+                {
+                    weapon.draw();
+                }
             }
             else
             {
                 unit.runForward();
+                
             }
         }
         else if (path.Count > 0)
@@ -55,6 +62,7 @@ public class Enemy : MonoBehaviour
         }else
         {
             unit.idle();
+            weapon.idle();
         }
     }
 }

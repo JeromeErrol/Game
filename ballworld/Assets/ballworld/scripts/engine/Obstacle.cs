@@ -24,7 +24,17 @@ public class Obstacle : MonoBehaviour
                 collider.transform.RotateAround(Vector3.zero, Vector3.Cross(collider.gameObject.transform.position, gameObject.transform.position), -force);
             }
         }
-    }    
+    }
+
+
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if(collider.GetComponent<Arrow>() != null)
+        {
+            DestroyObject(collider.gameObject);
+        }
+    }
 
     private void boxCollision(GameObject gameobject)
     {

@@ -2,8 +2,9 @@
 
 public class UnitController : MonoBehaviour {
 
-    private Unit unit;
-    public Sword sword;
+    public Unit unit;
+    public Weapon sword;
+    public Weapon bow;
 
     public KeyCode jump = KeyCode.Space;
     public KeyCode runKey = KeyCode.W;
@@ -11,12 +12,7 @@ public class UnitController : MonoBehaviour {
     public KeyCode strafeLeftKey = KeyCode.A;
     public KeyCode strafeRightKey = KeyCode.D;
     public float jumpSpeed = 1f;
-    public float sensitivityX = 4;
-
-    void Start()
-    {
-        this.unit = GetComponent<Unit>();
-    }
+    public float sensitivityX = 4;    
 
     void Update () {
 
@@ -63,29 +59,45 @@ public class UnitController : MonoBehaviour {
             unit.unitState = UnitState.IDLE;
         }
 
-        
-
         if (Input.GetMouseButtonDown(0))
         {
-            sword.attack();
-        }        
-        
+            sword.gameObject.SetActive(true);
+            if (bow.enabled)
+            {
+                bow.gameObject.SetActive(false);
+            }
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            sword.draw();
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            sword.release();
+        }
         if (Input.GetMouseButton(1))
         {
-            sword.drawBow();
+            bow.draw();
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            bow.gameObject.SetActive(true);
+            if (sword.enabled)
+            {
+                sword.gameObject.SetActive(false);
+            }
         }
         if (Input.GetMouseButtonUp(1))
         {
-            sword.bowReleaseArrow();
+            bow.release();
         }
 
         if (Input.GetKey(jump))
         {
             unit.transform.position += unit.transform.forward * jumpSpeed;
         }
-
-
-
         Camera.main.orthographicSize -= Input.GetAxis("Mouse ScrollWheel");
         Camera.main.fieldOfView -= (Input.GetAxis("Mouse ScrollWheel") * 10);
     }
