@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a3ee15d8c2a0de74798dd4f03c38d7f9
-timeCreated: 1479415974
+timeCreated: 1479761166
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,9 @@ TextureImporter:
     21300004: hero-legs_2
     21300006: hero-legs_3
     21300008: hero-legs_4
+    21300010: hero-legs_5
+    21300012: hero-legs_6
+    21300014: hero-legs_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -87,8 +90,8 @@ TextureImporter:
       name: hero-legs_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 128
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -100,7 +103,7 @@ TextureImporter:
       name: hero-legs_3
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 64
         width: 64
         height: 64
@@ -113,7 +116,46 @@ TextureImporter:
       name: hero-legs_4
       rect:
         serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero-legs_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero-legs_6
+      rect:
+        serializedVersion: 2
         x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hero-legs_7
+      rect:
+        serializedVersion: 2
+        x: 64
         y: 0
         width: 64
         height: 64

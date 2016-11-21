@@ -1,36 +1,32 @@
-﻿using UnityEngine;
-
-public class UnitAnimator : MonoBehaviour {
-
-    private Animator animator;
-
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
+﻿public class UnitAnimator : Anim {    
 
     public void idle()
     {
-        animator.SetInteger("state", 0);
+        state = 0;
     }
 
     public void running()
     {
-        animator.SetInteger("state", 1);
+        state = 1;
     }
 
     public void strafing()
     {
-        animator.SetInteger("state", 2);
+        state = 2;
     }
 
     public void crossing()
     {
-        animator.SetInteger("state", 3);
+        state = 3;
     }
 
     public void crossingCW()
     {
-        animator.SetInteger("state", 4);
+        state = 4;
+    }
+
+    public void dying()
+    {
+        state = 5;
     }
 }

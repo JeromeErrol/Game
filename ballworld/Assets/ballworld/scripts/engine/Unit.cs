@@ -2,7 +2,7 @@
 
 public class Unit : BallworldObject {
 
-    public UnitState unitState = UnitState.IDLE; 
+    public UnitState _unitState = UnitState.IDLE; 
     public float speed = 0.3f;
     public int health = 5;
     private UnitAnimator animator;
@@ -15,7 +15,7 @@ public class Unit : BallworldObject {
 
     void FixedUpdate()
     {
-        switch (unitState)
+        switch (_unitState)
         {                      
             case UnitState.RUNNING_FORWARD:
                 animator.running();
@@ -53,11 +53,24 @@ public class Unit : BallworldObject {
                 moveSideways(halfSpeed);
                 moveForward(-halfSpeed);
                 break;
+            case UnitState.DYING:
+                animator.dying();
+                break;
             default:
                 animator.idle();
                 break;
         }
     }    
+
+    public UnitState unitState
+    {
+       set {
+            if(_unitState != value && _unitState != UnitState.DYING)
+            {
+                _unitState = value;
+            }
+        }
+    }
 
     public float halfSpeed
     {
@@ -69,12 +82,11 @@ public class Unit : BallworldObject {
 
     public void takeDamage()
     {
-        health--;
-        Debug.Log("Damage taken: " + health);
-        if (health <= 0)
+        if (health-- <= 0)
         {
-            //die();
+            die();
         }
+        Debug.Log("Health: " + health);
     }
 
     public void idle()
@@ -84,6 +96,16 @@ public class Unit : BallworldObject {
 
     public void runForward()
     {
-        unitState = UnitState.RUNNING_FORWARD;
+            unitState = UnitState.RUNNING_FORWARD;
+    }
+
+    public void die()
+    {
+        unitState = UnitState.DYING;
+    }
+
+    public void destroyGameObject()
+    {
+        Destroy(gameObject);
     }
 }

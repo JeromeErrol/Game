@@ -103,6 +103,8 @@
     <Compile Include="Assets\ballworld\scripts\gameobjects\Signpost.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\SpawnPoint.cs" />
     <Compile Include="Assets\ballworld\scripts\io\UnitController.cs" />
+    <Compile Include="Assets\ballworld\scripts\map\Spawn.cs" />
+    <Compile Include="Assets\ballworld\scripts\physics\VerticalForce.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TSF\Shaders\TSF.shader" />

@@ -14,6 +14,11 @@ public class UnitController : MonoBehaviour {
     public float jumpSpeed = 1f;
     public float sensitivityX = 4;    
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     void Update () {
 
         if (Input.GetKey(runKey))
@@ -62,8 +67,9 @@ public class UnitController : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             sword.gameObject.SetActive(true);
-            if (bow.enabled)
+            if (bow.gameObject.activeInHierarchy)
             {
+                bow.idle();
                 bow.gameObject.SetActive(false);
             }
         }
@@ -79,24 +85,48 @@ public class UnitController : MonoBehaviour {
         }
         if (Input.GetMouseButton(1))
         {
-            bow.draw();
+            if (bow.gameObject.activeInHierarchy)
+            {
+                bow.draw();
+            }
         }
         if (Input.GetMouseButtonDown(1))
         {
             bow.gameObject.SetActive(true);
-            if (sword.enabled)
+            if (sword.gameObject.activeInHierarchy)
             {
+                sword.idle();
                 sword.gameObject.SetActive(false);
             }
         }
         if (Input.GetMouseButtonUp(1))
         {
-            bow.release();
+            if (bow.gameObject.activeInHierarchy)
+            {
+                bow.release();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+           // unit.transform.position += unit.transform.forward * jumpSpeed;
+            unit.addForce(unit.transform.up, 3f);
         }
 
         if (Input.GetKey(jump))
         {
-            unit.transform.position += unit.transform.forward * jumpSpeed;
+            //  unit.transform.position += unit.transform.forward * jumpSpeed;
+            bow.rotation = 90f;
+            sword.rotation = 90f;
+        }else if (Input.GetKey(KeyCode.LeftShift))
+        {
+            bow.rotation = -90f;
+            sword.rotation = -90f;
+        }
+        else
+        {
+            bow.rotation = 0;
+            sword.rotation = 0;
         }
         Camera.main.orthographicSize -= Input.GetAxis("Mouse ScrollWheel");
         Camera.main.fieldOfView -= (Input.GetAxis("Mouse ScrollWheel") * 10);

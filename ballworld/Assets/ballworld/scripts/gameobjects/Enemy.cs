@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
     public List<Transform> path;
     public int pathIndex = 0;
     public float chaseDistance = 0.4f;
-    public float attackDistance = 0.1f;
+    public float attackDistance = 0.08f;
     public int direction = 1;
     public Weapon weapon;
     private Unit unit;

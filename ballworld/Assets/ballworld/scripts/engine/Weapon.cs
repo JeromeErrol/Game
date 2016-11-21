@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class Weapon : MonoBehaviour {
+public abstract class Weapon : BallworldObject {
 
     private WeaponAnimator animator;
     public WeaponState state = WeaponState.IDLE;
@@ -28,7 +28,7 @@ public abstract class Weapon : MonoBehaviour {
 
     public void releaseFinished()
     {
-            state = WeaponState.IDLE;
+       state = WeaponState.IDLE;
     }
 
     public void draw()
@@ -51,8 +51,11 @@ public abstract class Weapon : MonoBehaviour {
 
     public void release()
     {
+        if (state == WeaponState.DRAWN)
+        {
             state = WeaponState.RELEASING;
             released();
+        }
     }
 
     public abstract void released();

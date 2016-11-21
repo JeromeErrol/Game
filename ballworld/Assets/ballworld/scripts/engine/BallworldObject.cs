@@ -32,6 +32,19 @@ public class BallworldObject : MonoBehaviour {
         transform.RotateAround(Vector3.zero, transform.forward, distance);
     }
 
+    public float rotation
+    {
+        get
+        {
+            return transform.localEulerAngles.z;
+        }set
+        {
+            Vector3 eulerAngles = transform.localEulerAngles;
+            eulerAngles.z = value;
+            transform.localEulerAngles = eulerAngles;
+        }
+    }
+
     /***
      * Green Arrow
      **/
@@ -89,41 +102,9 @@ public class BallworldObject : MonoBehaviour {
         force.amount = amount;
     }
 
-    /*
-    public float degreesBetween(Transform otherTransform)
+    public void addVerticalForce(float amount)
     {
-        Vector3 relative = transform.position - otherTransform.position;
-        Vector3 point = Quaternion.Inverse(otherTransform.rotation) * relative;
-        Vector2 point2 = new Vector2(point.x, point.y);
-
-        if (point2.x < 0)
-        {
-            return 360 - (Mathf.Atan2(point2.x, point2.y) * Mathf.Rad2Deg * -1);
-        }
-        else
-        {
-            return Mathf.Atan2(point2.x, point2.y) * Mathf.Rad2Deg;
-        }
+        VerticalForce verticalForce = gameObject.AddComponent<VerticalForce>();
+        verticalForce.amount = amount;            
     }
-
-    public Vector3 topLeft
-    {
-        get
-        {
-            Vector3 left = (transform.right.normalized * (size.x / 2));
-            Vector3 top = (transform.up.normalized * (size.y / 2));
-            return transform.position + left + top; 
-        }
-    }
-
-    public Vector3 bottomLeft
-    {
-        get
-        {
-            Vector3 left = transform.right.normalized * (size.x / 2);
-            Vector3 bottom = transform.up.normalized * (-size.y / 2);
-            return transform.position + left + bottom;
-        }
-    }
-    */
 }
