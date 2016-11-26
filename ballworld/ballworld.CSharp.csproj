@@ -112,6 +112,7 @@
     <Compile Include="Assets\ballworld\scripts\io\UnitController.cs" />
     <Compile Include="Assets\ballworld\scripts\map\Spawn.cs" />
     <Compile Include="Assets\ballworld\scripts\physics\VerticalForce.cs" />
+    <Compile Include="Assets\ballworld\scripts\scenes\intro\Scene01Camera.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TSF\Shaders\TSF.shader" />

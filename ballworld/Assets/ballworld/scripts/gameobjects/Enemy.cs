@@ -11,11 +11,13 @@ public class Enemy : MonoBehaviour
     public Weapon weapon;
     private Unit unit;
 
+
+
     void Start()
     {
-        if(unit == null)
+        if (unit == null)
         {
-            unit = GetComponent<Unit>();            
+            unit = GetComponent<Unit>();
         }
     }
 
@@ -28,12 +30,13 @@ public class Enemy : MonoBehaviour
         {
             unit.faceTowards(player.transform.position);
             if (distanceToPlayer < attackDistance)
-            {  
+            {
                 unit.idle();
                 if (weapon.readyToRelease)
                 {
                     weapon.release();
-                }else
+                }
+                else
                 {
                     weapon.draw();
                 }
@@ -41,7 +44,7 @@ public class Enemy : MonoBehaviour
             else
             {
                 unit.runForward();
-                
+
             }
         }
         else if (path.Count > 0)
@@ -59,10 +62,32 @@ public class Enemy : MonoBehaviour
             }
             unit.faceTowards(target.position);
             unit.runForward();
-        }else
+        }
+        else
         {
-            unit.idle();
-            weapon.idle();
+            wander();
         }
     }
+
+    private void wander()
+    {
+        weapon.idle();
+        if (walkDistance-- > 0)
+        {
+            unit.runForward();
+            idlePause = Random.Range(50, 200);
+        }
+        else if (idlePause-- > 0)
+        {
+            unit.idle();
+        }
+        else
+        {
+            unit.rotate(Random.Range(0, 360));
+            walkDistance = Random.Range(1, 100);
+        }
+    }
+
+    int idlePause = 100;
+    int walkDistance = 100;
 }
