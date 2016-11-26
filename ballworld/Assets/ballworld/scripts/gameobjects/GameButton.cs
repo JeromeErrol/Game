@@ -9,7 +9,7 @@ public class GameButton : MonoBehaviour {
     {
         if (collider.gameObject.GetComponent<Player>() != null)
         {
-            gate.open();
+            gate.state = Gate.GateState.OPENING;
         }
     }
 }

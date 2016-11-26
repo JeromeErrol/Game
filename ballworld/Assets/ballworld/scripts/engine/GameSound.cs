@@ -4,7 +4,6 @@ public class GameSound : MonoBehaviour {
 
     private AudioSource swordSlashAudioSource;
     public AudioClip swordSlash;
-
     
 	void Start () {
         swordSlashAudioSource = gameObject.AddComponent<AudioSource>();
