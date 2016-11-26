@@ -26,8 +26,6 @@ public class Obstacle : MonoBehaviour
         }
     }
 
-
-
     void OnTriggerEnter(Collider collider)
     {
         if(collider.GetComponent<Arrow>() != null)

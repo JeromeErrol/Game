@@ -107,4 +107,18 @@ public class BallworldObject : MonoBehaviour {
         VerticalForce verticalForce = gameObject.AddComponent<VerticalForce>();
         verticalForce.amount = amount;            
     }
+
+    public static float distanceBetween(Vector3 a, Vector3 b)
+    {
+        float angleFromCenter = Vector3.Angle(a, b);
+        float radius = Vector3.Distance(Vector3.zero, a);
+        return 2 * Mathf.PI * radius * (angleFromCenter / 360);
+    }
+
+    public float distanceBetween(Transform target)
+    {
+        float angleFromCenter = Vector3.Angle(transform.position, target.position);
+        float radius = Vector3.Distance(Vector3.zero, transform.position);
+        return 2 * Mathf.PI * radius * (angleFromCenter / 360);
+    }
 }

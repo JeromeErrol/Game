@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-
+﻿
 public abstract class Weapon : BallworldObject {
 
     private WeaponAnimator animator;

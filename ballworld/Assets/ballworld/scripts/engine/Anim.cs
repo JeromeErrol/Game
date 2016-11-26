@@ -2,7 +2,7 @@
 
 public class Anim : MonoBehaviour {
 
-    private Animator animator;
+    protected Animator animator;
 
     void Start()
     {

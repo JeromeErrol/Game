@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class World : MonoBehaviour {
+public class World : MonoBehaviour {    
 
     void Start()
     {

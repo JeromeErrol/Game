@@ -7,10 +7,13 @@ public class Unit : BallworldObject {
     public int health = 5;
     private UnitAnimator animator;
     public HitGroup hitGroup;
+    public AudioSource audioSource;
+    
 
     void Start()
     {
         animator = gameObject.AddComponent<UnitAnimator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -107,5 +110,15 @@ public class Unit : BallworldObject {
     public void destroyGameObject()
     {
         Destroy(gameObject);
+    }
+
+    
+    public void stepFinished()
+    {
+        // play audio
+        if(audioSource != null && !audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
     }
 }

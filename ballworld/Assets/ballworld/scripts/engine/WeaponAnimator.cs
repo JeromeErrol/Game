@@ -1,11 +1,11 @@
-﻿using UnityEngine;
-
+﻿
 public class WeaponAnimator : Anim
 {
 
     public void idle()
     {
         state = 0;
+      //  animator.Play("sword-idle");  
     }
 
     public void drawn()

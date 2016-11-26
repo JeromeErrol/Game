@@ -67,6 +67,7 @@ public class UnitController : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             sword.gameObject.SetActive(true);
+            sword.draw();
             if (bow.gameObject.activeInHierarchy)
             {
                 bow.idle();
