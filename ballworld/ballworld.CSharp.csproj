@@ -66,12 +66,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ballworld\scripts\actors\Bow.cs" />
-    <Compile Include="Assets\ballworld\scripts\actors\BowAnimator.cs" />
-    <Compile Include="Assets\ballworld\scripts\actors\BowState.cs" />
-    <Compile Include="Assets\ballworld\scripts\actors\Sword.cs" />
-    <Compile Include="Assets\ballworld\scripts\actors\SwordAnimator.cs" />
-    <Compile Include="Assets\ballworld\scripts\actors\SwordState.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\Gate.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\actions\ActionCycle.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\actions\FaceTowards.cs" />
@@ -81,15 +75,14 @@
     <Compile Include="Assets\ballworld\scripts\engine\Anim.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\AnimatorState.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\BallworldObject.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\Boundary.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Force.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\GameSound.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\GameUtil.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Gravity.cs" />
-    <Compile Include="Assets\ballworld\scripts\engine\Hazard.cs" />
-    <Compile Include="Assets\ballworld\scripts\engine\HitGroup.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Hitbox.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Music.cs" />
-    <Compile Include="Assets\ballworld\scripts\engine\Obstacle.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\Projectile.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Unit.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\UnitAnimator.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\UnitState.cs" />
@@ -98,21 +91,26 @@
     <Compile Include="Assets\ballworld\scripts\engine\WeaponState.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\World.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\ActivateOnStart.cs" />
-    <Compile Include="Assets\ballworld\scripts\gameobjects\Arrow.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Enemy.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Entrance.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Fog.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\GameButton.cs" />
-    <Compile Include="Assets\ballworld\scripts\gameobjects\Gold.cs" />
-    <Compile Include="Assets\ballworld\scripts\gameobjects\ObstacleAware.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Player.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Shadow.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Signpost.cs" />
-    <Compile Include="Assets\ballworld\scripts\gameobjects\SpawnPoint.cs" />
     <Compile Include="Assets\ballworld\scripts\io\UnitController.cs" />
     <Compile Include="Assets\ballworld\scripts\map\Spawn.cs" />
     <Compile Include="Assets\ballworld\scripts\physics\VerticalForce.cs" />
     <Compile Include="Assets\ballworld\scripts\scenes\intro\Scene01Camera.cs" />
+    <Compile Include="Assets\ballworld\scripts\weapons\Arrow.cs" />
+    <Compile Include="Assets\ballworld\scripts\weapons\ArrowPool.cs" />
+    <Compile Include="Assets\ballworld\scripts\weapons\Bow.cs" />
+    <Compile Include="Assets\ballworld\scripts\weapons\BowAnimator.cs" />
+    <Compile Include="Assets\ballworld\scripts\weapons\BowState.cs" />
+    <Compile Include="Assets\ballworld\scripts\weapons\Bullet.cs" />
+    <Compile Include="Assets\ballworld\scripts\weapons\Handgun.cs" />
+    <Compile Include="Assets\ballworld\scripts\weapons\Shotgun.cs" />
+    <Compile Include="Assets\ballworld\scripts\weapons\Sword.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TSF\Shaders\TSF.shader" />

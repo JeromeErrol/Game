@@ -6,14 +6,13 @@ public class Unit : BallworldObject {
     public float speed = 0.3f;
     public int health = 5;
     private UnitAnimator animator;
-    public HitGroup hitGroup;
-    public AudioSource audioSource;
+    public AudioSource stepAudioClip;
     
 
     void Start()
     {
         animator = gameObject.AddComponent<UnitAnimator>();
-        audioSource = GetComponent<AudioSource>();
+        stepAudioClip = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -116,9 +115,9 @@ public class Unit : BallworldObject {
     public void stepFinished()
     {
         // play audio
-        if(audioSource != null && !audioSource.isPlaying)
+        if(stepAudioClip != null && !stepAudioClip.isPlaying)
         {
-            audioSource.Play();
+            stepAudioClip.Play();
         }
     }
 }

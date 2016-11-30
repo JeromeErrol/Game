@@ -11,8 +11,6 @@ public class Enemy : MonoBehaviour
     public Weapon weapon;
     private Unit unit;
 
-
-
     void Start()
     {
         if (unit == null)
@@ -34,7 +32,7 @@ public class Enemy : MonoBehaviour
                 unit.idle();
                 if (weapon.readyToRelease)
                 {
-                    weapon.release();
+            //        weapon.release();
                 }
                 else
                 {

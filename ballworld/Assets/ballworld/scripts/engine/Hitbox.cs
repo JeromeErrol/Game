@@ -3,6 +3,8 @@
 public class Hitbox : MonoBehaviour
 {
     public GameObject owner;
+    public bool destroyOnCollision = false;
+    public float force = 1f;
 
     void OnTriggerEnter(Collider collider)
     {
@@ -13,9 +15,9 @@ public class Hitbox : MonoBehaviour
             if (unit != null)
             {
                 unit.takeDamage();
-                unit.addForce(-transform.right, 1f);
+                unit.addForce(-transform.right, force);
 
-                if(GetComponent<Arrow>() != null)
+                if(destroyOnCollision)
                 {
                     DestroyObject(gameObject);
                 }
