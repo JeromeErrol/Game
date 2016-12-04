@@ -13,6 +13,7 @@ public class UnitController : MonoBehaviour {
     public KeyCode strafeRightKey = KeyCode.D;
     public float jumpSpeed = 1f;
     public float sensitivityX = 4;    
+    
 
     void Start()
     {

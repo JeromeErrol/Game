@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.4.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -98,9 +100,11 @@
     <Compile Include="Assets\ballworld\scripts\gameobjects\Player.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Shadow.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Signpost.cs" />
+    <Compile Include="Assets\ballworld\scripts\io\CanvasManager.cs" />
     <Compile Include="Assets\ballworld\scripts\io\UnitController.cs" />
     <Compile Include="Assets\ballworld\scripts\map\Spawn.cs" />
     <Compile Include="Assets\ballworld\scripts\physics\VerticalForce.cs" />
+    <Compile Include="Assets\ballworld\scripts\scenes\dungeon\Speech.cs" />
     <Compile Include="Assets\ballworld\scripts\scenes\intro\Scene01Camera.cs" />
     <Compile Include="Assets\ballworld\scripts\weapons\Arrow.cs" />
     <Compile Include="Assets\ballworld\scripts\weapons\ArrowPool.cs" />
