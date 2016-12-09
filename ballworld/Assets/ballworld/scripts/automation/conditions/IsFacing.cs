@@ -8,6 +8,6 @@ public class IsFacing : Condition {
 
     public override bool isMet()
     {
-        return Trig.degreesBetween(source, target) < range;
+        return Trig.approx(source.transform.rotation.eulerAngles.z, Trig.rotationBetween(source, target).eulerAngles.z, range);
     }
 }

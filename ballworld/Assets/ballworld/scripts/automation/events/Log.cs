@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SomeEvent : GameEvent {
+public class Log : GameEvent {
 
     public string message;
 

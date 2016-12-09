@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class Transition : MonoBehaviour {
-    public State state;
+public class Transition : MonoBehaviour
+{
     public Condition condition;
+    public State state;
 }

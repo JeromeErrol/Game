@@ -6,15 +6,25 @@ public static class Trig {
     {
         Vector3 relative = transform.position - otherTransform.position;
         Vector3 point = Quaternion.Inverse(otherTransform.rotation) * relative;
-        Vector2 point2 = new Vector2(point.x, point.y);
 
-        if (point2.x < 0)
+        if (point.x < 0)
         {
-            return 360 - (Mathf.Atan2(point2.x, point2.y) * Mathf.Rad2Deg * -1);
+            return 360 - (Mathf.Atan2(point.x, point.y) * Mathf.Rad2Deg * -1);
         }
         else
         {
-            return Mathf.Atan2(point2.x, point2.y) * Mathf.Rad2Deg;
+            return Mathf.Atan2(point.x, point.y) * Mathf.Rad2Deg;
         }
+    }
+
+    public static Quaternion rotationBetween(Transform source, Transform target)
+    {
+        return Quaternion.LookRotation(source.transform.forward, target.transform.position - source.position);
+    }
+
+    public static bool approx(float a, float b, float range)
+    {
+        float halfRange = Mathf.Abs(range / 2);
+        return a > b - halfRange && a < b + halfRange;
     }
 }
