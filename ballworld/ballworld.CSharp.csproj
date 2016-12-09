@@ -69,7 +69,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ballworld\scripts\automation\Condition.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\ConditionNode.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\GameEvent.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\Gate.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\Node.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\State.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\StateMachine.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\Transition.cs" />
@@ -78,6 +81,10 @@
     <Compile Include="Assets\ballworld\scripts\automation\actions\GameAction.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\actions\MoveTowards.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\actions\Wait.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\conditions\IsFacing.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\conditions\KeyIsDown.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\events\SomeEvent.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\events\SpacePressedEvent.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Anim.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\AnimatorState.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\BallworldObject.cs" />
@@ -113,7 +120,6 @@
     <Compile Include="Assets\ballworld\scripts\physics\VerticalForce.cs" />
     <Compile Include="Assets\ballworld\scripts\scenes\dungeon\EventManager.cs" />
     <Compile Include="Assets\ballworld\scripts\scenes\dungeon\Speech.cs" />
-    <Compile Include="Assets\ballworld\scripts\automation\conditions\IsFacing.cs" />
     <Compile Include="Assets\ballworld\scripts\scenes\intro\Scene01Camera.cs" />
     <Compile Include="Assets\ballworld\scripts\weapons\Arrow.cs" />
     <Compile Include="Assets\ballworld\scripts\weapons\ArrowPool.cs" />

@@ -2,7 +2,12 @@
 
 public class StateMachine : MonoBehaviour
 {
-    public State state;
+    public State state;    
+
+    void Start()
+    {
+        state.onActivate.happen();
+    }
 
     void Update()
     {
@@ -10,9 +15,12 @@ public class StateMachine : MonoBehaviour
         {
             if (transition.condition.isMet())
             {
+                state.onDeactivate.happen();
                 state = transition.state;
-                break;
+                state.onActivate.happen();
+                return;
             }
         }
+        state.onActive.happen();
     }
 }
