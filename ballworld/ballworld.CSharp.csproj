@@ -68,7 +68,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ballworld\scripts\automation\Condition.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\Gate.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\State.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\StateMachine.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\Transition.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\actions\ActionCycle.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\actions\FaceTowards.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\actions\GameAction.cs" />
@@ -85,6 +89,7 @@
     <Compile Include="Assets\ballworld\scripts\engine\Hitbox.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Music.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Projectile.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\Trig.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Unit.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\UnitAnimator.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\UnitState.cs" />
@@ -92,6 +97,8 @@
     <Compile Include="Assets\ballworld\scripts\engine\WeaponAnimator.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\WeaponState.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\World.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\event\ActivateEvent.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\event\EventListener.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\ActivateOnStart.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Enemy.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Entrance.cs" />
@@ -104,7 +111,9 @@
     <Compile Include="Assets\ballworld\scripts\io\UnitController.cs" />
     <Compile Include="Assets\ballworld\scripts\map\Spawn.cs" />
     <Compile Include="Assets\ballworld\scripts\physics\VerticalForce.cs" />
+    <Compile Include="Assets\ballworld\scripts\scenes\dungeon\EventManager.cs" />
     <Compile Include="Assets\ballworld\scripts\scenes\dungeon\Speech.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\conditions\IsFacing.cs" />
     <Compile Include="Assets\ballworld\scripts\scenes\intro\Scene01Camera.cs" />
     <Compile Include="Assets\ballworld\scripts\weapons\Arrow.cs" />
     <Compile Include="Assets\ballworld\scripts\weapons\ArrowPool.cs" />
@@ -117,8 +126,8 @@
     <Compile Include="Assets\ballworld\scripts\weapons\Sword.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\TSF\Shaders\TSF.shader" />
-    <None Include="Assets\TSF\Shaders\TSFOutline.shader" />
+    <None Include="Assets\ballworld\resources\shaders\TSF.shader" />
+    <None Include="Assets\ballworld\resources\shaders\TSFOutline.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
