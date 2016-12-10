@@ -101,6 +101,7 @@
     <Compile Include="Assets\ballworld\scripts\engine\Hitbox.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Music.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Projectile.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\TextUtil.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Trig.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Unit.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\UnitAnimator.cs" />
@@ -113,9 +114,11 @@
     <Compile Include="Assets\ballworld\scripts\engine\event\ApplicationQuit.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\event\EventEnum.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\event\EventListener.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\event\MessageEvent.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\event\Script.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\event\ScriptRunner.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\event\StateEvent.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\event\TextEvent.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\ActivateOnStart.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Enemy.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Entrance.cs" />
