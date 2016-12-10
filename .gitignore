@@ -19,4 +19,4 @@ ExportedObj/
 *.booproj
 *.svd
 */Library/metadata/
-*/*cs.meta
+*/.meta
