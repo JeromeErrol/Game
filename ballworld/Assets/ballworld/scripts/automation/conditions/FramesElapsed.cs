@@ -6,6 +6,6 @@ public class FramesElapsed : Condition {
 
     public override bool isMet()
     {
-        return current++ < frames;
+        return current++ > frames;
     }
 }

@@ -131,6 +131,7 @@ public class UnitController : MonoBehaviour {
 
     void readGlance()
     {
+        
         if (Input.GetKey(glanceRight))
         {
             bow.rotation = 90f;
@@ -164,7 +165,7 @@ public class UnitController : MonoBehaviour {
         {
             readMouseAim();
         }
-        readGlance();
+      //  readGlance();
         readCameraZoom();        
     }
 }

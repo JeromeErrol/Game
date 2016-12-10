@@ -1,38 +1,22 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
     public State state;
 
-    void Start()
-    {
-        if (state.onActivate != null)
-        {
-            state.onActivate.happen();
-        }
-    }
-
     void Update()
-    {
-        foreach (Transition transition in state.transitions)
+    {      
+        foreach (Transition transition in state.GetComponents<Transition>())
         {
             if (transition.condition.isMet())
             {
-                if(state.onDeactivate != null)
-                {
-                    state.onDeactivate.happen();
-                }                
+                state.process(EventEnum.ON_DEACTIVATED);
                 state = transition.state;
-                if (state.onActivate != null)
-                {
-                    state.onActivate.happen();
-                }
+                state.process(EventEnum.ON_ACTIVATED);
                 return;
             }
         }
-        if (state.onActivate != null)
-        {
-            state.onActivate.happen();
-        }
-    }
+        state.process(EventEnum.ON_ATIVE);
+    }    
 }
