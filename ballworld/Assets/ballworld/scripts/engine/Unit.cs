@@ -22,6 +22,7 @@ public class Unit : BallworldObject {
             case UnitState.RUNNING_FORWARD:
                 animator.running();
                 moveForward(speed);
+                idle();
                 break;
             case UnitState.RUNNING_BACKWARD:
                 animator.running();

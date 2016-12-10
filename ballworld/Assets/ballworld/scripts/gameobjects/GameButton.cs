@@ -1,15 +1,32 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class GameButton : MonoBehaviour {
+public class GameButton : MonoBehaviour
+{
+    public GameEvent onEnter;
+    public GameEvent onStay;
+    public GameEvent onExit;
 
-    public Gate gate;
+    void OnTriggerEnter(Collider collider)
+    {
+        if (onEnter != null)
+        {
+            onEnter.happen();
+        }
+    }
 
     void OnTriggerStay(Collider collider)
     {
-        if (collider.gameObject.GetComponent<Player>() != null)
+        if (onStay != null)
         {
-            gate.state = Gate.GateState.OPENING;
+            onStay.happen();
+        }
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        if (onExit != null)
+        {
+            onExit.happen();
         }
     }
 }
