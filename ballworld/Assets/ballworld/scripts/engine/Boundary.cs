@@ -1,21 +1,15 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Boundary : BallworldObject
 {
     public float weight = 1f;
     public bool mobile;
-    private SphereCollider sphereCollider;
-    private BoxCollider boxCollider;
 
     void Start()
     {
         Rigidbody rigidBody = gameObject.AddComponent<Rigidbody>();
         rigidBody.useGravity = false;
         rigidBody.isKinematic = true;
-
-        sphereCollider = GetComponent<SphereCollider>();
-        boxCollider = GetComponent<BoxCollider>();  
     }
 
     void OnTriggerStay(Collider collider)
@@ -25,7 +19,6 @@ public class Boundary : BallworldObject
             if (collider.GetComponent<Boundary>() != null)
             {
                 Boundary that = collider.GetComponent<Boundary>();
-                float weightDifference = Mathf.Abs(weight - that.weight);
 
                 if (that.GetComponent<BoxCollider>() != null)
                 {
@@ -60,8 +53,6 @@ public class Boundary : BallworldObject
                 }
                 else
                 {
-                    SphereCollider thatSphereCollider = that.GetComponent<SphereCollider>();
-
                     if (that.mobile)
                     {
                         // displace the weights and shift accordingly

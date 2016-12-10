@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Log : GameEvent {
 
@@ -8,5 +9,10 @@ public class Log : GameEvent {
 	public override void happen()
     {
         Debug.Log(gameObject.name + " " + message);
+    }
+
+    public override bool isMet()
+    {
+        return true;
     }
 }

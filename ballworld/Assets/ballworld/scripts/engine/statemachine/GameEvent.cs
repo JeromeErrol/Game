@@ -1,6 +1,8 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿
+public abstract class GameEvent : ConditionalGameEvent {
 
-public abstract class GameEvent : MonoBehaviour {
-    public abstract void happen();
+    public override bool isMet()
+    {
+        return true;
+    }
 }
