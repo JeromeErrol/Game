@@ -27,4 +27,14 @@ public static class Trig {
         float halfRange = Mathf.Abs(range / 2);
         return a > b - halfRange && a < b + halfRange;
     }
+
+    public static float difference(float a, float b)
+    {
+        return Mathf.Abs(a - b);
+    }
+
+    public static float degreesDifference(float a, float b)
+    {
+        return (a - b) % 360;
+    }
 }

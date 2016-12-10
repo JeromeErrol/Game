@@ -7,6 +7,6 @@ public class Log : GameEvent {
 
 	public override void happen()
     {
-        Debug.Log(message);
+        Debug.Log(gameObject.name + " " + message);
     }
 }

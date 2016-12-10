@@ -119,6 +119,7 @@
     <Compile Include="Assets\ballworld\scripts\engine\event\ScriptRunner.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\event\StateEvent.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\event\TextEvent.cs" />
+    <Compile Include="Assets\ballworld\scripts\engine\event\WalkedAround.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\ActivateOnStart.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Enemy.cs" />
     <Compile Include="Assets\ballworld\scripts\gameobjects\Entrance.cs" />
