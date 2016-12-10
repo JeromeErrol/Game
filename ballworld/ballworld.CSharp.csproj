@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.4.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -77,12 +79,17 @@
     <Compile Include="Assets\ballworld\scripts\automation\actions\ActionCycle.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\actions\FaceTowards.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\actions\GameAction.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\actions\GameActions.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\actions\MoveTowards.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\actions\PlaySound.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\actions\SetMouseLock.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\actions\SetMovementLock.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\actions\Wait.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\conditions\FramesElapsed.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\conditions\HasBeenCondition.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\conditions\IsFacing.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\conditions\KeyIsDown.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\events\Conditions.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\events\Log.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\events\SetActive.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Anim.cs" />
