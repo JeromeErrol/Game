@@ -7,9 +7,15 @@ public class State : MonoBehaviour {
     {
         foreach (StateEvent stateEvent in new List<StateEvent>(GetComponents<StateEvent>()))
         {
-            if (stateEvent.eventEnum == eventEnum && (stateEvent.condition == null || stateEvent.condition.isMet()))
+            if (stateEvent.eventEnum == eventEnum)
             {
-                if(stateEvent.gameEvent != null)
+                Condition condition = null;
+
+                if(stateEvent is ConditionalStateEvent)
+                {
+                    condition = ((ConditionalStateEvent)stateEvent).condition;
+                }
+                if(stateEvent.gameEvent != null && condition == null || condition.isMet())
                 {
                     stateEvent.gameEvent.happen();
                 }else

@@ -14,6 +14,8 @@ public class StateMachine : MonoBehaviour
     {      
         foreach (Transition transition in state.GetComponents<Transition>())
         {
+
+
             if (transition.condition.isMet())
             {
                 state.process(EventEnum.ON_DEACTIVATED);

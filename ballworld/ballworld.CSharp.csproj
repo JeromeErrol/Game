@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Assets\ballworld\scripts\automation\Condition.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\ConditionNode.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\ConditionalStateEvent.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\GameEvent.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\Gate.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\Node.cs" />
@@ -87,9 +88,13 @@
     <Compile Include="Assets\ballworld\scripts\automation\conditions\HasBeenCondition.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\conditions\IsFacing.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\conditions\KeyIsDown.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\conditions\WithinDistance.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\events\Conditions.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\events\Face.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\events\Log.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\events\RunForward.cs" />
     <Compile Include="Assets\ballworld\scripts\automation\events\SetActive.cs" />
+    <Compile Include="Assets\ballworld\scripts\automation\events\UnitEvent.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\Anim.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\AnimatorState.cs" />
     <Compile Include="Assets\ballworld\scripts\engine\BallworldObject.cs" />

@@ -98,7 +98,7 @@ public class Unit : BallworldObject {
 
     public void runForward()
     {
-            unitState = UnitState.RUNNING_FORWARD;
+        unitState = UnitState.RUNNING_FORWARD;
     }
 
     public void die()

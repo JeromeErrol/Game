@@ -95,6 +95,11 @@ public class BallworldObject : MonoBehaviour {
         transform.rotation = Quaternion.LookRotation(transform.forward, position - transform.position);
     }
 
+    public void faceTowards(Transform transform)
+    {
+        faceTowards(transform.position);
+    }
+
     public void addForce(Vector3 axis, float amount)
     {
         Force force = gameObject.AddComponent<Force>();
